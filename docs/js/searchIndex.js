@@ -1066,6 +1066,36 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/oihana-enums-CharacterSet.html#constant_IBM_5035"
         },                {
+            "fqsen": "\\oihana\\enums\\FilterOption",
+            "name": "FilterOption",
+            "summary": "Defines\u0020constants\u0020representing\u0020valid\u0020option\u0020keys\u0020for\u0020PHP\u0027s\u0020filter\u0020functions\n\u0028e.g.\u0020\u007B\u0040see\u0020filter_var\u0028\u0029\u007D,\u0020\u007B\u0040see\u0020filter_input\u0028\u0029\u007D\u0029.",
+            "url": "classes/oihana-enums-FilterOption.html"
+        },                {
+            "fqsen": "\\oihana\\enums\\FilterOption\u003A\u003ADEFAULT",
+            "name": "DEFAULT",
+            "summary": "",
+            "url": "classes/oihana-enums-FilterOption.html#constant_DEFAULT"
+        },                {
+            "fqsen": "\\oihana\\enums\\FilterOption\u003A\u003AFLAGS",
+            "name": "FLAGS",
+            "summary": "",
+            "url": "classes/oihana-enums-FilterOption.html#constant_FLAGS"
+        },                {
+            "fqsen": "\\oihana\\enums\\FilterOption\u003A\u003AMAX_RANGE",
+            "name": "MAX_RANGE",
+            "summary": "",
+            "url": "classes/oihana-enums-FilterOption.html#constant_MAX_RANGE"
+        },                {
+            "fqsen": "\\oihana\\enums\\FilterOption\u003A\u003AMIN_RANGE",
+            "name": "MIN_RANGE",
+            "summary": "",
+            "url": "classes/oihana-enums-FilterOption.html#constant_MIN_RANGE"
+        },                {
+            "fqsen": "\\oihana\\enums\\FilterOption\u003A\u003AOPTIONS",
+            "name": "OPTIONS",
+            "summary": "",
+            "url": "classes/oihana-enums-FilterOption.html#constant_OPTIONS"
+        },                {
             "fqsen": "\\oihana\\enums\\IniOptions",
             "name": "IniOptions",
             "summary": "Class\u0020IniOptions",
