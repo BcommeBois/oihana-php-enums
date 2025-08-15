@@ -2771,6 +2771,36 @@ Search.appendIndex(
             "summary": "The\u0020descending\u0020order\u0020\u0028upper\u0020case\u0029.",
             "url": "classes/oihana-enums-Order.html#constant_DESC"
         },                {
+            "fqsen": "\\oihana\\enums\\Pagination",
+            "name": "Pagination",
+            "summary": "Pagination\u0020constants\u0020enumeration.",
+            "url": "classes/oihana-enums-Pagination.html"
+        },                {
+            "fqsen": "\\oihana\\enums\\Pagination\u003A\u003ALIMIT",
+            "name": "LIMIT",
+            "summary": "The\u0020number\u0020of\u0020items\u0020to\u0020retrieve\u0020per\u0020page\/request.",
+            "url": "classes/oihana-enums-Pagination.html#constant_LIMIT"
+        },                {
+            "fqsen": "\\oihana\\enums\\Pagination\u003A\u003AMAX_LIMIT",
+            "name": "MAX_LIMIT",
+            "summary": "The\u0020maximum\u0020allowed\u0020limit\u0020value.",
+            "url": "classes/oihana-enums-Pagination.html#constant_MAX_LIMIT"
+        },                {
+            "fqsen": "\\oihana\\enums\\Pagination\u003A\u003AMIN_LIMIT",
+            "name": "MIN_LIMIT",
+            "summary": "The\u0020minimum\u0020allowed\u0020limit\u0020value.",
+            "url": "classes/oihana-enums-Pagination.html#constant_MIN_LIMIT"
+        },                {
+            "fqsen": "\\oihana\\enums\\Pagination\u003A\u003AOFFSET",
+            "name": "OFFSET",
+            "summary": "The\u0020number\u0020of\u0020items\u0020to\u0020skip\u0020from\u0020the\u0020beginning\u0020of\u0020the\u0020result\u0020set.",
+            "url": "classes/oihana-enums-Pagination.html#constant_OFFSET"
+        },                {
+            "fqsen": "\\oihana\\enums\\Pagination\u003A\u003APAGE",
+            "name": "PAGE",
+            "summary": "The\u0020page\u0020number\u0020for\u0020page\u002Dbased\u0020pagination.",
+            "url": "classes/oihana-enums-Pagination.html#constant_PAGE"
+        },                {
             "fqsen": "\\oihana\\enums\\Param",
             "name": "Param",
             "summary": "Centralized\u0020enumeration\u0020of\u0020parameter\u0020keys\u0020used\u0020across\u0020various\u0020parts\u0020of\u0020the\u0020application.",
