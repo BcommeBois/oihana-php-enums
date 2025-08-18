@@ -1,7 +1,8 @@
 # Oihana PHP - Enums
 
-A collection of strongly-typed constant enumerations for PHP.
+![Oihana Php Core](https://raw.githubusercontent.com/BcommeBois/oihana-php-enums/main/assets/images/oihana-php-enums-logo-inline-512x160.png)
 
+A collection of strongly-typed constant enumerations for PHP.
 
 [![Latest Version](https://img.shields.io/packagist/v/oihana/php-enums.svg?style=flat-square)](https://packagist.org/packages/oihana/php-enums)  
 [![Total Downloads](https://img.shields.io/packagist/dt/oihana/php-enums.svg?style=flat-square)](https://packagist.org/packages/oihana/php-enums)  

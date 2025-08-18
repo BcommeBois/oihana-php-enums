@@ -6,8 +6,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased]
 
-### Added
+### Added 
+
 - oihana\enums\FilterOption
+- oihana\enums\Output
+- oihana\enums\Pagination
+
+- oihana\enums\http\HttpHeader
+- oihana\enums\http\HttpMethod
+- oihana\enums\http\HttpParamStrategy
+- oihana\enums\http\HttpStatusCode
 
 ----
 

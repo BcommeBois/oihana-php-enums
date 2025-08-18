@@ -72,7 +72,7 @@
 </h4>
     <ul class="phpdocumentor-list">
                     <li>
-                <a href="namespaces/oihana-enums.html" class="-active">enums</a>
+                <a href="namespaces/oihana-enums.html" class="">enums</a>
                 
             </li>
             </ul>
@@ -96,47 +96,208 @@
                                 <section>
                                         <ul class="phpdocumentor-breadcrumbs">
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/oihana.html">oihana</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/oihana-enums.html">enums</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/oihana-enums-http.html">http</a></li>
     </ul>
 
-    <article class="phpdocumentor-element -namespace">
-        <h2 class="phpdocumentor-content__title">enums</h2>
+    <article class="phpdocumentor-element -class">
+        <h2 class="phpdocumentor-content__title">
+    HttpParamStrategy
 
-        
+    
+    
+    
+            <span class="phpdocumentor-element__extends">
+            uses
+                            <abbr title="\oihana\reflect\traits\ConstantsTrait">ConstantsTrait</abbr>                    </span>
+    </h2>
+
+<div class="phpdocumentor-label-line">
+
+
+</div>
+
+        <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/http/HttpParamStrategy.php"><a href="files/src-oihana-enums-http-httpparamstrategy.html"><abbr title="src/oihana/enums/http/HttpParamStrategy.php">HttpParamStrategy.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">26</span>
+
+    </aside>
+
+            <p class="phpdocumentor-summary">Defines the strategy used to retrieve parameters from an HTTP request.</p>
+
+
+    <section class="phpdocumentor-description"><p>This class provides three strategies:</p>
+<ul>
+<li><a href="classes/oihana-enums-http-HttpParamStrategy.html#constant_BODY"><abbr title="\oihana\enums\http\HttpParamStrategy::BODY">HttpParamStrategy::BODY</abbr></a>  → Retrieve parameters from the request body only.</li>
+<li><a href="classes/oihana-enums-http-HttpParamStrategy.html#constant_QUERY"><abbr title="\oihana\enums\http\HttpParamStrategy::QUERY">HttpParamStrategy::QUERY</abbr></a> → Retrieve parameters from the query string only.</li>
+<li><a href="classes/oihana-enums-http-HttpParamStrategy.html#constant_BOTH"><abbr title="\oihana\enums\http\HttpParamStrategy::BOTH">HttpParamStrategy::BOTH</abbr></a>  → Retrieve parameters from both the body and the query string.</li>
+</ul>
+<p>The <abbr title="\oihana\reflect\traits\ConstantsTrait">ConstantsTrait</abbr> can be used to enumerate or validate these strategies.</p>
+<p>Example:</p>
+<pre class="prettyprint"><code class="language-php">if ($strategy === HttpParamStrategy::BODY)
+{
+    // Retrieve parameters only from the body
+}
+</code></pre>
+</section>
+
+
+
+
+
+
+
 <h3 id="toc">
     Table of Contents
-    <a href="namespaces/oihana-enums.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/oihana-enums-http-HttpParamStrategy.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h3>
 
 
-<h4 id="namespaces">
-    Namespaces
-    <a href="namespaces/oihana-enums.html#namespaces" class="headerlink"><i class="fas fa-link"></i></a>
+
+
+
+
+
+<h4 id="toc-constants">
+    Constants
+    <a href="classes/oihana-enums-http-HttpParamStrategy.html#toc-constants" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
-            <dt class="phpdocumentor-table-of-contents__entry -namespace"><a href="namespaces/oihana-enums-http.html"><abbr title="\oihana\enums\http">http</abbr></a></dt>
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a class="" href="classes/oihana-enums-http-HttpParamStrategy.html#constant_BODY">BODY</a>
+    <span>
+        &nbsp;= &#039;body&#039;                            </span>
+</dt>
+<dd>Retrieve parameters from the request body only.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a class="" href="classes/oihana-enums-http-HttpParamStrategy.html#constant_BOTH">BOTH</a>
+    <span>
+        &nbsp;= &#039;both&#039;                            </span>
+</dt>
+<dd>Retrieve parameters from both the request body and the query string.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a class="" href="classes/oihana-enums-http-HttpParamStrategy.html#constant_QUERY">QUERY</a>
+    <span>
+        &nbsp;= &#039;query&#039;                            </span>
+</dt>
+<dd>Retrieve parameters from the query string only.</dd>
+
     </dl>
 
 
-    <h4 id="toc-classes">
-        Classes
-        <a href="namespaces/oihana-enums.html#toc-classes" class="headerlink"><i class="fas fa-link"></i></a>
+
+
+
+
+        
+    <section class="phpdocumentor-constants">
+        <h3 class="phpdocumentor-elements__header" id="constants">
+            Constants
+            <a href="classes/oihana-enums-http-HttpParamStrategy.html#constants" class="headerlink"><i class="fas fa-link"></i></a>
+
+        </h3>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_BODY">
+        BODY
+        <a href="classes/oihana-enums-http-HttpParamStrategy.html#constant_BODY" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
-    <dl class="phpdocumentor-table-of-contents">
-                    <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/oihana-enums-Alter.html"><abbr title="\oihana\enums\Alter">Alter</abbr></a></dt><dd>Enumeration of all alter filter to apply on a object property.</dd>            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/oihana-enums-ArithmeticOperator.html"><abbr title="\oihana\enums\ArithmeticOperator">ArithmeticOperator</abbr></a></dt><dd>Enumeration of common arithmetic operator symbols as string constants.</dd>            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/oihana-enums-Boolean.html"><abbr title="\oihana\enums\Boolean">Boolean</abbr></a></dt><dd>A simple enumeration of string representations for boolean values: `&quot;true&quot;` and `&quot;false&quot;`.</dd>            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/oihana-enums-Char.html"><abbr title="\oihana\enums\Char">Char</abbr></a></dt><dd>A comprehensive enumeration of commonly used single-character strings,
-including punctuation marks, mathematical symbols, whitespace characters,
-typographic signs, and Unicode superscript/subscript digits.</dd>            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/oihana-enums-CharacterSet.html"><abbr title="\oihana\enums\CharacterSet">CharacterSet</abbr></a></dt><dd>Enumeration of official character set codes as assigned by IANA and
-used in Internet standards and documentation.</dd>            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/oihana-enums-FilterOption.html"><abbr title="\oihana\enums\FilterOption">FilterOption</abbr></a></dt><dd>Defines constants representing valid option keys for PHP&#039;s filter functions
-(e.g. {@see filter_var()}, {@see filter_input()}).</dd>            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/oihana-enums-IniOptions.html"><abbr title="\oihana\enums\IniOptions">IniOptions</abbr></a></dt><dd>Class IniOptions</dd>            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/oihana-enums-JsonParam.html"><abbr title="\oihana\enums\JsonParam">JsonParam</abbr></a></dt><dd>Enumeration of common parameter names used in JSON encoding and decoding operations.</dd>            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/oihana-enums-Order.html"><abbr title="\oihana\enums\Order">Order</abbr></a></dt><dd>Enumeration of sorting direction values, often used in SQL, data queries, or collection sorting.</dd>            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/oihana-enums-Output.html"><abbr title="\oihana\enums\Output">Output</abbr></a></dt><dd>Output response constants enumeration.</dd>            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/oihana-enums-Pagination.html"><abbr title="\oihana\enums\Pagination">Pagination</abbr></a></dt><dd>Pagination constants enumeration.</dd>            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/oihana-enums-Param.html"><abbr title="\oihana\enums\Param">Param</abbr></a></dt><dd>Centralized enumeration of parameter keys used across various parts of the application.</dd>    </dl>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/http/HttpParamStrategy.php"><a href="files/src-oihana-enums-http-httpparamstrategy.html"><abbr title="src/oihana/enums/http/HttpParamStrategy.php">HttpParamStrategy.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">33</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Retrieve parameters from the request body only.</p>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">BODY</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;body&#039;</span>
+</code>
 
 
+    
+    
+    
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_BOTH">
+        BOTH
+        <a href="classes/oihana-enums-http-HttpParamStrategy.html#constant_BOTH" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/http/HttpParamStrategy.php"><a href="files/src-oihana-enums-http-httpparamstrategy.html"><abbr title="src/oihana/enums/http/HttpParamStrategy.php">HttpParamStrategy.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">38</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Retrieve parameters from both the request body and the query string.</p>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">BOTH</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;both&#039;</span>
+</code>
 
 
+    
+    
+    
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_QUERY">
+        QUERY
+        <a href="classes/oihana-enums-http-HttpParamStrategy.html#constant_QUERY" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/http/HttpParamStrategy.php"><a href="files/src-oihana-enums-http-httpparamstrategy.html"><abbr title="src/oihana/enums/http/HttpParamStrategy.php">HttpParamStrategy.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">43</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Retrieve parameters from the query string only.</p>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">QUERY</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;query&#039;</span>
+</code>
 
 
+    
+    
+    
 
+    
+
+</article>
+            </section>
 
         
 
@@ -145,7 +306,7 @@ used in Internet standards and documentation.</dd>            <dt class="phpdocu
     <div class="phpdocumentor-modal-bg" data-exit-button></div>
     <div class="phpdocumentor-modal-container">
         <div class="phpdocumentor-modal-content">
-            <pre style="max-height: 500px; overflow-y: scroll" data-src="" class="language-php line-numbers linkable-line-numbers"></pre>
+            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/oihana/enums/http/HttpParamStrategy.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
         </div>
         <button data-exit-button class="phpdocumentor-modal__close">&times;</button>
     </div>
@@ -238,7 +399,7 @@ used in Internet standards and documentation.</dd>            <dt class="phpdocu
     </article>
                                 </section>
                 <section class="phpdocumentor-on-this-page__sidebar">
-                            
+                                
     <section class="phpdocumentor-on-this-page__content">
         <strong class="phpdocumentor-on-this-page__title">On this page</strong>
 
@@ -246,10 +407,18 @@ used in Internet standards and documentation.</dd>            <dt class="phpdocu
             <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                                                                                    <li><a href="namespaces/oihana-enums.html#toc-classes">Classes</a></li>
-                                                                                                                    </ul>
+                                        <li><a href="classes/oihana-enums-http-HttpParamStrategy.html#toc-constants">Constants</a></li>
+                                                                            </ul>
             </li>
-
+                            <li class="phpdocumentor-on-this-page-section__title">Constants</li>
+                <li>
+                    <ul class="phpdocumentor-list -clean">
+                                                    <li class=""><a href="classes/oihana-enums-http-HttpParamStrategy.html#constant_BODY">BODY</a></li>
+                                                    <li class=""><a href="classes/oihana-enums-http-HttpParamStrategy.html#constant_BOTH">BOTH</a></li>
+                                                    <li class=""><a href="classes/oihana-enums-http-HttpParamStrategy.html#constant_QUERY">QUERY</a></li>
+                                            </ul>
+                </li>
+            
             
                     </ul>
     </section>
@@ -268,7 +437,7 @@ used in Internet standards and documentation.</dd>            <dt class="phpdocu
     </section>
 </section>
         </div>
-        <a href="namespaces/oihana-enums.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/oihana-enums-http-HttpParamStrategy.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

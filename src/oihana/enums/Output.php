@@ -131,7 +131,7 @@ class Output
      * Total number of available items.
      * Complete count of items available, regardless of pagination limits.
      */
-    public const string TOTAL= 'total' ;
+    public const string TOTAL = 'total' ;
 
     /**
      * URL or web address.

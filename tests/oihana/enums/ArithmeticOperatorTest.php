@@ -30,7 +30,6 @@ class ArithmeticOperatorTest extends TestCase
             $this->assertContains($value, $enums);
         }
 
-        // Vérifie que le tableau est trié (tri string par défaut)
         $sorted = $enums;
         sort($sorted, SORT_STRING);
         $this->assertSame($sorted, $enums);
