@@ -1613,12 +1613,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\oihana\\enums\\http\\HttpStatusCode\u003A\u003AgetDescription\u0028\u0029",
             "name": "getDescription",
-            "summary": "Returns\u0020the\u0020status\u0020type\u0020of\u0020the\u0020specific\u0020code.",
+            "summary": "Returns\u0020the\u0020standard\u0020HTTP\u0020status\u0020description\u0020for\u0020a\u0020given\u0020code.",
             "url": "classes/oihana-enums-http-HttpStatusCode.html#method_getDescription"
         },                {
             "fqsen": "\\oihana\\enums\\http\\HttpStatusCode\u003A\u003AgetType\u0028\u0029",
             "name": "getType",
-            "summary": "Returns\u0020the\u0020status\u0020type\u0020of\u0020the\u0020specific\u0020code.",
+            "summary": "Returns\u0020the\u0020status\u0020type\u0020corresponding\u0020to\u0020a\u0020given\u0020HTTP\u0020status\u0020code.",
             "url": "classes/oihana-enums-http-HttpStatusCode.html#method_getType"
         },                {
             "fqsen": "\\oihana\\enums\\http\\HttpStatusCode\u003A\u003ADEFAULT",

@@ -34,6 +34,8 @@ class HttpStatusCodeTest extends TestCase
         $this->assertSame('An exception occurred', HttpStatusCode::getDescription(HttpStatusCode::DEFAULT));
         $this->assertSame('Multiple Choices', HttpStatusCode::getDescription(300));
         $this->assertSame('Bandwidth Limit Exceeded', HttpStatusCode::getDescription(509));
+
+        $this->assertSame('Bandwidth Limit Exceeded', HttpStatusCode::getDescription('509'));
     }
 
     public function testGetType(): void
@@ -43,6 +45,7 @@ class HttpStatusCodeTest extends TestCase
         $this->assertSame(Output::REDIRECT, HttpStatusCode::getType(HttpStatusCode::MOVED_PERMANENTLY));
         $this->assertSame(Output::ERROR, HttpStatusCode::getType(HttpStatusCode::NOT_FOUND));
         $this->assertSame(Output::ERROR, HttpStatusCode::getType(HttpStatusCode::INTERNAL_SERVER_ERROR));
+        $this->assertSame(Output::ERROR, HttpStatusCode::getType(500));
         $this->assertNull(HttpStatusCode::getType(999));
     }
 }

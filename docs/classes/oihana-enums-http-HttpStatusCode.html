@@ -654,14 +654,14 @@ RFCs (notably RFC 7231 and RFC 9110).</p>
     <span>
                                 &nbsp;: string|null    </span>
 </dt>
-<dd>Returns the status type of the specific code.</dd>
+<dd>Returns the standard HTTP status description for a given code.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/oihana-enums-http-HttpStatusCode.html#method_getType">getType()</a>
     <span>
                                 &nbsp;: string|null    </span>
 </dt>
-<dd>Returns the status type of the specific code.</dd>
+<dd>Returns the status type corresponding to a given HTTP status code.</dd>
 
     </dl>
 
@@ -3116,11 +3116,11 @@ RFCs (notably RFC 7231 and RFC 9110).</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/http/HttpStatusCode.php"><a href="files/src-oihana-enums-http-httpstatuscode.html"><abbr title="src/oihana/enums/http/HttpStatusCode.php">HttpStatusCode.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">132</span>
+    <span class="phpdocumentor-element-found-in__line">150</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Returns the status type of the specific code.</p>
+        <p class="phpdocumentor-summary">Returns the standard HTTP status description for a given code.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3129,7 +3129,22 @@ RFCs (notably RFC 7231 and RFC 9110).</p>
     <div class="phpdocumentor-label-line">
         </div>
     
-    
+        <section class="phpdocumentor-description"><p>The method normalizes the input to an integer and returns the
+corresponding textual reason phrase (e.g., <code class="prettyprint">&quot;OK&quot;</code>, <code class="prettyprint">&quot;Not Found&quot;</code>,
+<code class="prettyprint">&quot;Internal Server Error&quot;</code>), based on the defined constants in this class.</p>
+<p>The mapping includes:</p>
+<ul>
+<li><strong>1xx (100–199):</strong> Informational responses (e.g., &quot;Continue&quot;, &quot;Processing&quot;).</li>
+<li><strong>2xx (200–299):</strong> Successful responses (e.g., &quot;OK&quot;, &quot;Created&quot;).</li>
+<li><strong>3xx (300–399):</strong> Redirection messages (e.g., &quot;Moved Permanently&quot;, &quot;See Other&quot;).</li>
+<li><strong>4xx (400–499):</strong> Client error responses (e.g., &quot;Bad Request&quot;, &quot;Not Found&quot;).</li>
+<li><strong>5xx (500–599):</strong> Server error responses (e.g., &quot;Internal Server Error&quot;, &quot;Bad Gateway&quot;).</li>
+<li><strong>Custom codes:</strong> Application-specific or extended values (e.g., <code class="prettyprint">&quot;Busy&quot;</code>).</li>
+</ul>
+<p>If the given code does not match any predefined constant,
+the method will return <code class="prettyprint">null</code>.</p>
+</section>
+
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -3137,7 +3152,9 @@ RFCs (notably RFC 7231 and RFC 9110).</p>
                 : <span class="phpdocumentor-signature__argument__return-type">int|string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>The HTTP status code to evaluate. Strings are cast to integers.</p>
+</section>
+
             </dd>
             </dl>
 
@@ -3148,6 +3165,11 @@ RFCs (notably RFC 7231 and RFC 9110).</p>
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type">string|null</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>The human-readable status description associated with the code,
+or <code class="prettyprint">null</code> if no match is found.</p>
+</section>
+
             </section>
 
 </article>
@@ -3165,11 +3187,11 @@ RFCs (notably RFC 7231 and RFC 9110).</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/http/HttpStatusCode.php"><a href="files/src-oihana-enums-http-httpstatuscode.html"><abbr title="src/oihana/enums/http/HttpStatusCode.php">HttpStatusCode.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">240</span>
+    <span class="phpdocumentor-element-found-in__line">273</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Returns the status type of the specific code.</p>
+        <p class="phpdocumentor-summary">Returns the status type corresponding to a given HTTP status code.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -3178,7 +3200,18 @@ RFCs (notably RFC 7231 and RFC 9110).</p>
     <div class="phpdocumentor-label-line">
         </div>
     
-    
+        <section class="phpdocumentor-description"><p>The method normalizes the input to an integer and determines the category
+of the HTTP response based on its range:</p>
+<ul>
+<li><strong>1xx (100–199):</strong> info                  → <a href="classes/oihana-enums-Output.html#constant_INFO"><abbr title="\oihana\enums\Output::INFO">Output::INFO</abbr></a></li>
+<li><strong>2xx (200–299):</strong> success               → <a href="classes/oihana-enums-Output.html#constant_SUCCESS"><abbr title="\oihana\enums\Output::SUCCESS">Output::SUCCESS</abbr></a></li>
+<li><strong>3xx (300–399):</strong> redirect              → <a href="classes/oihana-enums-Output.html#constant_REDIRECT"><abbr title="\oihana\enums\Output::REDIRECT">Output::REDIRECT</abbr></a></li>
+<li><strong>4xx (400–499):</strong> error | Client error  → <a href="classes/oihana-enums-Output.html#constant_ERROR"><abbr title="\oihana\enums\Output::ERROR">Output::ERROR</abbr></a></li>
+<li><strong>5xx (500–599):</strong> error | Server error  → <a href="classes/oihana-enums-Output.html#constant_ERROR"><abbr title="\oihana\enums\Output::ERROR">Output::ERROR</abbr></a></li>
+</ul>
+<p>Any value outside these ranges will return <code class="prettyprint">null</code>.</p>
+</section>
+
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -3186,7 +3219,9 @@ RFCs (notably RFC 7231 and RFC 9110).</p>
                 : <span class="phpdocumentor-signature__argument__return-type">int|string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>The HTTP status code to evaluate. Strings are cast to integers.</p>
+</section>
+
             </dd>
             </dl>
 
@@ -3197,6 +3232,11 @@ RFCs (notably RFC 7231 and RFC 9110).</p>
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type">string|null</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>One of the <code class="prettyprint">Output::*</code> constants (<code class="prettyprint">INFO</code>, <code class="prettyprint">SUCCESS</code>, <code class="prettyprint">REDIRECT</code>, <code class="prettyprint">ERROR</code>)
+if the code matches a known range, or <code class="prettyprint">null</code> otherwise.</p>
+</section>
+
             </section>
 
 </article>

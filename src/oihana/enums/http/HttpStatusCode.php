@@ -125,12 +125,31 @@ class HttpStatusCode
     const int BUSY = 600 ;
 
     /**
-     * Returns the status type of the specific code.
-     * @param int|string $code
-     * @return ?string
+     * Returns the standard HTTP status description for a given code.
+     *
+     * The method normalizes the input to an integer and returns the
+     * corresponding textual reason phrase (e.g., `"OK"`, `"Not Found"`,
+     * `"Internal Server Error"`), based on the defined constants in this class.
+     *
+     * The mapping includes:
+     * - **1xx (100–199):** Informational responses (e.g., "Continue", "Processing").
+     * - **2xx (200–299):** Successful responses (e.g., "OK", "Created").
+     * - **3xx (300–399):** Redirection messages (e.g., "Moved Permanently", "See Other").
+     * - **4xx (400–499):** Client error responses (e.g., "Bad Request", "Not Found").
+     * - **5xx (500–599):** Server error responses (e.g., "Internal Server Error", "Bad Gateway").
+     * - **Custom codes:** Application-specific or extended values (e.g., `"Busy"`).
+     *
+     * If the given code does not match any predefined constant,
+     * the method will return `null`.
+     *
+     * @param int|string $code The HTTP status code to evaluate. Strings are cast to integers.
+     *
+     * @return string|null The human-readable status description associated with the code,
+     *                     or `null` if no match is found.
      */
     public static function getDescription( int|string $code ):?string
     {
+        $code = (int) $code ;
         return match( $code )
         {
             self::DEFAULT => "An exception occurred" ,
@@ -233,12 +252,27 @@ class HttpStatusCode
     }
 
     /**
-     * Returns the status type of the specific code.
-     * @param int|string $code
-     * @return ?string
+     * Returns the status type corresponding to a given HTTP status code.
+     *
+     * The method normalizes the input to an integer and determines the category
+     * of the HTTP response based on its range:
+     *
+     * - **1xx (100–199):** info                  → {@see Output::INFO}
+     * - **2xx (200–299):** success               → {@see Output::SUCCESS}
+     * - **3xx (300–399):** redirect              → {@see Output::REDIRECT}
+     * - **4xx (400–499):** error | Client error  → {@see Output::ERROR}
+     * - **5xx (500–599):** error | Server error  → {@see Output::ERROR}
+     *
+     * Any value outside these ranges will return `null`.
+     *
+     * @param int|string $code The HTTP status code to evaluate. Strings are cast to integers.
+     *
+     * @return string|null One of the `Output::*` constants (`INFO`, `SUCCESS`, `REDIRECT`, `ERROR`)
+     *                     if the code matches a known range, or `null` otherwise.
      */
     public static function getType( int|string $code ):?string
     {
+        $code = (int) $code ;
         if( $code >= 100 && $code < 200 ) // 1xx informational response
         {
             return Output::INFO ;
