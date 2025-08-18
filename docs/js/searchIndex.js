@@ -1096,325 +1096,325 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/oihana-enums-FilterOption.html#constant_OPTIONS"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders",
-            "name": "HttpHeaders",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader",
+            "name": "HttpHeader",
             "summary": "Enumeration\u0020of\u0020standard\u0020HTTP\u0020header\u0020names\u0020\u0028request\u0020and\u0020response\u0029.",
-            "url": "classes/oihana-enums-http-HttpHeaders.html"
+            "url": "classes/oihana-enums-http-HttpHeader.html"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AACCESS_CONTROL_ALLOW_CREDENTIALS",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AACCESS_CONTROL_ALLOW_CREDENTIALS",
             "name": "ACCESS_CONTROL_ALLOW_CREDENTIALS",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_ACCESS_CONTROL_ALLOW_CREDENTIALS"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_ACCESS_CONTROL_ALLOW_CREDENTIALS"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AACCESS_CONTROL_ALLOW_HEADERS",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AACCESS_CONTROL_ALLOW_HEADERS",
             "name": "ACCESS_CONTROL_ALLOW_HEADERS",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_ACCESS_CONTROL_ALLOW_HEADERS"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_ACCESS_CONTROL_ALLOW_HEADERS"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AACCESS_CONTROL_ALLOW_METHODS",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AACCESS_CONTROL_ALLOW_METHODS",
             "name": "ACCESS_CONTROL_ALLOW_METHODS",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_ACCESS_CONTROL_ALLOW_METHODS"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_ACCESS_CONTROL_ALLOW_METHODS"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AACCESS_CONTROL_ALLOW_ORIGIN",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AACCESS_CONTROL_ALLOW_ORIGIN",
             "name": "ACCESS_CONTROL_ALLOW_ORIGIN",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_ACCESS_CONTROL_ALLOW_ORIGIN"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_ACCESS_CONTROL_ALLOW_ORIGIN"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AACCESS_CONTROL_EXPOSE_HEADERS",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AACCESS_CONTROL_EXPOSE_HEADERS",
             "name": "ACCESS_CONTROL_EXPOSE_HEADERS",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_ACCESS_CONTROL_EXPOSE_HEADERS"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_ACCESS_CONTROL_EXPOSE_HEADERS"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AACCESS_CONTROL_MAX_AGE",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AACCESS_CONTROL_MAX_AGE",
             "name": "ACCESS_CONTROL_MAX_AGE",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_ACCESS_CONTROL_MAX_AGE"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_ACCESS_CONTROL_MAX_AGE"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AACCESS_CONTROL_REQUEST_HEADERS",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AACCESS_CONTROL_REQUEST_HEADERS",
             "name": "ACCESS_CONTROL_REQUEST_HEADERS",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_ACCESS_CONTROL_REQUEST_HEADERS"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_ACCESS_CONTROL_REQUEST_HEADERS"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AACCESS_CONTROL_REQUEST_METHOD",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AACCESS_CONTROL_REQUEST_METHOD",
             "name": "ACCESS_CONTROL_REQUEST_METHOD",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_ACCESS_CONTROL_REQUEST_METHOD"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_ACCESS_CONTROL_REQUEST_METHOD"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AACCEPT",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AACCEPT",
             "name": "ACCEPT",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_ACCEPT"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_ACCEPT"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AACCEPT_CHARSET",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AACCEPT_CHARSET",
             "name": "ACCEPT_CHARSET",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_ACCEPT_CHARSET"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_ACCEPT_CHARSET"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AACCEPT_ENCODING",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AACCEPT_ENCODING",
             "name": "ACCEPT_ENCODING",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_ACCEPT_ENCODING"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_ACCEPT_ENCODING"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AACCEPT_LANGUAGE",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AACCEPT_LANGUAGE",
             "name": "ACCEPT_LANGUAGE",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_ACCEPT_LANGUAGE"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_ACCEPT_LANGUAGE"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AAGE",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AAGE",
             "name": "AGE",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_AGE"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_AGE"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003ACACHE_CONTROL",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003ACACHE_CONTROL",
             "name": "CACHE_CONTROL",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_CACHE_CONTROL"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_CACHE_CONTROL"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AEXPIRES",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AEXPIRES",
             "name": "EXPIRES",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_EXPIRES"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_EXPIRES"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003APRAGMA",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003APRAGMA",
             "name": "PRAGMA",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_PRAGMA"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_PRAGMA"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AWARNING",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AWARNING",
             "name": "WARNING",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_WARNING"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_WARNING"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AETAG",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AETAG",
             "name": "ETAG",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_ETAG"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_ETAG"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AIF_MATCH",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AIF_MATCH",
             "name": "IF_MATCH",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_IF_MATCH"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_IF_MATCH"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AIF_NONE_MATCH",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AIF_NONE_MATCH",
             "name": "IF_NONE_MATCH",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_IF_NONE_MATCH"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_IF_NONE_MATCH"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AIF_MODIFIED_SINCE",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AIF_MODIFIED_SINCE",
             "name": "IF_MODIFIED_SINCE",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_IF_MODIFIED_SINCE"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_IF_MODIFIED_SINCE"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AIF_UNMODIFIED_SINCE",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AIF_UNMODIFIED_SINCE",
             "name": "IF_UNMODIFIED_SINCE",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_IF_UNMODIFIED_SINCE"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_IF_UNMODIFIED_SINCE"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AIF_RANGE",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AIF_RANGE",
             "name": "IF_RANGE",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_IF_RANGE"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_IF_RANGE"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003ACONTENT_DISPOSITION",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003ACONTENT_DISPOSITION",
             "name": "CONTENT_DISPOSITION",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_CONTENT_DISPOSITION"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_CONTENT_DISPOSITION"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003ACONTENT_ENCODING",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003ACONTENT_ENCODING",
             "name": "CONTENT_ENCODING",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_CONTENT_ENCODING"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_CONTENT_ENCODING"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003ACONTENT_LANGUAGE",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003ACONTENT_LANGUAGE",
             "name": "CONTENT_LANGUAGE",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_CONTENT_LANGUAGE"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_CONTENT_LANGUAGE"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003ACONTENT_LENGTH",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003ACONTENT_LENGTH",
             "name": "CONTENT_LENGTH",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_CONTENT_LENGTH"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_CONTENT_LENGTH"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003ACONTENT_LOCATION",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003ACONTENT_LOCATION",
             "name": "CONTENT_LOCATION",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_CONTENT_LOCATION"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_CONTENT_LOCATION"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003ACONTENT_RANGE",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003ACONTENT_RANGE",
             "name": "CONTENT_RANGE",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_CONTENT_RANGE"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_CONTENT_RANGE"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003ACONTENT_TYPE",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003ACONTENT_TYPE",
             "name": "CONTENT_TYPE",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_CONTENT_TYPE"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_CONTENT_TYPE"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003ALAST_MODIFIED",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003ALAST_MODIFIED",
             "name": "LAST_MODIFIED",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_LAST_MODIFIED"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_LAST_MODIFIED"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AVARY",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AVARY",
             "name": "VARY",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_VARY"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_VARY"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AAUTHORIZATION",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AAUTHORIZATION",
             "name": "AUTHORIZATION",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_AUTHORIZATION"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_AUTHORIZATION"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003APROXY_AUTHENTICATE",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003APROXY_AUTHENTICATE",
             "name": "PROXY_AUTHENTICATE",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_PROXY_AUTHENTICATE"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_PROXY_AUTHENTICATE"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003APROXY_AUTHORIZATION",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003APROXY_AUTHORIZATION",
             "name": "PROXY_AUTHORIZATION",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_PROXY_AUTHORIZATION"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_PROXY_AUTHORIZATION"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AWWW_AUTHENTICATE",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AWWW_AUTHENTICATE",
             "name": "WWW_AUTHENTICATE",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_WWW_AUTHENTICATE"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_WWW_AUTHENTICATE"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003ACOOKIE",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003ACOOKIE",
             "name": "COOKIE",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_COOKIE"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_COOKIE"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003ASET_COOKIE",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003ASET_COOKIE",
             "name": "SET_COOKIE",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_SET_COOKIE"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_SET_COOKIE"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AACCEPT_RANGES",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AACCEPT_RANGES",
             "name": "ACCEPT_RANGES",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_ACCEPT_RANGES"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_ACCEPT_RANGES"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003ARANGE",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003ARANGE",
             "name": "RANGE",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_RANGE"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_RANGE"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003ARETRY_AFTER",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003ARETRY_AFTER",
             "name": "RETRY_AFTER",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_RETRY_AFTER"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_RETRY_AFTER"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003ACONNECTION",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003ACONNECTION",
             "name": "CONNECTION",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_CONNECTION"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_CONNECTION"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003ADATE",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003ADATE",
             "name": "DATE",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_DATE"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_DATE"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AFORWARDED",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AFORWARDED",
             "name": "FORWARDED",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_FORWARDED"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_FORWARDED"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AHOST",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AHOST",
             "name": "HOST",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_HOST"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_HOST"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AKEEP_ALIVE",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AKEEP_ALIVE",
             "name": "KEEP_ALIVE",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_KEEP_ALIVE"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_KEEP_ALIVE"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003ALINK",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003ALINK",
             "name": "LINK",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_LINK"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_LINK"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003ALOCATION",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003ALOCATION",
             "name": "LOCATION",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_LOCATION"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_LOCATION"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003ASERVER",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003ASERVER",
             "name": "SERVER",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_SERVER"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_SERVER"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003ATE",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003ATE",
             "name": "TE",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_TE"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_TE"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003ATRAILER",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003ATRAILER",
             "name": "TRAILER",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_TRAILER"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_TRAILER"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003ATRANSFER_ENCODING",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003ATRANSFER_ENCODING",
             "name": "TRANSFER_ENCODING",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_TRANSFER_ENCODING"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_TRANSFER_ENCODING"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AUPGRADE",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AUPGRADE",
             "name": "UPGRADE",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_UPGRADE"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_UPGRADE"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AVIA",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AVIA",
             "name": "VIA",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_VIA"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_VIA"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003ADNT",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003ADNT",
             "name": "DNT",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_DNT"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_DNT"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AORIGIN",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AORIGIN",
             "name": "ORIGIN",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_ORIGIN"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_ORIGIN"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AREFERER",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AREFERER",
             "name": "REFERER",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_REFERER"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_REFERER"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AUSER_AGENT",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AUSER_AGENT",
             "name": "USER_AGENT",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_USER_AGENT"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_USER_AGENT"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AUPGRADE_INSECURE_REQUESTS",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AUPGRADE_INSECURE_REQUESTS",
             "name": "UPGRADE_INSECURE_REQUESTS",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_UPGRADE_INSECURE_REQUESTS"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_UPGRADE_INSECURE_REQUESTS"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003ASTRICT_TRANSPORT_SECURITY",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003ASTRICT_TRANSPORT_SECURITY",
             "name": "STRICT_TRANSPORT_SECURITY",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_STRICT_TRANSPORT_SECURITY"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_STRICT_TRANSPORT_SECURITY"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AX_CONTENT_TYPE_OPTIONS",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AX_CONTENT_TYPE_OPTIONS",
             "name": "X_CONTENT_TYPE_OPTIONS",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_X_CONTENT_TYPE_OPTIONS"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_X_CONTENT_TYPE_OPTIONS"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AX_FRAME_OPTIONS",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AX_FRAME_OPTIONS",
             "name": "X_FRAME_OPTIONS",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_X_FRAME_OPTIONS"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_X_FRAME_OPTIONS"
         },                {
-            "fqsen": "\\oihana\\enums\\http\\HttpHeaders\u003A\u003AX_XSS_PROTECTION",
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AX_XSS_PROTECTION",
             "name": "X_XSS_PROTECTION",
             "summary": "",
-            "url": "classes/oihana-enums-http-HttpHeaders.html#constant_X_XSS_PROTECTION"
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_X_XSS_PROTECTION"
         },                {
             "fqsen": "\\oihana\\enums\\http\\HttpMethod",
             "name": "HttpMethod",
