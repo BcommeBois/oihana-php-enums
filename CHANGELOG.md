@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - oihana\enums\FilterOption
 - oihana\enums\Output
 - oihana\enums\Pagination
+- oihana\enums\ServerParam
 
 - oihana\enums\http\HttpHeader
 - oihana\enums\http\HttpMethod
