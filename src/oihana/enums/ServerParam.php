@@ -65,6 +65,11 @@ class ServerParam
     const string REMOTE_USER          = 'REMOTE_USER';
     const string REDIRECT_REMOTE_USER = 'REDIRECT_REMOTE_USER';
 
+    // Proxy / Real-IP headers (non-standard, de-facto usage)
+    const string HTTP_CF_CONNECTING_IP = 'HTTP_CF_CONNECTING_IP';
+    const string HTTP_X_FORWARDED_FOR  = 'HTTP_X_FORWARDED_FOR';
+    const string HTTP_X_REAL_IP        = 'HTTP_X_REAL_IP';
+
     // HTTP headers (mapped into $_SERVER)
     const string HTTP_ACCEPT          = 'HTTP_ACCEPT';
     const string HTTP_ACCEPT_CHARSET  = 'HTTP_ACCEPT_CHARSET';

@@ -4,6 +4,7 @@ namespace tests\oihana\enums ;
 
 use oihana\enums\ServerParam;
 use PHPUnit\Framework\TestCase;
+use ReflectionClass;
 
 class ServerParamTest extends TestCase
 {
@@ -44,9 +45,20 @@ class ServerParamTest extends TestCase
 
     public function testAllConstantsAreStrings(): void
     {
-        $reflection = new \ReflectionClass(ServerParam::class);
+        $reflection = new ReflectionClass(ServerParam::class);
         foreach ($reflection->getConstants() as $value) {
             $this->assertIsString($value);
         }
+    }
+
+    public function testProxyHeaders(): void
+    {
+        $this->assertSame('HTTP_CF_CONNECTING_IP', ServerParam::HTTP_CF_CONNECTING_IP);
+        $this->assertSame('HTTP_X_FORWARDED_FOR', ServerParam::HTTP_X_FORWARDED_FOR);
+        $this->assertSame('HTTP_X_REAL_IP', ServerParam::HTTP_X_REAL_IP);
+
+        $this->assertTrue(ServerParam::includes('HTTP_CF_CONNECTING_IP'));
+        $this->assertTrue(ServerParam::includes('HTTP_X_FORWARDED_FOR'));
+        $this->assertTrue(ServerParam::includes('HTTP_X_REAL_IP'));
     }
 }

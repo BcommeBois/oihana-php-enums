@@ -4931,6 +4931,21 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/oihana-enums-ServerParam.html#constant_REDIRECT_REMOTE_USER"
         },                {
+            "fqsen": "\\oihana\\enums\\ServerParam\u003A\u003AHTTP_CF_CONNECTING_IP",
+            "name": "HTTP_CF_CONNECTING_IP",
+            "summary": "",
+            "url": "classes/oihana-enums-ServerParam.html#constant_HTTP_CF_CONNECTING_IP"
+        },                {
+            "fqsen": "\\oihana\\enums\\ServerParam\u003A\u003AHTTP_X_FORWARDED_FOR",
+            "name": "HTTP_X_FORWARDED_FOR",
+            "summary": "",
+            "url": "classes/oihana-enums-ServerParam.html#constant_HTTP_X_FORWARDED_FOR"
+        },                {
+            "fqsen": "\\oihana\\enums\\ServerParam\u003A\u003AHTTP_X_REAL_IP",
+            "name": "HTTP_X_REAL_IP",
+            "summary": "",
+            "url": "classes/oihana-enums-ServerParam.html#constant_HTTP_X_REAL_IP"
+        },                {
             "fqsen": "\\oihana\\enums\\ServerParam\u003A\u003AHTTP_ACCEPT",
             "name": "HTTP_ACCEPT",
             "summary": "",
