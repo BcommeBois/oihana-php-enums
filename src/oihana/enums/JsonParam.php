@@ -34,6 +34,11 @@ class JsonParam
 {
     use ConstantsTrait ;
 
+    /**
+     * Indicates the default 'no' json options.
+     */
+    public const int JSON_NONE = 0 ;
+
     public const string ASSOCIATIVE = 'associative' ;
     public const string DEPTH       = 'depth' ;
     public const string FLAGS       = 'flags' ;

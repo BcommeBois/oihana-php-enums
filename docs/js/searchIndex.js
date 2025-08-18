@@ -3641,6 +3641,11 @@ Search.appendIndex(
             "summary": "Checks\u0020if\u0020the\u0020given\u0020flags\u0020value\u0020is\u0020valid\u0020JSON\u0020flag\u0020or\u0020combination\u0020of\u0020flags.",
             "url": "classes/oihana-enums-JsonParam.html#method_isValidFlags"
         },                {
+            "fqsen": "\\oihana\\enums\\JsonParam\u003A\u003AJSON_NONE",
+            "name": "JSON_NONE",
+            "summary": "Indicates\u0020the\u0020default\u0020\u0027no\u0027\u0020json\u0020options.",
+            "url": "classes/oihana-enums-JsonParam.html#constant_JSON_NONE"
+        },                {
             "fqsen": "\\oihana\\enums\\JsonParam\u003A\u003AASSOCIATIVE",
             "name": "ASSOCIATIVE",
             "summary": "",
