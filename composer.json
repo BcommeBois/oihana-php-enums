@@ -38,6 +38,7 @@
         "oihana/php-reflect": "dev-main"
     },
     "require-dev": {
+        "ext-xdebug" : "*",
         "phpunit/phpunit": "^12",
         "nunomaduro/collision": "^8.8",
         "mikey179/vfsstream": "^1.6",

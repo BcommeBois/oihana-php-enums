@@ -1101,6 +1101,26 @@ Search.appendIndex(
             "summary": "Enumeration\u0020of\u0020standard\u0020HTTP\u0020header\u0020names\u0020\u0028request\u0020and\u0020response\u0029.",
             "url": "classes/oihana-enums-http-HttpHeader.html"
         },                {
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003Aall\u0028\u0029",
+            "name": "all",
+            "summary": "Returns\u0020all\u0020currently\u0020sent\u0020headers.",
+            "url": "classes/oihana-enums-http-HttpHeader.html#method_all"
+        },                {
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003Ahas\u0028\u0029",
+            "name": "has",
+            "summary": "Checks\u0020if\u0020a\u0020specific\u0020header\u0020has\u0020already\u0020been\u0020sent.",
+            "url": "classes/oihana-enums-http-HttpHeader.html#method_has"
+        },                {
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003Aremove\u0028\u0029",
+            "name": "remove",
+            "summary": "Removes\u0020a\u0020previously\u0020set\u0020header.",
+            "url": "classes/oihana-enums-http-HttpHeader.html#method_remove"
+        },                {
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003Asend\u0028\u0029",
+            "name": "send",
+            "summary": "Sends\u0020an\u0020HTTP\u0020header\u0020with\u0020optional\u0020value.",
+            "url": "classes/oihana-enums-http-HttpHeader.html#method_send"
+        },                {
             "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AACCESS_CONTROL_ALLOW_CREDENTIALS",
             "name": "ACCESS_CONTROL_ALLOW_CREDENTIALS",
             "summary": "",

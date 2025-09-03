@@ -2,8 +2,10 @@
 
 namespace tests\oihana\enums\http;
 
-use oihana\enums\http\HttpHeader;
 use PHPUnit\Framework\TestCase;
+
+use oihana\enums\http\HttpHeader;
+use oihana\reflect\exceptions\ConstantException;
 
 class HttpHeaderTest extends TestCase
 {
@@ -82,5 +84,37 @@ class HttpHeaderTest extends TestCase
         {
             $this->assertContains($value, $enums);
         }
+    }
+
+    /**
+     * @throws ConstantException
+     */
+    public function testSendAndHasAndAll(): void
+    {
+        if ( !function_exists('xdebug_get_headers') )
+        {
+            $this->markTestSkipped('xdebug required to test header sending');
+        }
+
+        HttpHeader::send(HttpHeader::CONTENT_TYPE  , 'application/json' ) ;
+        HttpHeader::send(HttpHeader::CACHE_CONTROL , 'no-cache'         ) ;
+
+        $headers = xdebug_get_headers();
+
+        $this->assertTrue(
+            in_array(HttpHeader::CONTENT_TYPE . ': application/json', $headers),
+            'Expected Content-Type header not found'
+        );
+
+        $this->assertTrue(
+            in_array(HttpHeader::CACHE_CONTROL . ': no-cache', $headers),
+            'Expected Cache-Control header not found'
+        );
+    }
+
+    public function testSendInvalidHeaderThrowsException(): void
+    {
+        $this->expectException(ConstantException::class);
+        HttpHeader::send('X-Invalid-Header', 'oops');
     }
 }
