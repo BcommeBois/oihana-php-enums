@@ -56,4 +56,43 @@ class HttpMethod
     public const string truncate  = 'truncate' ;
     public const string update    = 'update' ;
     public const string upsert    = 'upsert' ;
+
+    /**
+     * Checks whether a given HTTP method is a valid standard HTTP method.
+     *
+     * This method compares the input string against the list of recognized
+     * HTTP methods (GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS, TRACE, CONNECT, PURGE).
+     * By default, the check is case-insensitive, but you can enforce exact case
+     * matching by setting `$caseSensitive` to `true`.
+     *
+     * @param string $method        The HTTP method to validate (e.g., 'GET', 'post').
+     * @param bool   $caseSensitive Optional. Whether the match should be case-sensitive.
+     *                              Defaults to `false`.
+     *
+     * @return bool Returns `true` if the method is a recognized HTTP method,
+     *              `false` otherwise.
+     *
+     * @example
+     * ```php
+     * HttpMethod::isValid('POST');        // true
+     * HttpMethod::isValid('post');        // true
+     * HttpMethod::isValid('post', true);  // false
+     * HttpMethod::isValid('flush');       // false
+     * ```
+     */
+    public static function isValid( string $method , bool $caseSensitive = false ): bool
+    {
+        if ( !$caseSensitive )
+        {
+            $method = strtoupper( $method );
+        }
+
+        return match ( $method )
+        {
+            self::GET, self::POST, self::PUT, self::DELETE,
+            self::PATCH, self::HEAD, self::OPTIONS, self::TRACE,
+            self::CONNECT, self::PURGE => true,
+            default => false,
+        };
+    }
 }

@@ -17,6 +17,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - oihana\enums\http\HttpMethod
 - oihana\enums\http\HttpParamStrategy
 - oihana\enums\http\HttpStatusCode
+- oihana\enums\http\OAuthParameters
+- oihana\enums\http\OAuthSignatureMethod
 
 ----
 

@@ -72,6 +72,7 @@ class HttpHeader
 
     // Authentication & Authorization
     const string AUTHORIZATION                    = 'Authorization' ;
+    const string OAUTH                            = 'OAuth' ;
     const string PROXY_AUTHENTICATE               = 'Proxy-Authenticate' ;
     const string PROXY_AUTHORIZATION              = 'Proxy-Authorization' ;
     const string WWW_AUTHENTICATE                 = 'WWW-Authenticate' ;

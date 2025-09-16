@@ -1286,6 +1286,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/oihana-enums-http-HttpHeader.html#constant_AUTHORIZATION"
         },                {
+            "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003AOAUTH",
+            "name": "OAUTH",
+            "summary": "",
+            "url": "classes/oihana-enums-http-HttpHeader.html#constant_OAUTH"
+        },                {
             "fqsen": "\\oihana\\enums\\http\\HttpHeader\u003A\u003APROXY_AUTHENTICATE",
             "name": "PROXY_AUTHENTICATE",
             "summary": "",
@@ -1440,6 +1445,11 @@ Search.appendIndex(
             "name": "HttpMethod",
             "summary": "Defines\u0020constants\u0020for\u0020common\u0020HTTP\u0020request\u0020methods.",
             "url": "classes/oihana-enums-http-HttpMethod.html"
+        },                {
+            "fqsen": "\\oihana\\enums\\http\\HttpMethod\u003A\u003AisValid\u0028\u0029",
+            "name": "isValid",
+            "summary": "Checks\u0020whether\u0020a\u0020given\u0020HTTP\u0020method\u0020is\u0020a\u0020valid\u0020standard\u0020HTTP\u0020method.",
+            "url": "classes/oihana-enums-http-HttpMethod.html#method_isValid"
         },                {
             "fqsen": "\\oihana\\enums\\http\\HttpMethod\u003A\u003ADELETE",
             "name": "DELETE",
@@ -2030,6 +2040,71 @@ Search.appendIndex(
             "name": "BUSY",
             "summary": "",
             "url": "classes/oihana-enums-http-HttpStatusCode.html#constant_BUSY"
+        },                {
+            "fqsen": "\\oihana\\enums\\http\\OAuthParameters",
+            "name": "OAuthParameters",
+            "summary": "Standard\u0020OAuth\u00201.0a\u0020parameter\u0020keys.",
+            "url": "classes/oihana-enums-http-OAuthParameters.html"
+        },                {
+            "fqsen": "\\oihana\\enums\\http\\OAuthParameters\u003A\u003AOAUTH_CONSUMER_KEY",
+            "name": "OAUTH_CONSUMER_KEY",
+            "summary": "The\u0020consumer\u0020key.",
+            "url": "classes/oihana-enums-http-OAuthParameters.html#constant_OAUTH_CONSUMER_KEY"
+        },                {
+            "fqsen": "\\oihana\\enums\\http\\OAuthParameters\u003A\u003AOAUTH_TOKEN",
+            "name": "OAUTH_TOKEN",
+            "summary": "The\u0020access\u0020token.",
+            "url": "classes/oihana-enums-http-OAuthParameters.html#constant_OAUTH_TOKEN"
+        },                {
+            "fqsen": "\\oihana\\enums\\http\\OAuthParameters\u003A\u003AOAUTH_SIGNATURE",
+            "name": "OAUTH_SIGNATURE",
+            "summary": "The\u0020generated\u0020signature.",
+            "url": "classes/oihana-enums-http-OAuthParameters.html#constant_OAUTH_SIGNATURE"
+        },                {
+            "fqsen": "\\oihana\\enums\\http\\OAuthParameters\u003A\u003AOAUTH_SIGNATURE_METHOD",
+            "name": "OAUTH_SIGNATURE_METHOD",
+            "summary": "The\u0020signature\u0020method\u0020\u0028HMAC\u002DSHA1,\u0020HMAC\u002DSHA256,\u0020PLAINTEXT,\u0020RSA\u002DSHA1\u0029.",
+            "url": "classes/oihana-enums-http-OAuthParameters.html#constant_OAUTH_SIGNATURE_METHOD"
+        },                {
+            "fqsen": "\\oihana\\enums\\http\\OAuthParameters\u003A\u003AOAUTH_TIMESTAMP",
+            "name": "OAUTH_TIMESTAMP",
+            "summary": "The\u0020timestamp\u0020of\u0020the\u0020request.",
+            "url": "classes/oihana-enums-http-OAuthParameters.html#constant_OAUTH_TIMESTAMP"
+        },                {
+            "fqsen": "\\oihana\\enums\\http\\OAuthParameters\u003A\u003AOAUTH_NONCE",
+            "name": "OAUTH_NONCE",
+            "summary": "A\u0020unique\u0020nonce\u0020for\u0020each\u0020request.",
+            "url": "classes/oihana-enums-http-OAuthParameters.html#constant_OAUTH_NONCE"
+        },                {
+            "fqsen": "\\oihana\\enums\\http\\OAuthParameters\u003A\u003AOAUTH_VERSION",
+            "name": "OAUTH_VERSION",
+            "summary": "The\u0020OAuth\u0020version\u0020\u0028usually\u0020\u00221.0\u0022\u0029.",
+            "url": "classes/oihana-enums-http-OAuthParameters.html#constant_OAUTH_VERSION"
+        },                {
+            "fqsen": "\\oihana\\enums\\http\\OAuthSignatureMethod",
+            "name": "OAuthSignatureMethod",
+            "summary": "Enumeration\u0020of\u0020OAuth\u00201.0a\u0020signature\u0020methods.",
+            "url": "classes/oihana-enums-http-OAuthSignatureMethod.html"
+        },                {
+            "fqsen": "\\oihana\\enums\\http\\OAuthSignatureMethod\u003A\u003AHMAC_SHA1",
+            "name": "HMAC_SHA1",
+            "summary": "HMAC\u0020using\u0020SHA\u002D1\u0020hash\u0020algorithm.",
+            "url": "classes/oihana-enums-http-OAuthSignatureMethod.html#constant_HMAC_SHA1"
+        },                {
+            "fqsen": "\\oihana\\enums\\http\\OAuthSignatureMethod\u003A\u003AHMAC_SHA256",
+            "name": "HMAC_SHA256",
+            "summary": "HMAC\u0020using\u0020SHA\u002D256\u0020hash\u0020algorithm.",
+            "url": "classes/oihana-enums-http-OAuthSignatureMethod.html#constant_HMAC_SHA256"
+        },                {
+            "fqsen": "\\oihana\\enums\\http\\OAuthSignatureMethod\u003A\u003APLAINTEXT",
+            "name": "PLAINTEXT",
+            "summary": "Plaintext\u0020\u0028insecure,\u0020only\u0020for\u0020trusted\u0020HTTPS\u0020connections\u0029.",
+            "url": "classes/oihana-enums-http-OAuthSignatureMethod.html#constant_PLAINTEXT"
+        },                {
+            "fqsen": "\\oihana\\enums\\http\\OAuthSignatureMethod\u003A\u003ARSA_SHA1",
+            "name": "RSA_SHA1",
+            "summary": "RSA\u0020with\u0020SHA\u002D1\u0020\u0028requires\u0020private\/public\u0020key\u0020pair\u0029.",
+            "url": "classes/oihana-enums-http-OAuthSignatureMethod.html#constant_RSA_SHA1"
         },                {
             "fqsen": "\\oihana\\enums\\IniOptions",
             "name": "IniOptions",

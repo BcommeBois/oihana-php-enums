@@ -55,4 +55,23 @@ class HttpMethodTest extends TestCase
             $this->assertContains($value, $enums);
         }
     }
+
+
+    public function testIsValidDefaultCaseInsensitive(): void
+    {
+        $this->assertTrue(HttpMethod::isValid('GET'));
+        $this->assertTrue(HttpMethod::isValid('get'));
+        $this->assertTrue(HttpMethod::isValid('Post'));
+        $this->assertFalse(HttpMethod::isValid('flush'));
+        $this->assertFalse(HttpMethod::isValid('invalid'));
+    }
+
+    public function testIsValidCaseSensitive(): void
+    {
+        $this->assertTrue(HttpMethod::isValid('GET', true));
+        $this->assertFalse(HttpMethod::isValid('get', true));
+        $this->assertTrue(HttpMethod::isValid('POST', true));
+        $this->assertFalse(HttpMethod::isValid('Post', true));
+        $this->assertFalse(HttpMethod::isValid('flush', true));
+    }
 }

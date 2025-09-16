@@ -48,6 +48,7 @@ class HttpHeaderTest extends TestCase
             HttpHeader::LAST_MODIFIED                    ,
             HttpHeader::VARY                             ,
             HttpHeader::AUTHORIZATION                    ,
+            HttpHeader::OAUTH                            ,
             HttpHeader::PROXY_AUTHENTICATE               ,
             HttpHeader::PROXY_AUTHORIZATION              ,
             HttpHeader::WWW_AUTHENTICATE                 ,
