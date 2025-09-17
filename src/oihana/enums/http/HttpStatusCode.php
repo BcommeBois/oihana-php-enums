@@ -152,8 +152,6 @@ class HttpStatusCode
         $code = (int) $code ;
         return match( $code )
         {
-            self::DEFAULT => "An exception occurred" ,
-
             // Informational responses
 
             self::CONTINUE => "Continue" ,
@@ -248,6 +246,8 @@ class HttpStatusCode
             // Custom Status Code
 
             self::BUSY => "Busy" ,
+
+            default => "An exception occurred" ,
         };
     }
 
@@ -270,25 +270,16 @@ class HttpStatusCode
      * @return string|null One of the `Output::*` constants (`INFO`, `SUCCESS`, `REDIRECT`, `ERROR`)
      *                     if the code matches a known range, or `null` otherwise.
      */
-    public static function getType( int|string $code ):?string
+    public static function getType(int|string $code): ?string
     {
         $code = (int) $code ;
-        if( $code >= 100 && $code < 200 ) // 1xx informational response
+        return match ( true )
         {
-            return Output::INFO ;
-        }
-        elseif( $code >= 200 && $code < 300 ) // 2xx successful
-        {
-            return Output::SUCCESS ;
-        }
-        elseif( $code >= 300 && $code < 400 ) // 3xx redirection
-        {
-            return Output::REDIRECT ;
-        }
-        elseif( $code >= 400 && $code < 600 ) // 4xx client error | 5xx server error
-        {
-            return Output::ERROR ;
-        }
-        return null ;
+            $code >= 100 && $code < 200 => Output::INFO     ,
+            $code >= 200 && $code < 300 => Output::SUCCESS  ,
+            $code >= 300 && $code < 400 => Output::REDIRECT ,
+            $code >= 400 && $code < 600 => Output::ERROR    ,
+            default => null,
+        };
     }
 }
