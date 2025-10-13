@@ -101,19 +101,6 @@ class PostalCode
     }
 
     /**
-     * Returns true if a postal code is valid for a given ISO country code.
-     *
-     * @param string $code    The postal code to check.
-     * @param string $country ISO 3166-1 alpha-2 code (e.g. "FR", "US").
-     * @return bool
-     */
-    public static function isValid( string $code , string $country ): bool
-    {
-        $pattern = static::getPattern($country);
-        return $pattern !== null && preg_match( $pattern , trim( $code ) ) === 1;
-    }
-
-    /**
      * Returns the regex pattern for the given country code, or null if unknown.
      *
      * @param string $country ISO 3166-1 alpha-2 code (case-insensitive)
@@ -124,5 +111,18 @@ class PostalCode
         $country   = strtoupper($country);
         $constants = static::getAll();
         return $constants[ $country ] ?? null;
+    }
+
+    /**
+     * Returns true if a postal code is valid for a given ISO country code.
+     *
+     * @param string $code    The postal code to check.
+     * @param string $country ISO 3166-1 alpha-2 code (e.g. "FR", "US").
+     * @return bool
+     */
+    public static function isValid( string $code , string $country ): bool
+    {
+        $pattern = static::getPattern($country);
+        return $pattern !== null && preg_match( $pattern , trim( $code ) ) === 1;
     }
 }
