@@ -12,10 +12,10 @@ use oihana\reflect\traits\ConstantsTrait;
  *
  * Example:
  * ```php
- * PostalCode::isValid('75015', 'FR'); // true
- * PostalCode::isValid('90210', 'US'); // true
- * PostalCode::isValid('99999', 'CH'); // false
- * PostalCode::getPattern('HK'); // null (no postal code system)
+ * PostalCodePattern::isValid('75015', 'FR'); // true
+ * PostalCodePattern::isValid('90210', 'US'); // true
+ * PostalCodePattern::isValid('99999', 'CH'); // false
+ * PostalCodePattern::getPattern('HK'); // null (no postal code system)
  * ```
  *
  * Countries without postal code systems (not defined in this class):
@@ -32,7 +32,7 @@ use oihana\reflect\traits\ConstantsTrait;
  * @author  Marc Alcaraz (ekameleon)
  * @since   1.1.0
  */
-class PostalCode
+class PostalCodePattern
 {
     use ConstantsTrait;
 
@@ -837,7 +837,8 @@ class PostalCode
     {
         if (!static::isValid($code, $country))
         {
-            throw new InvalidArgumentException(sprintf(
+            throw new InvalidArgumentException( sprintf
+            (
                 "Invalid postal code '%s' for country '%s'.",
                 $code,
                 strtoupper($country)
