@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - oihana\enums\Pagination
 - oihana\enums\PostalCodePattern
 - oihana\enums\ServerParam
+- oihana\enums\Status
 
 - oihana\enums\http\HttpHeader
 - oihana\enums\http\HttpMethod
