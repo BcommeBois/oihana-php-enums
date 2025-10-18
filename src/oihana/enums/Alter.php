@@ -24,6 +24,7 @@ class Alter
     public const string INT            = 'int' ;
     public const string JSON_PARSE     = 'jsonParse' ;
     public const string JSON_STRINGIFY = 'jsonStringify' ;
+    public const string NORMALIZE      = 'normalize' ;
     public const string NOT            = 'not' ;
     public const string URL            = 'url' ;
     public const string VALUE          = 'value' ;
