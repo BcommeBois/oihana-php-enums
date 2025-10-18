@@ -22,6 +22,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - oihana\enums\http\OAuthParameters
 - oihana\enums\http\OAuthSignatureMethod
 
+### Removed
+- oihana\enums\Alter (move in the oihana\models\enums package)
+- 
 ----
 
 ## [1.0.0] - 2025-08-13
