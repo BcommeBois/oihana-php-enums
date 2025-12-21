@@ -26,15 +26,36 @@ class CharTest extends TestCase
 
     public function testIncludesReturnsTrueForKnownValue(): void
     {
-        $this->assertTrue(Char::includes(Char::AMPERSAND));
-        $this->assertTrue(Char::includes(Char::SUPERSCRIPT_ONE));
+        $values = [
+            Char::AMPERSAND,
+            Char::DOLLAR_SIGN,
+            Char::PLUS,
+            Char::SUPERSCRIPT_TWO,
+            Char::SUBSCRIPT_FIVE,
+            Char::DOT
+        ];
+
+        foreach ($values as $value) {
+            $this->assertTrue(Char::includes($value), "Failed asserting Char::includes() for '$value'");
+        }
+
         $this->assertFalse(Char::includes('🌟'));
+        $this->assertFalse(Char::includes('A'));
     }
 
     public function testGetConstantReturnsConstantName(): void
     {
-        $this->assertSame('AMPERSAND', Char::getConstant('&'));
-        $this->assertSame('SUBSCRIPT_ZERO', Char::getConstant('₀'));
+        $map = [
+            Char::AMPERSAND => 'AMPERSAND',
+            Char::SUPERSCRIPT_ONE => 'SUPERSCRIPT_ONE',
+            Char::SUBSCRIPT_ZERO => 'SUBSCRIPT_ZERO',
+            Char::DOT => 'DOT',
+        ];
+
+        foreach ($map as $value => $name) {
+            $this->assertSame($name, Char::getConstant($value));
+        }
+
         $this->assertNull(Char::getConstant('🌟'));
     }
 
@@ -49,7 +70,43 @@ class CharTest extends TestCase
      */
     public function testValidateDoesNotThrowForValidValue(): void
     {
-        $this->expectNotToPerformAssertions();
-        Char::validate(Char::DOT);
+        // Test plusieurs catégories
+        $validValues = [
+            Char::AMPERSAND,
+            Char::DOLLAR_SIGN,
+            Char::PLUS,
+            Char::SUPERSCRIPT_TWO,
+            Char::SUBSCRIPT_FIVE,
+            Char::DOT
+        ];
+
+        foreach ($validValues as $value) {
+            $this->expectNotToPerformAssertions();
+            Char::validate($value);
+        }
+    }
+
+    public function testAliasesPointToSameValue(): void
+    {
+        $aliases = [
+            'HYPHEN' => 'DASH',
+            'NUMBER' => 'HASH',
+            'PERCENT' => 'MODULUS',
+            'QUOTATION_MARK' => 'DOUBLE_QUOTE',
+            'SIMPLE_QUOTE' => 'APOSTROPHE',
+            'TICK' => 'GRAVE_ACCENT',
+        ];
+
+        foreach ($aliases as $alias => $target)
+        {
+            $this->assertSame( Char::{$target}, Char::{$alias}, "Alias $alias should point to $target");
+        }
+    }
+
+    public function testAllConstantsAreStrings(): void
+    {
+        foreach (Char::enums() as $value) {
+            $this->assertIsString($value);
+        }
     }
 }
