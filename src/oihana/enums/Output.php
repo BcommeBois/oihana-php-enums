@@ -20,6 +20,11 @@ class Output
     use ConstantsTrait ;
 
     /**
+     * The allowed methods details.
+     */
+    public const string ALLOWED = 'allowed' ;
+
+    /**
      * Status or error code identifier.
      * Typically used for HTTP status codes or custom error codes.
      */
