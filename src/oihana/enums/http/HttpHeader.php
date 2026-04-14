@@ -154,13 +154,18 @@ class HttpHeader
     const string CROSS_ORIGIN_RESOURCE_POLICY        = 'Cross-Origin-Resource-Policy';
 
     // -------------------------------------------------------------------------
-    // Reverse proxy / infrastructure (de-facto standard)
+    // Reverse proxy / infrastructure (de-facto standard + CDN)
     // -------------------------------------------------------------------------
 
     const string X_FORWARDED_FOR                  = 'X-Forwarded-For';
     const string X_FORWARDED_HOST                 = 'X-Forwarded-Host';
     const string X_FORWARDED_PROTO                = 'X-Forwarded-Proto';
     const string X_REAL_IP                        = 'X-Real-IP';
+
+    const string CF_CONNECTING_IP                 = 'CF-Connecting-IP';
+    const string TRUE_CLIENT_IP                   = 'True-Client-IP';
+    const string FASTLY_CLIENT_IP                 = 'Fastly-Client-IP';
+    const string X_CLUSTER_CLIENT_IP              = 'X-Cluster-Client-IP';
 
     // -------------------------------------------------------------------------
     // Rate limiting (de-facto + RFC draft)
@@ -182,6 +187,15 @@ class HttpHeader
     const string X_CORRELATION_ID                 = 'X-Correlation-Id';
     const string TRACEPARENT                      = 'traceparent';
     const string TRACESTATE                       = 'tracestate';
+
+    // -------------------------------------------------------------------------
+    // Misc modern headers
+    // -------------------------------------------------------------------------
+
+    const string EARLY_HINTS                      = '103 Early Hints';
+    const string ALT_SVC                          = 'Alt-Svc';
+    const string NEL                              = 'NEL';
+    const string REPORT_TO                        = 'Report-To';
 
     // -------------------------------------------------------------------------
     // Helpers
