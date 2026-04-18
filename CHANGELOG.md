@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ### Added 
 
 - oihana\enums\FilterOption
+- oihana\enums\HashAlgorithm
 - oihana\enums\Output
 - oihana\enums\Pagination
 - oihana\enums\PostalCodePattern
