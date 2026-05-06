@@ -103,6 +103,11 @@ class Output
     public const string POSITION = 'position' ;
 
     /**
+     * Reason of the error or the context.
+     */
+    public const string REASON = 'reason' ;
+
+    /**
      * Redirect URL or location.
      * URL where the client should be redirected after the operation.
      */
