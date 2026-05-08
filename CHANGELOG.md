@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - oihana\enums\ServerParam
 - oihana\enums\Status
 
+- Add AuthScheme enum (RFC 7235 authentication schemes).
 - oihana\enums\http\HttpHeader
 - oihana\enums\http\HttpMethod
 - oihana\enums\http\HttpParamStrategy
