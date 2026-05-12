@@ -6,27 +6,41 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased]
 
-### Added 
+### Added
 
-- oihana\enums\FilterOption
-- oihana\enums\HashAlgorithm
-- oihana\enums\Output
-- oihana\enums\Pagination
-- oihana\enums\PostalCodePattern
-- oihana\enums\ServerParam
-- oihana\enums\Status
+#### Core enums
+- `oihana\enums\FilterOption`
+- `oihana\enums\HashAlgorithm` (with unit tests)
+- `oihana\enums\Output` (incl. `REASON` constant)
+- `oihana\enums\Pagination`
+- `oihana\enums\PostalCodePattern` (renamed from `PostalCode`, with country-specific patterns)
+- `oihana\enums\ServerParam`
+- `oihana\enums\Status`
 
-- Add AuthScheme enum (RFC 7235 authentication schemes).
-- oihana\enums\http\HttpHeader
-- oihana\enums\http\HttpMethod
-- oihana\enums\http\HttpParamStrategy
-- oihana\enums\http\HttpStatusCode
-- oihana\enums\http\OAuthParameters
-- oihana\enums\http\OAuthSignatureMethod
+#### HTTP enums (`oihana\enums\http`)
+- `AuthScheme` — RFC 7235 authentication schemes (Basic, Bearer, Digest, OAuth, …)
+- `GuzzleOption` — Guzzle HTTP client request option keys
+- `HttpHeader` (with helper methods)
+- `HttpMethod` (with `isValid()` case-sensitive flag)
+- `HttpParamStrategy`
+- `HttpStatusCode`
+- `OAuthParameters` — OAuth 1.0a protocol parameters (RFC 5849)
+- `OAuthSignatureMethod`
+
+#### JWT enums (`oihana\enums\jwt`)
+- `JwtClaim` — RFC 7519 registered claims + OIDC standard claims
+
+#### OAuth 2.0 enums (`oihana\enums\oauth2`)
+- `OAuth2Parameter` — request parameter names (RFC 6749 / 7523 / 7636, OIDC)
+- `OAuth2TokenField` — token endpoint response fields (RFC 6749 §5, RFC 7662)
+
+#### Misc
+- `oihana\enums\Char` — expanded with more symbols and improved tests
+- `oihana\enums\JsonParam` — added `JSON_NONE` constant
 
 ### Removed
-- oihana\enums\Alter (move in the oihana\models\enums package)
-- 
+- `oihana\enums\Alter` (moved to the `oihana\models\enums` package)
+
 ----
 
 ## [1.0.0] - 2025-08-13
@@ -41,4 +55,3 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
  - oihana\enums\JsonParam
  - oihana\enums\Order
  - oihana\enums\Param
-
