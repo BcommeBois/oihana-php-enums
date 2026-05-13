@@ -23,7 +23,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - `HttpHeader` (with helper methods)
 - `HttpMethod` (with `isValid()` case-sensitive flag)
 - `HttpParamStrategy`
-- `HttpStatusCode`
+- `HttpStatusCode` (incl. `fromException()` to extract a 4xx/5xx code from a `Throwable`, falling back to `INTERNAL_SERVER_ERROR`)
 - `OAuthParameters` — OAuth 1.0a protocol parameters (RFC 5849)
 - `OAuthSignatureMethod`
 

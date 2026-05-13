@@ -2,6 +2,8 @@
 
 namespace oihana\enums\http;
 
+use Throwable;
+
 use oihana\enums\Output;
 use oihana\reflect\traits\ConstantsTrait;
 
@@ -281,5 +283,47 @@ class HttpStatusCode
             $code >= 400 && $code < 600 => Output::ERROR    ,
             default => null,
         };
+    }
+
+    /**
+     * Returns the HTTP status code carried by `$e->getCode()` when it
+     * falls in the 4xx/5xx range — the convention used by oihana
+     * `Error4xx`/`Error5xx` exceptions which pass their status as the
+     * second argument of `Exception::__construct( $message , $code )`.
+     *
+     * Returns {@see HttpStatusCode::INTERNAL_SERVER_ERROR} otherwise, so
+     * unexpected runtime failures (PHP `Exception` with default `0`,
+     * driver-level exceptions with custom codes, etc.) still surface as
+     * 500.
+     *
+     * Use it in `catch( Throwable )` blocks of controllers to keep the
+     * `fail()` response aligned with the actual error class, instead of
+     * collapsing every 403/404/409/422/… to an opaque 500. Without this,
+     * an `Error403( 'Forbidden field: status' )` thrown by an inner
+     * capability check arrives at the outer catch and the controller
+     * loses the HTTP code before responding — masking the real
+     * authorisation outcome from both the client and the audit log.
+     *
+     * @example
+     * ```php
+     * catch( Throwable $e )
+     * {
+     *     return $this->fail
+     *     (
+     *         request  : $request ,
+     *         response : $response ,
+     *         code     : HttpStatusCode::fromException( $e ) ,
+     *         details  : $e->getMessage() ,
+     *     ) ;
+     * }
+     * ```
+     *
+     * @author  Marc Alcaraz
+     * @package oihana\http\helpers
+     */
+    public static function fromException( Throwable $e ) :int
+    {
+        $code = $e->getCode() ;
+        return ( $code >= self::BAD_REQUEST && $code < self::BUSY ) ? $code : self::INTERNAL_SERVER_ERROR ;
     }
 }
