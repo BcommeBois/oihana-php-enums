@@ -286,15 +286,12 @@ class HttpStatusCode
     }
 
     /**
-     * Returns the HTTP status code carried by `$e->getCode()` when it
-     * falls in the 4xx/5xx range — the convention used by oihana
-     * `Error4xx`/`Error5xx` exceptions which pass their status as the
+     * Returns the HTTP status code carried by `$e->getCode()` when it falls in the 4xx/5xx range —
+     * the convention used by oihana `Error4xx`/`Error5xx` exceptions which pass their status as the
      * second argument of `Exception::__construct( $message , $code )`.
      *
-     * Returns {@see HttpStatusCode::INTERNAL_SERVER_ERROR} otherwise, so
-     * unexpected runtime failures (PHP `Exception` with default `0`,
-     * driver-level exceptions with custom codes, etc.) still surface as
-     * 500.
+     * Returns {@see HttpStatusCode::INTERNAL_SERVER_ERROR} otherwise, so unexpected runtime failures
+     * (PHP `Exception` with default `0`, driver-level exceptions with custom codes, etc.) still surface as 500.
      *
      * Use it in `catch( Throwable )` blocks of controllers to keep the
      * `fail()` response aligned with the actual error class, instead of
@@ -318,8 +315,9 @@ class HttpStatusCode
      * }
      * ```
      *
-     * @author  Marc Alcaraz
-     * @package oihana\http\helpers
+     * @param Throwable $e
+     *
+     * @return int
      */
     public static function fromException( Throwable $e ) :int
     {
