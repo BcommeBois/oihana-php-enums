@@ -28,7 +28,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - `OAuthSignatureMethod`
 
 #### JWT enums (`oihana\enums\jwt`)
-- `JwtClaim` — RFC 7519 registered claims + OIDC standard claims
+- `JwtClaim` — comprehensive JWT claim registry:
+  - RFC 7519 registered claims (`iss`, `sub`, `aud`, `exp`, `nbf`, `iat`, `jti`) with long-form aliases (`ISSUER`, `SUBJECT`, `AUDIENCE`, `EXPIRES_AT`, `NOT_BEFORE`, `ISSUED_AT`, `JWT_ID`)
+  - Common OAuth 2.0 / OIDC claims (`azp`, `nonce`, `auth_time`, `acr`, `amr`, `scope`, `scp`, `client_id`)
+  - OIDC Session Management (`sid` + `SESSION_ID` alias — Front-Channel / Back-Channel Logout)
+  - OIDC ID Token validation hashes (`at_hash`, `c_hash`)
+  - OIDC standard profile claims (Core §5.1): `name`, `given_name`, `family_name`, `middle_name`, `nickname`, `preferred_username`, `profile`, `picture`, `website`, `email`, `email_verified`, `gender`, `birthdate`, `zoneinfo`, `locale`, `phone_number`, `phone_number_verified`, `address`, `updated_at`
+  - RFC 8693 Token Exchange (`act`, `may_act`)
+  - RFC 7800 Proof-of-Possession (`cnf`)
+  - Widely used provider-specific claims (`groups`, `roles`, `entitlements`, `tid`, `oid`)
+  - Full phpdoc per constant with spec references
 
 #### OAuth 2.0 enums (`oihana\enums\oauth2`)
 - `OAuth2Parameter` — request parameter names (RFC 6749 / 7523 / 7636, OIDC)
