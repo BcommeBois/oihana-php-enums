@@ -47,6 +47,25 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
   - IETF extension grants: JWT Bearer (RFC 7523), SAML 2.0 Bearer (RFC 7522), Device Code (RFC 8628), Token Exchange (RFC 8693), UMA 2.0 ticket
   - OpenID Connect CIBA grant (`urn:openid:params:grant-type:ciba`)
   - Full phpdoc per constant with spec references and `@deprecated` tags where applicable
+- `OAuth2Error` (with unit tests) — standard error codes from the authorization endpoint (RFC 6749 §4.1.2.1), token endpoint (RFC 6749 §5.2), OIDC Core §3.1.2.6, Device Flow (RFC 8628), Resource Indicators (RFC 8707), and DPoP (RFC 9449)
+- `OAuth2ResponseType` (with unit tests) — `response_type` values: `code`, `token`, `id_token`, `none`, plus OIDC Hybrid Flow combinations (`code id_token`, `code token`, `id_token token`, `code id_token token`)
+- `OAuth2TokenType` (with unit tests) — HTTP token types (`Bearer`, `DPoP`, `MAC`, `N_A`) and Token Exchange URIs (RFC 8693 §3): `access_token`, `refresh_token`, `id_token`, `saml1`, `saml2`, `jwt`
+- `OAuth2CodeChallengeMethod` (with unit tests) — PKCE methods (RFC 7636): `plain`, `S256`
+- `OAuth2TokenEndpointAuthMethod` (with unit tests) — client authentication methods (`client_secret_basic`, `client_secret_post`, `client_secret_jwt`, `private_key_jwt`, `none`, `tls_client_auth`, `self_signed_tls_client_auth`)
+- `OAuth2ClientAssertionType` (with unit tests) — `client_assertion_type` URNs for `jwt-bearer` (RFC 7523) and `saml2-bearer` (RFC 7522)
+- `OidcScope` (with unit tests) — standard OIDC scopes (`openid`, `profile`, `email`, `address`, `phone`, `offline_access`)
+- `OAuth2Prompt` (with unit tests) — `prompt` values (`none`, `login`, `consent`, `select_account`, `create`)
+- `OAuth2Display` (with unit tests) — `display` values (`page`, `popup`, `touch`, `wap`)
+- `OidcAmr` (with unit tests) — Authentication Method Reference values (RFC 8176)
+- `OidcDiscoveryField` (with unit tests) — fields of the `/.well-known/openid-configuration` discovery document (OIDC Discovery 1.0, RFC 8414, RFC 8628, RFC 9126, RFC 9449, OIDC RP-Initiated/Front-Channel/Back-Channel Logout)
+
+#### JOSE / JWT enums (`oihana\enums\jwt`)
+- `JwtHeader` (with unit tests) — JOSE header parameter names (RFC 7515 §4.1, RFC 7516 §4.1, RFC 7797, RFC 8555): `alg`, `kid`, `typ`, `cty`, `crit`, `enc`, `zip`, `b64`, `url`, `nonce`, `ppt`, and the full X.509 set (`x5u`, `x5c`, `x5t`, `x5t#S256`)
+- `JwtAlgorithm` (with unit tests) — JOSE algorithm identifiers (RFC 7518, RFC 8037, RFC 8812):
+  - JWS signature/MAC: `none` (deprecated), `HS256/384/512`, `RS256/384/512`, `ES256/384/512`, `PS256/384/512`, `EdDSA`, `ES256K`
+  - JWE key management: `RSA1_5` (deprecated), `RSA-OAEP`, `RSA-OAEP-256`, `A128/192/256KW`, `dir`, `ECDH-ES`, `ECDH-ES+A128/192/256KW`, `A128/192/256GCMKW`, `PBES2-HS*+A*KW`
+  - JWE content encryption: `A128CBC-HS256`, `A192CBC-HS384`, `A256CBC-HS512`, `A128/192/256GCM`
+- `JwtType` (with unit tests) — `typ` header values: `JWT`, `at+jwt` (RFC 9068), `dpop+jwt` (RFC 9449), `logout+jwt`, `secevent+jwt` (RFC 8417), `token-introspection+jwt` (RFC 9701), `it+jwt`
 
 #### Misc
 - `oihana\enums\Char` — expanded with more symbols and improved tests
