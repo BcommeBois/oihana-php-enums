@@ -42,6 +42,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 #### OAuth 2.0 enums (`oihana\enums\oauth2`)
 - `OAuth2Parameter` — request parameter names (RFC 6749 / 7523 / 7636, OIDC)
 - `OAuth2TokenField` — token endpoint response fields (RFC 6749 §5, RFC 7662)
+- `OAuth2GrantType` (with unit tests) — `grant_type` values for the token endpoint:
+  - RFC 6749 core grants: `authorization_code`, `client_credentials`, `refresh_token`, `password` (deprecated by OAuth 2.1 / RFC 9700), `implicit` (deprecated by OAuth 2.1 / RFC 9700)
+  - IETF extension grants: JWT Bearer (RFC 7523), SAML 2.0 Bearer (RFC 7522), Device Code (RFC 8628), Token Exchange (RFC 8693), UMA 2.0 ticket
+  - OpenID Connect CIBA grant (`urn:openid:params:grant-type:ciba`)
+  - Full phpdoc per constant with spec references and `@deprecated` tags where applicable
 
 #### Misc
 - `oihana\enums\Char` — expanded with more symbols and improved tests
