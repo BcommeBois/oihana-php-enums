@@ -97,11 +97,12 @@
                                         <ul class="phpdocumentor-breadcrumbs">
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/oihana.html">oihana</a></li>
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/oihana-enums.html">enums</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/oihana-enums-jwt.html">jwt</a></li>
     </ul>
 
     <article class="phpdocumentor-element -class">
         <h2 class="phpdocumentor-content__title">
-    Alter
+    JwtType
 
     
     
@@ -117,20 +118,35 @@
 </div>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/Alter.php"><a href="files/src-oihana-enums-alter.html"><abbr title="src/oihana/enums/Alter.php">Alter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/jwt/JwtType.php"><a href="files/src-oihana-enums-jwt-jwttype.html"><abbr title="src/oihana/enums/jwt/JwtType.php">JwtType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">14</span>
+    <span class="phpdocumentor-element-found-in__line">28</span>
 
     </aside>
 
-            <p class="phpdocumentor-summary">Enumeration of all alter filter to apply on a object property.</p>
+            <p class="phpdocumentor-summary">Enumeration of standard `typ` (JWT Type) header values.</p>
 
 
+    <section class="phpdocumentor-description"><p>Values used in the <a href="classes/oihana-enums-jwt-JwtHeader.html#constant_TYP"><abbr title="\oihana\enums\jwt\JwtHeader::TYP">JwtHeader::TYP</abbr></a> header to identify the
+specific JWT profile carried by a JWS or JWE, allowing recipients
+to reject tokens whose profile does not match the expected one
+(and to mitigate token confusion attacks).</p>
+<p>References:</p>
+<ul>
+<li>RFC 7519       — JSON Web Token (generic <code class="prettyprint">JWT</code> type)</li>
+<li>RFC 9068       — JSON Web Token (JWT) Profile for OAuth 2.0 Access Tokens (<code class="prettyprint">at+jwt</code>)</li>
+<li>RFC 9449       — OAuth 2.0 DPoP (<code class="prettyprint">dpop+jwt</code>)</li>
+<li>RFC 8417       — Security Event Token (<code class="prettyprint">secevent+jwt</code>)</li>
+<li>RFC 9701       — JWT Response for OAuth Token Introspection (<code class="prettyprint">token-introspection+jwt</code>)</li>
+<li>OIDC Back-Channel Logout 1.0 (<code class="prettyprint">logout+jwt</code>)</li>
+<li>OpenID Connect Initiating User Registration via OIDC 1.0 (<code class="prettyprint">it+jwt</code>)</li>
+</ul>
+</section>
 
 
     <h5 class="phpdocumentor-tag-list__heading" id="tags">
         Tags
-        <a href="classes/oihana-enums-Alter.html#tags" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/oihana-enums-jwt-JwtType.html#tags" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h5>
     <dl class="phpdocumentor-tag-list">
@@ -147,7 +163,7 @@
                     <span class="phpdocumentor-tag__name">since</span>
                 </dt>
                 <dd class="phpdocumentor-tag-list__definition">
-                                            <span class="phpdocumentor-tag-link">1.0.0</span>
+                                            <span class="phpdocumentor-tag-link">1.1.0</span>
                                                                                 
                                              
                                     </dd>
@@ -159,7 +175,7 @@
 
 <h3 id="toc">
     Table of Contents
-    <a href="classes/oihana-enums-Alter.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/oihana-enums-jwt-JwtType.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h3>
 
@@ -171,75 +187,60 @@
 
 <h4 id="toc-constants">
     Constants
-    <a href="classes/oihana-enums-Alter.html#toc-constants" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/oihana-enums-jwt-JwtType.html#toc-constants" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a class="" href="classes/oihana-enums-Alter.html#constant_ARRAY">ARRAY</a>
+    <a class="" href="classes/oihana-enums-jwt-JwtType.html#constant_AT_JWT">AT_JWT</a>
     <span>
-        &nbsp;= &#039;array&#039;                            </span>
+        &nbsp;= &#039;at+jwt&#039;                            </span>
 </dt>
+<dd>`at+jwt` — JWT Profile for OAuth 2.0 Access Tokens (RFC 9068).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a class="" href="classes/oihana-enums-Alter.html#constant_CALL">CALL</a>
+    <a class="" href="classes/oihana-enums-jwt-JwtType.html#constant_DPOP_JWT">DPOP_JWT</a>
     <span>
-        &nbsp;= &#039;call&#039;                            </span>
+        &nbsp;= &#039;dpop+jwt&#039;                            </span>
 </dt>
+<dd>`dpop+jwt` — DPoP proof JWT (RFC 9449).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a class="" href="classes/oihana-enums-Alter.html#constant_CLEAN">CLEAN</a>
+    <a class="" href="classes/oihana-enums-jwt-JwtType.html#constant_IT_JWT">IT_JWT</a>
     <span>
-        &nbsp;= &#039;clean&#039;                            </span>
+        &nbsp;= &#039;it+jwt&#039;                            </span>
 </dt>
+<dd>`it+jwt` — Initiation Token used by &quot;Initiating User
+Registration via OpenID Connect 1.0&quot;.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a class="" href="classes/oihana-enums-Alter.html#constant_FLOAT">FLOAT</a>
+    <a class="" href="classes/oihana-enums-jwt-JwtType.html#constant_JWT">JWT</a>
     <span>
-        &nbsp;= &#039;float&#039;                            </span>
+        &nbsp;= &#039;JWT&#039;                            </span>
 </dt>
+<dd>`JWT` — Generic JSON Web Token (RFC 7519).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a class="" href="classes/oihana-enums-Alter.html#constant_GET">GET</a>
+    <a class="" href="classes/oihana-enums-jwt-JwtType.html#constant_LOGOUT_JWT">LOGOUT_JWT</a>
     <span>
-        &nbsp;= &#039;get&#039;                            </span>
+        &nbsp;= &#039;logout+jwt&#039;                            </span>
 </dt>
+<dd>`logout+jwt` — OIDC Back-Channel Logout Token.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a class="" href="classes/oihana-enums-Alter.html#constant_INT">INT</a>
+    <a class="" href="classes/oihana-enums-jwt-JwtType.html#constant_SECEVENT_JWT">SECEVENT_JWT</a>
     <span>
-        &nbsp;= &#039;int&#039;                            </span>
+        &nbsp;= &#039;secevent+jwt&#039;                            </span>
 </dt>
+<dd>`secevent+jwt` — Security Event Token (RFC 8417).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a class="" href="classes/oihana-enums-Alter.html#constant_JSON_PARSE">JSON_PARSE</a>
+    <a class="" href="classes/oihana-enums-jwt-JwtType.html#constant_TOKEN_INTROSPECTION_JWT">TOKEN_INTROSPECTION_JWT</a>
     <span>
-        &nbsp;= &#039;jsonParse&#039;                            </span>
+        &nbsp;= &#039;token-introspection+jwt&#039;                            </span>
 </dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a class="" href="classes/oihana-enums-Alter.html#constant_JSON_STRINGIFY">JSON_STRINGIFY</a>
-    <span>
-        &nbsp;= &#039;jsonStringify&#039;                            </span>
-</dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a class="" href="classes/oihana-enums-Alter.html#constant_LIST">LIST</a>
-    <span>
-        &nbsp;= &#039;list&#039;                            </span>
-</dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a class="" href="classes/oihana-enums-Alter.html#constant_URL">URL</a>
-    <span>
-        &nbsp;= &#039;url&#039;                            </span>
-</dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
-    <a class="" href="classes/oihana-enums-Alter.html#constant_VALUE">VALUE</a>
-    <span>
-        &nbsp;= &#039;value&#039;                            </span>
-</dt>
+<dd>`token-introspection+jwt` — JWT response from a Token
+Introspection endpoint (RFC 9701).</dd>
 
     </dl>
 
@@ -252,30 +253,103 @@
     <section class="phpdocumentor-constants">
         <h3 class="phpdocumentor-elements__header" id="constants">
             Constants
-            <a href="classes/oihana-enums-Alter.html#constants" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/oihana-enums-jwt-JwtType.html#constants" class="headerlink"><i class="fas fa-link"></i></a>
 
         </h3>
                     <article class="phpdocumentor-element -constant -public ">
-    <h4 class="phpdocumentor-element__name" id="constant_ARRAY">
-        ARRAY
-        <a href="classes/oihana-enums-Alter.html#constant_ARRAY" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="constant_AT_JWT">
+        AT_JWT
+        <a href="classes/oihana-enums-jwt-JwtType.html#constant_AT_JWT" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
 
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/Alter.php"><a href="files/src-oihana-enums-alter.html"><abbr title="src/oihana/enums/Alter.php">Alter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/jwt/JwtType.php"><a href="files/src-oihana-enums-jwt-jwttype.html"><abbr title="src/oihana/enums/jwt/JwtType.php">JwtType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">48</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">`at+jwt` — JWT Profile for OAuth 2.0 Access Tokens (RFC 9068).</p>
+
     
     <code class="phpdocumentor-signature phpdocumentor-code ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">ARRAY</span>
-    = <span class="phpdocumentor-signature__default-value">&#039;array&#039;</span>
+    <span class="phpdocumentor-signature__name">AT_JWT</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;at+jwt&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"><p>Used to distinguish a structured (JWT) access token from an
+ID Token. Resource servers MUST reject access tokens whose
+<code class="prettyprint">typ</code> does not match this value (or another expected profile).</p>
+</section>
+
+    
+    
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_DPOP_JWT">
+        DPOP_JWT
+        <a href="classes/oihana-enums-jwt-JwtType.html#constant_DPOP_JWT" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/jwt/JwtType.php"><a href="files/src-oihana-enums-jwt-jwttype.html"><abbr title="src/oihana/enums/jwt/JwtType.php">JwtType.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">56</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">`dpop+jwt` — DPoP proof JWT (RFC 9449).</p>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">DPOP_JWT</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;dpop+jwt&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"><p>Carried in the <code class="prettyprint">DPoP</code> HTTP header alongside a DPoP-bound access
+token. Recipients MUST verify this <code class="prettyprint">typ</code> value.</p>
+</section>
+
+    
+    
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_IT_JWT">
+        IT_JWT
+        <a href="classes/oihana-enums-jwt-JwtType.html#constant_IT_JWT" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/jwt/JwtType.php"><a href="files/src-oihana-enums-jwt-jwttype.html"><abbr title="src/oihana/enums/jwt/JwtType.php">JwtType.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">84</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">`it+jwt` — Initiation Token used by &quot;Initiating User
+Registration via OpenID Connect 1.0&quot;.</p>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">IT_JWT</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;it+jwt&#039;</span>
 </code>
 
 
@@ -287,30 +361,35 @@
 
 </article>
                     <article class="phpdocumentor-element -constant -public ">
-    <h4 class="phpdocumentor-element__name" id="constant_CALL">
-        CALL
-        <a href="classes/oihana-enums-Alter.html#constant_CALL" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="constant_JWT">
+        JWT
+        <a href="classes/oihana-enums-jwt-JwtType.html#constant_JWT" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
 
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/Alter.php"><a href="files/src-oihana-enums-alter.html"><abbr title="src/oihana/enums/Alter.php">Alter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/jwt/JwtType.php"><a href="files/src-oihana-enums-jwt-jwttype.html"><abbr title="src/oihana/enums/jwt/JwtType.php">JwtType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">19</span>
+    <span class="phpdocumentor-element-found-in__line">39</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">`JWT` — Generic JSON Web Token (RFC 7519).</p>
+
     
     <code class="phpdocumentor-signature phpdocumentor-code ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">CALL</span>
-    = <span class="phpdocumentor-signature__default-value">&#039;call&#039;</span>
+    <span class="phpdocumentor-signature__name">JWT</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;JWT&#039;</span>
 </code>
 
 
-    
+        <section class="phpdocumentor-description"><p>Most common value; indicates a JWS- or JWE-secured JWT without
+further profile constraint. Value is case-insensitive on the
+wire but the canonical form is <code class="prettyprint">JWT</code>.</p>
+</section>
+
     
     
 
@@ -318,30 +397,34 @@
 
 </article>
                     <article class="phpdocumentor-element -constant -public ">
-    <h4 class="phpdocumentor-element__name" id="constant_CLEAN">
-        CLEAN
-        <a href="classes/oihana-enums-Alter.html#constant_CLEAN" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="constant_LOGOUT_JWT">
+        LOGOUT_JWT
+        <a href="classes/oihana-enums-jwt-JwtType.html#constant_LOGOUT_JWT" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
 
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/Alter.php"><a href="files/src-oihana-enums-alter.html"><abbr title="src/oihana/enums/Alter.php">Alter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/jwt/JwtType.php"><a href="files/src-oihana-enums-jwt-jwttype.html"><abbr title="src/oihana/enums/jwt/JwtType.php">JwtType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">20</span>
+    <span class="phpdocumentor-element-found-in__line">64</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">`logout+jwt` — OIDC Back-Channel Logout Token.</p>
+
     
     <code class="phpdocumentor-signature phpdocumentor-code ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">CLEAN</span>
-    = <span class="phpdocumentor-signature__default-value">&#039;clean&#039;</span>
+    <span class="phpdocumentor-signature__name">LOGOUT_JWT</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;logout+jwt&#039;</span>
 </code>
 
 
-    
+        <section class="phpdocumentor-description"><p>Sent by the OP to RPs registered for back-channel logout to
+terminate sessions identified by <code class="prettyprint">sid</code> and/or <code class="prettyprint">sub</code>.</p>
+</section>
+
     
     
 
@@ -349,30 +432,34 @@
 
 </article>
                     <article class="phpdocumentor-element -constant -public ">
-    <h4 class="phpdocumentor-element__name" id="constant_FLOAT">
-        FLOAT
-        <a href="classes/oihana-enums-Alter.html#constant_FLOAT" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="constant_SECEVENT_JWT">
+        SECEVENT_JWT
+        <a href="classes/oihana-enums-jwt-JwtType.html#constant_SECEVENT_JWT" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
 
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/Alter.php"><a href="files/src-oihana-enums-alter.html"><abbr title="src/oihana/enums/Alter.php">Alter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/jwt/JwtType.php"><a href="files/src-oihana-enums-jwt-jwttype.html"><abbr title="src/oihana/enums/jwt/JwtType.php">JwtType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">21</span>
+    <span class="phpdocumentor-element-found-in__line">72</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">`secevent+jwt` — Security Event Token (RFC 8417).</p>
+
     
     <code class="phpdocumentor-signature phpdocumentor-code ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">FLOAT</span>
-    = <span class="phpdocumentor-signature__default-value">&#039;float&#039;</span>
+    <span class="phpdocumentor-signature__name">SECEVENT_JWT</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;secevent+jwt&#039;</span>
 </code>
 
 
-    
+        <section class="phpdocumentor-description"><p>Used by the SET, RISC, and CAEP families of specifications to
+convey security-relevant events between systems.</p>
+</section>
+
     
     
 
@@ -380,212 +467,28 @@
 
 </article>
                     <article class="phpdocumentor-element -constant -public ">
-    <h4 class="phpdocumentor-element__name" id="constant_GET">
-        GET
-        <a href="classes/oihana-enums-Alter.html#constant_GET" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="constant_TOKEN_INTROSPECTION_JWT">
+        TOKEN_INTROSPECTION_JWT
+        <a href="classes/oihana-enums-jwt-JwtType.html#constant_TOKEN_INTROSPECTION_JWT" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
 
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/Alter.php"><a href="files/src-oihana-enums-alter.html"><abbr title="src/oihana/enums/Alter.php">Alter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/jwt/JwtType.php"><a href="files/src-oihana-enums-jwt-jwttype.html"><abbr title="src/oihana/enums/jwt/JwtType.php">JwtType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">22</span>
+    <span class="phpdocumentor-element-found-in__line">78</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">`token-introspection+jwt` — JWT response from a Token
+Introspection endpoint (RFC 9701).</p>
+
     
     <code class="phpdocumentor-signature phpdocumentor-code ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">GET</span>
-    = <span class="phpdocumentor-signature__default-value">&#039;get&#039;</span>
-</code>
-
-
-    
-    
-    
-
-    
-
-</article>
-                    <article class="phpdocumentor-element -constant -public ">
-    <h4 class="phpdocumentor-element__name" id="constant_INT">
-        INT
-        <a href="classes/oihana-enums-Alter.html#constant_INT" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/Alter.php"><a href="files/src-oihana-enums-alter.html"><abbr title="src/oihana/enums/Alter.php">Alter.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">24</span>
-
-    </aside>
-
-    
-    
-    <code class="phpdocumentor-signature phpdocumentor-code ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">INT</span>
-    = <span class="phpdocumentor-signature__default-value">&#039;int&#039;</span>
-</code>
-
-
-    
-    
-    
-
-    
-
-</article>
-                    <article class="phpdocumentor-element -constant -public ">
-    <h4 class="phpdocumentor-element__name" id="constant_JSON_PARSE">
-        JSON_PARSE
-        <a href="classes/oihana-enums-Alter.html#constant_JSON_PARSE" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/Alter.php"><a href="files/src-oihana-enums-alter.html"><abbr title="src/oihana/enums/Alter.php">Alter.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">25</span>
-
-    </aside>
-
-    
-    
-    <code class="phpdocumentor-signature phpdocumentor-code ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">JSON_PARSE</span>
-    = <span class="phpdocumentor-signature__default-value">&#039;jsonParse&#039;</span>
-</code>
-
-
-    
-    
-    
-
-    
-
-</article>
-                    <article class="phpdocumentor-element -constant -public ">
-    <h4 class="phpdocumentor-element__name" id="constant_JSON_STRINGIFY">
-        JSON_STRINGIFY
-        <a href="classes/oihana-enums-Alter.html#constant_JSON_STRINGIFY" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/Alter.php"><a href="files/src-oihana-enums-alter.html"><abbr title="src/oihana/enums/Alter.php">Alter.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">26</span>
-
-    </aside>
-
-    
-    
-    <code class="phpdocumentor-signature phpdocumentor-code ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">JSON_STRINGIFY</span>
-    = <span class="phpdocumentor-signature__default-value">&#039;jsonStringify&#039;</span>
-</code>
-
-
-    
-    
-    
-
-    
-
-</article>
-                    <article class="phpdocumentor-element -constant -public ">
-    <h4 class="phpdocumentor-element__name" id="constant_LIST">
-        LIST
-        <a href="classes/oihana-enums-Alter.html#constant_LIST" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/Alter.php"><a href="files/src-oihana-enums-alter.html"><abbr title="src/oihana/enums/Alter.php">Alter.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">23</span>
-
-    </aside>
-
-    
-    
-    <code class="phpdocumentor-signature phpdocumentor-code ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">LIST</span>
-    = <span class="phpdocumentor-signature__default-value">&#039;list&#039;</span>
-</code>
-
-
-    
-    
-    
-
-    
-
-</article>
-                    <article class="phpdocumentor-element -constant -public ">
-    <h4 class="phpdocumentor-element__name" id="constant_URL">
-        URL
-        <a href="classes/oihana-enums-Alter.html#constant_URL" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/Alter.php"><a href="files/src-oihana-enums-alter.html"><abbr title="src/oihana/enums/Alter.php">Alter.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">27</span>
-
-    </aside>
-
-    
-    
-    <code class="phpdocumentor-signature phpdocumentor-code ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">URL</span>
-    = <span class="phpdocumentor-signature__default-value">&#039;url&#039;</span>
-</code>
-
-
-    
-    
-    
-
-    
-
-</article>
-                    <article class="phpdocumentor-element -constant -public ">
-    <h4 class="phpdocumentor-element__name" id="constant_VALUE">
-        VALUE
-        <a href="classes/oihana-enums-Alter.html#constant_VALUE" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/Alter.php"><a href="files/src-oihana-enums-alter.html"><abbr title="src/oihana/enums/Alter.php">Alter.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">28</span>
-
-    </aside>
-
-    
-    
-    <code class="phpdocumentor-signature phpdocumentor-code ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-        <span class="phpdocumentor-signature__type">mixed</span>
-    <span class="phpdocumentor-signature__name">VALUE</span>
-    = <span class="phpdocumentor-signature__default-value">&#039;value&#039;</span>
+    <span class="phpdocumentor-signature__name">TOKEN_INTROSPECTION_JWT</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;token-introspection+jwt&#039;</span>
 </code>
 
 
@@ -605,7 +508,7 @@
     <div class="phpdocumentor-modal-bg" data-exit-button></div>
     <div class="phpdocumentor-modal-container">
         <div class="phpdocumentor-modal-content">
-            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/oihana/enums/Alter.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/oihana/enums/jwt/JwtType.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
         </div>
         <button data-exit-button class="phpdocumentor-modal__close">&times;</button>
     </div>
@@ -706,23 +609,19 @@
             <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                        <li><a href="classes/oihana-enums-Alter.html#toc-constants">Constants</a></li>
+                                        <li><a href="classes/oihana-enums-jwt-JwtType.html#toc-constants">Constants</a></li>
                                                                             </ul>
             </li>
                             <li class="phpdocumentor-on-this-page-section__title">Constants</li>
                 <li>
                     <ul class="phpdocumentor-list -clean">
-                                                    <li class=""><a href="classes/oihana-enums-Alter.html#constant_ARRAY">ARRAY</a></li>
-                                                    <li class=""><a href="classes/oihana-enums-Alter.html#constant_CALL">CALL</a></li>
-                                                    <li class=""><a href="classes/oihana-enums-Alter.html#constant_CLEAN">CLEAN</a></li>
-                                                    <li class=""><a href="classes/oihana-enums-Alter.html#constant_FLOAT">FLOAT</a></li>
-                                                    <li class=""><a href="classes/oihana-enums-Alter.html#constant_GET">GET</a></li>
-                                                    <li class=""><a href="classes/oihana-enums-Alter.html#constant_INT">INT</a></li>
-                                                    <li class=""><a href="classes/oihana-enums-Alter.html#constant_JSON_PARSE">JSON_PARSE</a></li>
-                                                    <li class=""><a href="classes/oihana-enums-Alter.html#constant_JSON_STRINGIFY">JSON_STRINGIFY</a></li>
-                                                    <li class=""><a href="classes/oihana-enums-Alter.html#constant_LIST">LIST</a></li>
-                                                    <li class=""><a href="classes/oihana-enums-Alter.html#constant_URL">URL</a></li>
-                                                    <li class=""><a href="classes/oihana-enums-Alter.html#constant_VALUE">VALUE</a></li>
+                                                    <li class=""><a href="classes/oihana-enums-jwt-JwtType.html#constant_AT_JWT">AT_JWT</a></li>
+                                                    <li class=""><a href="classes/oihana-enums-jwt-JwtType.html#constant_DPOP_JWT">DPOP_JWT</a></li>
+                                                    <li class=""><a href="classes/oihana-enums-jwt-JwtType.html#constant_IT_JWT">IT_JWT</a></li>
+                                                    <li class=""><a href="classes/oihana-enums-jwt-JwtType.html#constant_JWT">JWT</a></li>
+                                                    <li class=""><a href="classes/oihana-enums-jwt-JwtType.html#constant_LOGOUT_JWT">LOGOUT_JWT</a></li>
+                                                    <li class=""><a href="classes/oihana-enums-jwt-JwtType.html#constant_SECEVENT_JWT">SECEVENT_JWT</a></li>
+                                                    <li class=""><a href="classes/oihana-enums-jwt-JwtType.html#constant_TOKEN_INTROSPECTION_JWT">TOKEN_INTROSPECTION_JWT</a></li>
                                             </ul>
                 </li>
             
@@ -744,7 +643,7 @@
     </section>
 </section>
         </div>
-        <a href="classes/oihana-enums-Alter.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/oihana-enums-jwt-JwtType.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

@@ -102,10 +102,137 @@
         <div class="phpdocumentor-row">
             <h2 class="phpdocumentor-content__title">Deprecated</h2>
 
+                        <h3>Table of Contents</h3>
+            <table class="phpdocumentor-table_of_contents">
+                                    <tr>
+                        <td class="phpdocumentor-cell"><a href="reports/deprecated.html#src/oihana/enums/jwt/JwtAlgorithm.php">src/oihana/enums/jwt/JwtAlgorithm.php</a></td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell"><a href="reports/deprecated.html#src/oihana/enums/oauth2/OAuth2CodeChallengeMethod.php">src/oihana/enums/oauth2/OAuth2CodeChallengeMethod.php</a></td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell"><a href="reports/deprecated.html#src/oihana/enums/oauth2/OAuth2GrantType.php">src/oihana/enums/oauth2/OAuth2GrantType.php</a></td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell"><a href="reports/deprecated.html#src/oihana/enums/oauth2/OAuth2ResponseType.php">src/oihana/enums/oauth2/OAuth2ResponseType.php</a></td>
+                    </tr>
+                                    <tr>
+                        <td class="phpdocumentor-cell"><a href="reports/deprecated.html#src/oihana/enums/oauth2/OAuth2TokenType.php">src/oihana/enums/oauth2/OAuth2TokenType.php</a></td>
+                    </tr>
+                            </table>
             
-                            <div class="phpdocumentor-admonition phpdocumentor-admonition--success">
-                    No deprecated elements have been found in this project.
-                </div>
+                            <a id="src/oihana/enums/jwt/JwtAlgorithm.php"></a>
+                <h3><abbr title="src/oihana/enums/jwt/JwtAlgorithm.php">JwtAlgorithm.php</abbr></h3>
+                <table>
+                    <tr>
+                        <th class="phpdocumentor-heading">Line</th>
+                        <th class="phpdocumentor-heading">Element</th>
+                        <th class="phpdocumentor-heading">Reason</th>
+                    </tr>
+                                                                        <tr>
+                                <td class="phpdocumentor-cell">57</td>
+                                <td class="phpdocumentor-cell"><a href="classes/oihana-enums-jwt-JwtAlgorithm.html#constant_NONE"><abbr title="\oihana\enums\jwt\JwtAlgorithm::NONE">JwtAlgorithm::NONE</abbr></a></td>
+                                <td class="phpdocumentor-cell"><p>Disallowed in practice for any security-bearing
+token. Many libraries reject it by default; clients
+MUST NOT accept it without explicit opt-in.</p>
+</td>
+                            </tr>
+                                                                                                <tr>
+                                <td class="phpdocumentor-cell">111</td>
+                                <td class="phpdocumentor-cell"><a href="classes/oihana-enums-jwt-JwtAlgorithm.html#constant_RSA1_5"><abbr title="\oihana\enums\jwt\JwtAlgorithm::RSA1_5">JwtAlgorithm::RSA1_5</abbr></a></td>
+                                <td class="phpdocumentor-cell"><p>Vulnerable to Bleichenbacher-style attacks; prefer
+<abbr title="\oihana\enums\jwt\self::RSA_OAEP_256">self::RSA_OAEP_256</abbr>.</p>
+</td>
+                            </tr>
+                                                            </table>
+                            <a id="src/oihana/enums/oauth2/OAuth2CodeChallengeMethod.php"></a>
+                <h3><abbr title="src/oihana/enums/oauth2/OAuth2CodeChallengeMethod.php">OAuth2CodeChallengeMethod.php</abbr></h3>
+                <table>
+                    <tr>
+                        <th class="phpdocumentor-heading">Line</th>
+                        <th class="phpdocumentor-heading">Element</th>
+                        <th class="phpdocumentor-heading">Reason</th>
+                    </tr>
+                                                                        <tr>
+                                <td class="phpdocumentor-cell">48</td>
+                                <td class="phpdocumentor-cell"><a href="classes/oihana-enums-oauth2-OAuth2CodeChallengeMethod.html#constant_PLAIN"><abbr title="\oihana\enums\oauth2\OAuth2CodeChallengeMethod::PLAIN">OAuth2CodeChallengeMethod::PLAIN</abbr></a></td>
+                                <td class="phpdocumentor-cell"><p>Provides no protection against a passive observer
+intercepting the authorization response. RFC 7636
+requires servers to support <abbr title="\oihana\enums\oauth2\self::S256">self::S256</abbr> and
+only allows <code class="prettyprint">plain</code> for clients that cannot perform
+SHA-256. Modern clients MUST use <abbr title="\oihana\enums\oauth2\self::S256">self::S256</abbr>.</p>
+</td>
+                            </tr>
+                                                            </table>
+                            <a id="src/oihana/enums/oauth2/OAuth2GrantType.php"></a>
+                <h3><abbr title="src/oihana/enums/oauth2/OAuth2GrantType.php">OAuth2GrantType.php</abbr></h3>
+                <table>
+                    <tr>
+                        <th class="phpdocumentor-heading">Line</th>
+                        <th class="phpdocumentor-heading">Element</th>
+                        <th class="phpdocumentor-heading">Reason</th>
+                    </tr>
+                                                                        <tr>
+                                <td class="phpdocumentor-cell">101</td>
+                                <td class="phpdocumentor-cell"><a href="classes/oihana-enums-oauth2-OAuth2GrantType.html#constant_PASSWORD"><abbr title="\oihana\enums\oauth2\OAuth2GrantType::PASSWORD">OAuth2GrantType::PASSWORD</abbr></a></td>
+                                <td class="phpdocumentor-cell"><p>Disallowed by OAuth 2.1 and RFC 9700 (Security BCP).
+Exposes user credentials to the client and prevents
+multi-factor authentication. Kept for legacy
+interoperability only; prefer
+<abbr title="\oihana\enums\oauth2\self::AUTHORIZATION_CODE">self::AUTHORIZATION_CODE</abbr> with PKCE.</p>
+</td>
+                            </tr>
+                                                                                                <tr>
+                                <td class="phpdocumentor-cell">115</td>
+                                <td class="phpdocumentor-cell"><a href="classes/oihana-enums-oauth2-OAuth2GrantType.html#constant_IMPLICIT"><abbr title="\oihana\enums\oauth2\OAuth2GrantType::IMPLICIT">OAuth2GrantType::IMPLICIT</abbr></a></td>
+                                <td class="phpdocumentor-cell"><p>Removed by OAuth 2.1 and disallowed by RFC 9700
+(Security BCP) because of access-token leakage via
+redirect URIs and browser history. Use
+<abbr title="\oihana\enums\oauth2\self::AUTHORIZATION_CODE">self::AUTHORIZATION_CODE</abbr> with PKCE instead.</p>
+</td>
+                            </tr>
+                                                            </table>
+                            <a id="src/oihana/enums/oauth2/OAuth2ResponseType.php"></a>
+                <h3><abbr title="src/oihana/enums/oauth2/OAuth2ResponseType.php">OAuth2ResponseType.php</abbr></h3>
+                <table>
+                    <tr>
+                        <th class="phpdocumentor-heading">Line</th>
+                        <th class="phpdocumentor-heading">Element</th>
+                        <th class="phpdocumentor-heading">Reason</th>
+                    </tr>
+                                                                        <tr>
+                                <td class="phpdocumentor-cell">71</td>
+                                <td class="phpdocumentor-cell"><a href="classes/oihana-enums-oauth2-OAuth2ResponseType.html#constant_TOKEN"><abbr title="\oihana\enums\oauth2\OAuth2ResponseType::TOKEN">OAuth2ResponseType::TOKEN</abbr></a></td>
+                                <td class="phpdocumentor-cell"><p>Disallowed by OAuth 2.1 and RFC 9700 (Security BCP).
+Use <abbr title="\oihana\enums\oauth2\self::CODE">self::CODE</abbr> with PKCE instead.</p>
+</td>
+                            </tr>
+                                                                                                <tr>
+                                <td class="phpdocumentor-cell">115</td>
+                                <td class="phpdocumentor-cell"><a href="classes/oihana-enums-oauth2-OAuth2ResponseType.html#constant_ID_TOKEN_TOKEN"><abbr title="\oihana\enums\oauth2\OAuth2ResponseType::ID_TOKEN_TOKEN">OAuth2ResponseType::ID_TOKEN_TOKEN</abbr></a></td>
+                                <td class="phpdocumentor-cell"><p>Like <abbr title="\oihana\enums\oauth2\self::TOKEN">self::TOKEN</abbr>, the implicit flow is
+discouraged by RFC 9700.</p>
+</td>
+                            </tr>
+                                                            </table>
+                            <a id="src/oihana/enums/oauth2/OAuth2TokenType.php"></a>
+                <h3><abbr title="src/oihana/enums/oauth2/OAuth2TokenType.php">OAuth2TokenType.php</abbr></h3>
+                <table>
+                    <tr>
+                        <th class="phpdocumentor-heading">Line</th>
+                        <th class="phpdocumentor-heading">Element</th>
+                        <th class="phpdocumentor-heading">Reason</th>
+                    </tr>
+                                                                        <tr>
+                                <td class="phpdocumentor-cell">91</td>
+                                <td class="phpdocumentor-cell"><a href="classes/oihana-enums-oauth2-OAuth2TokenType.html#constant_MAC"><abbr title="\oihana\enums\oauth2\OAuth2TokenType::MAC">OAuth2TokenType::MAC</abbr></a></td>
+                                <td class="phpdocumentor-cell"><p>The MAC token type IETF draft has expired and is not
+a published RFC. Exposed only for completeness;
+prefer <abbr title="\oihana\enums\oauth2\self::DPOP">self::DPOP</abbr> for sender-constrained
+tokens.</p>
+</td>
+                            </tr>
+                                                            </table>
                     </div>
     </section>
                             </div>

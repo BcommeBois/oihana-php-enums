@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+            <title>Oihana Php Enums</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="../">
+    <link rel="icon" href="images/favicon.ico"/>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/base.css">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/template.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-okaidia.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-highlight/prism-line-highlight.css">
+                <script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+        <script src="js/template.js"></script>
+        <script src="js/search.js"></script>
+        <script defer src="js/searchIndex.js"></script>
+    </head>
+<body id="top">
+    <header class="phpdocumentor-header phpdocumentor-section">
+    <h1 class="phpdocumentor-title">
+    <a href="" class="phpdocumentor-title__link">
+        <img src="assets/images/oihana-php-enums-logo-inline-512x160.png" alt="Oihana PHP Enums" style="width: 128px; height: 40px;"/>
+    </a>
+</h1>    <input class="phpdocumentor-header__menu-button" type="checkbox" id="menu-button" name="menu-button" />
+    <label class="phpdocumentor-header__menu-icon" for="menu-button">
+        <i class="fas fa-bars"></i>
+    </label>
+    <section data-search-form class="phpdocumentor-search">
+    <label>
+        <span class="visually-hidden">Search for</span>
+        <svg class="phpdocumentor-search__icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7.5" cy="7.5" r="6.5" stroke="currentColor" stroke-width="2"/>
+            <line x1="12.4892" y1="12.2727" x2="19.1559" y2="18.9393" stroke="currentColor" stroke-width="3"/>
+        </svg>
+        <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading .." disabled />
+    </label>
+</section>
+
+    <nav class="phpdocumentor-topnav">
+    <ul class="phpdocumentor-topnav__menu">
+                        <li class="phpdocumentor-topnav__menu-item -social">
+                <a href="https://github.com/BcommeBois/oihana-php-enums">
+                    <span>
+                                                                        <i class="fab fa-github"></i>
+                                                
+                    </span>
+                </a>
+            </li>
+                </ul>
+</nav>
+</header>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <input class="phpdocumentor-sidebar__menu-button" type="checkbox" id="sidebar-button" name="sidebar-button" />
+<label class="phpdocumentor-sidebar__menu-icon" for="sidebar-button">
+    Menu
+</label>
+<aside class="phpdocumentor-column -three phpdocumentor-sidebar">
+                    <section class="phpdocumentor-sidebar__category -namespaces">
+            <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                    <h4 class="phpdocumentor-sidebar__root-namespace">
+    <a href="namespaces/oihana.html" class="">oihana</a>
+</h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="namespaces/oihana-enums.html" class="">enums</a>
+                
+            </li>
+            </ul>
+
+                        </section>
+            
+    <section class="phpdocumentor-sidebar__category -reports">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category -indices">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="indices/files.html">Files</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -nine phpdocumentor-content">
+                                <section>
+                                        <ul class="phpdocumentor-breadcrumbs">
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/oihana.html">oihana</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/oihana-enums.html">enums</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/oihana-enums-oauth2.html">oauth2</a></li>
+    </ul>
+
+    <article class="phpdocumentor-element -class">
+        <h2 class="phpdocumentor-content__title">
+    OAuth2TokenEndpointAuthMethod
+
+    
+    
+    
+            <span class="phpdocumentor-element__extends">
+            uses
+                            <abbr title="\oihana\reflect\traits\ConstantsTrait">ConstantsTrait</abbr>                    </span>
+    </h2>
+
+<div class="phpdocumentor-label-line">
+
+
+</div>
+
+        <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/oauth2/OAuth2TokenEndpointAuthMethod.php"><a href="files/src-oihana-enums-oauth2-oauth2tokenendpointauthmethod.html"><abbr title="src/oihana/enums/oauth2/OAuth2TokenEndpointAuthMethod.php">OAuth2TokenEndpointAuthMethod.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">48</span>
+
+    </aside>
+
+            <p class="phpdocumentor-summary">Enumeration of standard client authentication methods at the OAuth 2.0
+token endpoint (and other authenticated endpoints).</p>
+
+
+    <section class="phpdocumentor-description"><p>Values used in the <code class="prettyprint">token_endpoint_auth_method</code> metadata of a client
+registered via RFC 7591 / RFC 7592, and advertised by the
+authorization server in
+<a href="classes/oihana-enums-oauth2-OidcDiscoveryField.html#constant_TOKEN_ENDPOINT_AUTH_METHODS_SUPPORTED"><abbr title="\oihana\enums\oauth2\OidcDiscoveryField::TOKEN_ENDPOINT_AUTH_METHODS_SUPPORTED">OidcDiscoveryField::TOKEN_ENDPOINT_AUTH_METHODS_SUPPORTED</abbr></a>.</p>
+<p>Example (private_key_jwt):</p>
+<pre class="prettyprint"><code class="language-php">$assertion = $jwtSigner-&gt;sign( [
+    JwtClaim::ISS =&gt; $clientId ,
+    JwtClaim::SUB =&gt; $clientId ,
+    JwtClaim::AUD =&gt; $tokenEndpoint ,
+    JwtClaim::IAT =&gt; time() ,
+    JwtClaim::EXP =&gt; time() + 300 ,
+    JwtClaim::JTI =&gt; bin2hex( random_bytes( 16 ) ) ,
+] ) ;
+
+$client-&gt;post( $tokenEndpoint ,
+[
+    GuzzleOption::FORM_PARAMS =&gt;
+    [
+        OAuth2Parameter::GRANT_TYPE            =&gt; OAuth2GrantType::CLIENT_CREDENTIALS ,
+        OAuth2Parameter::CLIENT_ASSERTION_TYPE =&gt; OAuth2ClientAssertionType::JWT_BEARER ,
+        OAuth2Parameter::CLIENT_ASSERTION      =&gt; $assertion ,
+    ]
+]) ;
+</code></pre>
+<p>References:</p>
+<ul>
+<li>OIDC Core 1.0 §9 (Client Authentication)</li>
+<li>RFC 7591  §2 (Dynamic Client Registration metadata)</li>
+<li>RFC 7521 / RFC 7523 (assertion-based client authentication)</li>
+<li>RFC 8705  (mTLS client authentication)</li>
+</ul>
+</section>
+
+
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">author</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>Marc Alcaraz (ekameleon)</p>
+</section>
+
+                                    </dd>
+                                                <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">since</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                            <span class="phpdocumentor-tag-link">1.1.0</span>
+                                                                                
+                                             
+                                    </dd>
+                                            </dl>
+
+
+
+
+
+<h3 id="toc">
+    Table of Contents
+    <a href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
+
+</h3>
+
+
+
+
+
+
+
+<h4 id="toc-constants">
+    Constants
+    <a href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#toc-constants" class="headerlink"><i class="fas fa-link"></i></a>
+
+</h4>
+<dl class="phpdocumentor-table-of-contents">
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a class="" href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#constant_CLIENT_SECRET_BASIC">CLIENT_SECRET_BASIC</a>
+    <span>
+        &nbsp;= &#039;client_secret_basic&#039;                            </span>
+</dt>
+<dd>`client_secret_basic` — HTTP Basic authentication with
+`client_id:client_secret` credentials (RFC 6749 §2.3.1).</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a class="" href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#constant_CLIENT_SECRET_JWT">CLIENT_SECRET_JWT</a>
+    <span>
+        &nbsp;= &#039;client_secret_jwt&#039;                            </span>
+</dt>
+<dd>`client_secret_jwt` — The client authenticates by signing a JWT
+with its `client_secret` using HMAC (HS256/HS384/HS512)
+(OIDC Core §9, RFC 7523).</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a class="" href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#constant_CLIENT_SECRET_POST">CLIENT_SECRET_POST</a>
+    <span>
+        &nbsp;= &#039;client_secret_post&#039;                            </span>
+</dt>
+<dd>`client_secret_post` — Client credentials sent in the request
+body as `client_id` and `client_secret` (RFC 6749 §2.3.1).</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a class="" href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#constant_NONE">NONE</a>
+    <span>
+        &nbsp;= &#039;none&#039;                            </span>
+</dt>
+<dd>`none` — The client is public and does not authenticate at the
+token endpoint (OIDC Core §9). Typically combined with PKCE.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a class="" href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#constant_PRIVATE_KEY_JWT">PRIVATE_KEY_JWT</a>
+    <span>
+        &nbsp;= &#039;private_key_jwt&#039;                            </span>
+</dt>
+<dd>`private_key_jwt` — The client authenticates by signing a JWT
+with its private key (RS256/PS256/ES256, ...) registered with
+the authorization server (OIDC Core §9, RFC 7523).</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a class="" href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#constant_SELF_SIGNED_TLS_CLIENT_AUTH">SELF_SIGNED_TLS_CLIENT_AUTH</a>
+    <span>
+        &nbsp;= &#039;self_signed_tls_client_auth&#039;                            </span>
+</dt>
+<dd>`self_signed_tls_client_auth` — The client authenticates using a
+self-signed X.509 certificate over mutual TLS, with the public
+key registered out-of-band (RFC 8705 §2.2).</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a class="" href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#constant_TLS_CLIENT_AUTH">TLS_CLIENT_AUTH</a>
+    <span>
+        &nbsp;= &#039;tls_client_auth&#039;                            </span>
+</dt>
+<dd>`tls_client_auth` — The client authenticates using a PKI-issued
+X.509 client certificate over mutual TLS (RFC 8705 §2.1).</dd>
+
+    </dl>
+
+
+
+
+
+
+        
+    <section class="phpdocumentor-constants">
+        <h3 class="phpdocumentor-elements__header" id="constants">
+            Constants
+            <a href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#constants" class="headerlink"><i class="fas fa-link"></i></a>
+
+        </h3>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_CLIENT_SECRET_BASIC">
+        CLIENT_SECRET_BASIC
+        <a href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#constant_CLIENT_SECRET_BASIC" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/oauth2/OAuth2TokenEndpointAuthMethod.php"><a href="files/src-oihana-enums-oauth2-oauth2tokenendpointauthmethod.html"><abbr title="src/oihana/enums/oauth2/OAuth2TokenEndpointAuthMethod.php">OAuth2TokenEndpointAuthMethod.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">58</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">`client_secret_basic` — HTTP Basic authentication with
+`client_id:client_secret` credentials (RFC 6749 §2.3.1).</p>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">CLIENT_SECRET_BASIC</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;client_secret_basic&#039;</span>
+</code>
+
+
+        <section class="phpdocumentor-description"><p>Default method when none is specified for confidential clients.</p>
+</section>
+
+    
+    
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_CLIENT_SECRET_JWT">
+        CLIENT_SECRET_JWT
+        <a href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#constant_CLIENT_SECRET_JWT" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/oauth2/OAuth2TokenEndpointAuthMethod.php"><a href="files/src-oihana-enums-oauth2-oauth2tokenendpointauthmethod.html"><abbr title="src/oihana/enums/oauth2/OAuth2TokenEndpointAuthMethod.php">OAuth2TokenEndpointAuthMethod.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">71</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">`client_secret_jwt` — The client authenticates by signing a JWT
+with its `client_secret` using HMAC (HS256/HS384/HS512)
+(OIDC Core §9, RFC 7523).</p>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">CLIENT_SECRET_JWT</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;client_secret_jwt&#039;</span>
+</code>
+
+
+    
+    
+    
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_CLIENT_SECRET_POST">
+        CLIENT_SECRET_POST
+        <a href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#constant_CLIENT_SECRET_POST" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/oauth2/OAuth2TokenEndpointAuthMethod.php"><a href="files/src-oihana-enums-oauth2-oauth2tokenendpointauthmethod.html"><abbr title="src/oihana/enums/oauth2/OAuth2TokenEndpointAuthMethod.php">OAuth2TokenEndpointAuthMethod.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">64</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">`client_secret_post` — Client credentials sent in the request
+body as `client_id` and `client_secret` (RFC 6749 §2.3.1).</p>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">CLIENT_SECRET_POST</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;client_secret_post&#039;</span>
+</code>
+
+
+    
+    
+    
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_NONE">
+        NONE
+        <a href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#constant_NONE" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/oauth2/OAuth2TokenEndpointAuthMethod.php"><a href="files/src-oihana-enums-oauth2-oauth2tokenendpointauthmethod.html"><abbr title="src/oihana/enums/oauth2/OAuth2TokenEndpointAuthMethod.php">OAuth2TokenEndpointAuthMethod.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">84</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">`none` — The client is public and does not authenticate at the
+token endpoint (OIDC Core §9). Typically combined with PKCE.</p>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">NONE</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;none&#039;</span>
+</code>
+
+
+    
+    
+    
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PRIVATE_KEY_JWT">
+        PRIVATE_KEY_JWT
+        <a href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#constant_PRIVATE_KEY_JWT" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/oauth2/OAuth2TokenEndpointAuthMethod.php"><a href="files/src-oihana-enums-oauth2-oauth2tokenendpointauthmethod.html"><abbr title="src/oihana/enums/oauth2/OAuth2TokenEndpointAuthMethod.php">OAuth2TokenEndpointAuthMethod.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">78</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">`private_key_jwt` — The client authenticates by signing a JWT
+with its private key (RS256/PS256/ES256, ...) registered with
+the authorization server (OIDC Core §9, RFC 7523).</p>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">PRIVATE_KEY_JWT</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;private_key_jwt&#039;</span>
+</code>
+
+
+    
+    
+    
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_SELF_SIGNED_TLS_CLIENT_AUTH">
+        SELF_SIGNED_TLS_CLIENT_AUTH
+        <a href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#constant_SELF_SIGNED_TLS_CLIENT_AUTH" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/oauth2/OAuth2TokenEndpointAuthMethod.php"><a href="files/src-oihana-enums-oauth2-oauth2tokenendpointauthmethod.html"><abbr title="src/oihana/enums/oauth2/OAuth2TokenEndpointAuthMethod.php">OAuth2TokenEndpointAuthMethod.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">97</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">`self_signed_tls_client_auth` — The client authenticates using a
+self-signed X.509 certificate over mutual TLS, with the public
+key registered out-of-band (RFC 8705 §2.2).</p>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">SELF_SIGNED_TLS_CLIENT_AUTH</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;self_signed_tls_client_auth&#039;</span>
+</code>
+
+
+    
+    
+    
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_TLS_CLIENT_AUTH">
+        TLS_CLIENT_AUTH
+        <a href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#constant_TLS_CLIENT_AUTH" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/oihana/enums/oauth2/OAuth2TokenEndpointAuthMethod.php"><a href="files/src-oihana-enums-oauth2-oauth2tokenendpointauthmethod.html"><abbr title="src/oihana/enums/oauth2/OAuth2TokenEndpointAuthMethod.php">OAuth2TokenEndpointAuthMethod.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">90</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">`tls_client_auth` — The client authenticates using a PKI-issued
+X.509 client certificate over mutual TLS (RFC 8705 §2.1).</p>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">TLS_CLIENT_AUTH</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;tls_client_auth&#039;</span>
+</code>
+
+
+    
+    
+    
+
+    
+
+</article>
+            </section>
+
+        
+
+        
+        <div class="phpdocumentor-modal" id="source-view">
+    <div class="phpdocumentor-modal-bg" data-exit-button></div>
+    <div class="phpdocumentor-modal-container">
+        <div class="phpdocumentor-modal-content">
+            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/oihana/enums/oauth2/OAuth2TokenEndpointAuthMethod.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+        </div>
+        <button data-exit-button class="phpdocumentor-modal__close">&times;</button>
+    </div>
+</div>
+
+    <script type="text/javascript">
+        (function () {
+            function loadExternalCodeSnippet(el, url, line) {
+                Array.prototype.slice.call(el.querySelectorAll('pre[data-src]')).forEach((pre) => {
+                    const src = url || pre.getAttribute('data-src').replace(/\\/g, '/');
+                    const language = 'php';
+
+                    const code = document.createElement('code');
+                    code.className = 'language-' + language;
+                    pre.textContent = '';
+                    pre.setAttribute('data-line', line)
+                    code.textContent = 'Loading…';
+                    pre.appendChild(code);
+
+                    var xhr = new XMLHttpRequest();
+
+                    xhr.open('GET', src, true);
+
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState !== 4) {
+                            return;
+                        }
+
+                        if (xhr.status < 400 && xhr.responseText) {
+                            code.textContent = xhr.responseText;
+                            Prism.highlightElement(code);
+                            d=document.getElementsByClassName("line-numbers");
+                            d[0].scrollTop = d[0].children[1].offsetTop;
+                            return;
+                        }
+
+                        if (xhr.status === 404) {
+                            code.textContent = '✖ Error: File could not be found';
+                            return;
+                        }
+
+                        if (xhr.status >= 400) {
+                            code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                            return;
+                        }
+
+                        code.textContent = '✖ Error: An unknown error occurred';
+                    };
+
+                    xhr.send(null);
+                });
+            }
+
+            const modalButtons = document.querySelectorAll("[data-modal]");
+            const openedAsLocalFile = window.location.protocol === 'file:';
+            if (modalButtons.length > 0 && openedAsLocalFile) {
+                console.warn(
+                    'Viewing the source code is unavailable because you are opening this page from the file:// scheme; ' +
+                    'browsers block XHR requests when a page is opened this way'
+                );
+            }
+
+            modalButtons.forEach(function (trigger) {
+                if (openedAsLocalFile) {
+                    trigger.setAttribute("hidden", "hidden");
+                }
+
+                trigger.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const modal = document.getElementById(trigger.dataset.modal);
+                    if (!modal) {
+                        console.error(`Modal with id "${trigger.dataset.modal}" could not be found`);
+                        return;
+                    }
+                    modal.classList.add("phpdocumentor-modal__open");
+
+                    loadExternalCodeSnippet(modal, trigger.dataset.src || null, trigger.dataset.line)
+                    const exits = modal.querySelectorAll("[data-exit-button]");
+                    exits.forEach(function (exit) {
+                        exit.addEventListener("click", function (event) {
+                            event.preventDefault();
+                            modal.classList.remove("phpdocumentor-modal__open");
+                        });
+                    });
+                });
+            });
+        })();
+    </script>
+
+    </article>
+                                </section>
+                <section class="phpdocumentor-on-this-page__sidebar">
+                                
+    <section class="phpdocumentor-on-this-page__content">
+        <strong class="phpdocumentor-on-this-page__title">On this page</strong>
+
+        <ul class="phpdocumentor-list -clean">
+            <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
+            <li>
+                <ul class="phpdocumentor-list -clean">
+                                        <li><a href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#toc-constants">Constants</a></li>
+                                                                            </ul>
+            </li>
+                            <li class="phpdocumentor-on-this-page-section__title">Constants</li>
+                <li>
+                    <ul class="phpdocumentor-list -clean">
+                                                    <li class=""><a href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#constant_CLIENT_SECRET_BASIC">CLIENT_SECRET_BASIC</a></li>
+                                                    <li class=""><a href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#constant_CLIENT_SECRET_JWT">CLIENT_SECRET_JWT</a></li>
+                                                    <li class=""><a href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#constant_CLIENT_SECRET_POST">CLIENT_SECRET_POST</a></li>
+                                                    <li class=""><a href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#constant_NONE">NONE</a></li>
+                                                    <li class=""><a href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#constant_PRIVATE_KEY_JWT">PRIVATE_KEY_JWT</a></li>
+                                                    <li class=""><a href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#constant_SELF_SIGNED_TLS_CLIENT_AUTH">SELF_SIGNED_TLS_CLIENT_AUTH</a></li>
+                                                    <li class=""><a href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#constant_TLS_CLIENT_AUTH">TLS_CLIENT_AUTH</a></li>
+                                            </ul>
+                </li>
+            
+            
+                    </ul>
+    </section>
+
+                </section>
+                            </div>
+            <section data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
+    <section class="phpdocumentor-search-results__dialog">
+        <header class="phpdocumentor-search-results__header">
+            <h2 class="phpdocumentor-search-results__title">Search results</h2>
+            <button class="phpdocumentor-search-results__close"><i class="fas fa-times"></i></button>
+        </header>
+        <section class="phpdocumentor-search-results__body">
+            <ul class="phpdocumentor-search-results__entries"></ul>
+        </section>
+    </section>
+</section>
+        </div>
+        <a href="classes/oihana-enums-oauth2-OAuth2TokenEndpointAuthMethod.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <script>
+        cssVars({});
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-highlight/prism-line-highlight.min.js"></script>
+</body>
+</html>
