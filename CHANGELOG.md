@@ -26,6 +26,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - `HttpStatusCode` (incl. `fromException()` to extract a 4xx/5xx code from a `Throwable`, falling back to `INTERNAL_SERVER_ERROR`)
 - `OAuthParameters` — OAuth 1.0a protocol parameters (RFC 5849)
 - `OAuthSignatureMethod`
+- `RequestAttribute` (with unit tests) — conventional PSR-7 request attribute names attached by middlewares and read by downstream consumers:
+  - Identity / authentication: `ACCESS_TOKEN`, `AUTH_SCHEME`, `TOKEN_TYPE`, `USER_CLAIMS`, `USER_ID`, `USER_ROLES`, `USER_SCOPES`
+  - Traceability: `CORRELATION_ID`, `REQUEST_ID`, `TRACE_ID`
+  - Multi-tenancy: `ORGANIZATION_ID`, `TENANT_ID`
+  - Routing (PSR-15): `ROUTE`, `ROUTE_PARAMS`
+  - I18n: `LOCALE`
+  - camelCase values aligned with the de-facto PSR-15 ecosystem convention
 
 #### JWT enums (`oihana\enums\jwt`)
 - `JwtClaim` — comprehensive JWT claim registry:
