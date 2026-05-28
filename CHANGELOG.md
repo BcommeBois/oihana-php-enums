@@ -22,7 +22,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 - `AuthScheme` — RFC 7235 authentication schemes (`Basic`, `Bearer`, `Digest`, `OAuth`, …)
 - `GuzzleOption` — Guzzle HTTP client request option keys
-- `HttpHeader` — with helper methods
+- `HttpHeader` — with helper methods. Observability / tracing section extended with `X_RESPONSE_TIME` (`X-Response-Time`, de-facto Express/Koa) and `SERVER_TIMING` (`Server-Timing`, W3C standard).
 - `HttpMethod` — with `isValid()` case-sensitive flag
 - `HttpParamStrategy`
 - `HttpStatusCode` — incl. `fromException()` to extract a 4xx/5xx code from a `Throwable`, falling back to `INTERNAL_SERVER_ERROR`
