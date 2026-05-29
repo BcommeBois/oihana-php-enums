@@ -27,7 +27,7 @@ composer require oihana/php-enums
 
 ## ✨ What you can do
 
-- 📦 55 enumerations across general, HTTP, JWT/JOSE and OAuth 2.0/OIDC domains — see the [catalog](#-enumeration-catalog).
+- 📦 58 enumerations across general, HTTP, JWT/JOSE and OAuth 2.0/OIDC domains — see the [catalog](#-enumeration-catalog).
 - 🔍 Reflection-ready with ConstantsTrait for listing or validating values.
 - 🛡️ Reduces “magic strings” and improves semantic clarity.
 - 🧩 Easily reusable in any PHP application or framework.
@@ -53,7 +53,7 @@ ini_set(IniOptions::DISPLAY_ERRORS, '1');
 
 ## 📖 Enumeration catalog
 
-Over **1,600 constants** spread across **55 enumerations** in 4 namespaces. Every class uses
+Over **1,600 constants** spread across **58 enumerations** in 4 namespaces. Every class uses
 `ConstantsTrait`, so they all share a common reflection API — list, validate and reverse-lookup
 values without instantiating anything:
 
@@ -135,7 +135,10 @@ A few enums marked ⚙️ also ship domain-specific helpers — see [Convenience
 | `OAuth2ResponseType` | `string` | 8 | `response_type` values. |
 | `OAuth2TokenEndpointAuthMethod` | `string` | 7 | Client authentication methods at the token endpoint. |
 | `OAuth2TokenField` | `string` | 19 | Token endpoint response fields. |
-| `OAuth2TokenType` | `string` | 10 | Access token types / token type hints. |
+| `OAuth2TokenType` | `string` | 10 | Access token types / Token Exchange URIs. |
+| `OAuth2ResponseMode` | `string` | 8 | `response_mode` values (`query`, `form_post`, JARM, …). |
+| `OAuth2SubjectType` | `string` | 2 | OIDC subject identifier types (`public`, `pairwise`). |
+| `OAuth2TokenTypeHint` | `string` | 3 | `token_type_hint` for introspection / revocation. |
 | `OidcAmr` | `string` | 21 | Authentication Method Reference (`amr`) values. |
 | `OidcDiscoveryField` | `string` | 54 | OIDC discovery document fields (`.well-known/openid-configuration`). |
 | `OidcScope` | `string` | 6 | OIDC scope values. |

@@ -97,6 +97,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - `OAuth2TokenEndpointAuthMethod` (with unit tests) — client authentication methods: `client_secret_basic`, `client_secret_post`, `client_secret_jwt`, `private_key_jwt`, `none`, `tls_client_auth`, `self_signed_tls_client_auth`
 - `OAuth2TokenField` — token endpoint response fields (RFC 6749 §5, RFC 7662)
 - `OAuth2TokenType` (with unit tests) — HTTP token types (`Bearer`, `DPoP`, `MAC`, `N_A`) and Token Exchange URIs (RFC 8693 §3): `access_token`, `refresh_token`, `id_token`, `saml1`, `saml2`, `jwt`
+- `OAuth2ResponseMode` (with unit tests) — `response_mode` values: `query`, `fragment`, `form_post`, `web_message` (draft), and JARM modes `jwt`, `query.jwt`, `fragment.jwt`, `form_post.jwt`
+- `OAuth2SubjectType` (with unit tests) — OIDC Subject Identifier types (OIDC Core §8): `public`, `pairwise`
+- `OAuth2TokenTypeHint` (with unit tests) — `token_type_hint` values for introspection / revocation (IANA registry): `access_token`, `refresh_token` (RFC 7009), `pct` (UMA 2.0 Grant §3.7)
 - `OidcAmr` (with unit tests) — Authentication Method Reference values (RFC 8176)
 - `OidcDiscoveryField` (with unit tests) — fields of the `/.well-known/openid-configuration` discovery document (OIDC Discovery 1.0, RFC 8414, RFC 8628, RFC 9126, RFC 9449, OIDC RP-Initiated / Front-Channel / Back-Channel Logout)
 - `OidcScope` (with unit tests) — standard OIDC scopes: `openid`, `profile`, `email`, `address`, `phone`, `offline_access`
