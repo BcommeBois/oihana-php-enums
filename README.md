@@ -91,7 +91,7 @@ A few enums marked ⚙️ also ship domain-specific helpers — see [Convenience
 |---|---|--:|---|
 | `AuthScheme` ⚙️ | `string` | 10 | HTTP authentication schemes (`Basic`, `Bearer`, …). |
 | `GuzzleOption` | `string` | 29 | Guzzle HTTP client request options. |
-| `HttpHeader` ⚙️ | `string` | 95 | Standard HTTP header names (request & response). |
+| `HttpHeader` ⚙️ | `string` | 131 | Standard HTTP header names (request & response). |
 | `HttpMethod` ⚙️ | `string` | 33 | HTTP request methods (`GET`, `POST`, …). |
 | `HttpParamStrategy` | `string` | 3 | Strategy for retrieving parameters from a request. |
 | `HttpStatusCode` ⚙️ | `int` | 78 | Standard HTTP status codes. |
@@ -107,6 +107,8 @@ A few enums marked ⚙️ also ship domain-specific helpers — see [Convenience
 | `CookieSameSite` | `string` | 3 | `SameSite` cookie values (`Strict`, `Lax`, `None`). |
 | `HttpProtocolVersion` | `string` | 4 | Protocol version strings (`HTTP/1.1`, `HTTP/2`, …). |
 | `ContentDisposition` | `string` | 3 | `Content-Disposition` types (`inline`, `attachment`, `form-data`). |
+
+> `HttpHeader`'s 131 constants are split into composable per-category traits under `oihana\enums\http\headers` (`CorsHeaderTrait`, `SecurityHeaderTrait`, `FetchMetadataHeaderTrait`, …). `use` a single trait when you only need one category.
 
 ### JWT / JOSE — `oihana\enums\jwt`
 

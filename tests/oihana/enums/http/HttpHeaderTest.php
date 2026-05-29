@@ -86,6 +86,27 @@ class HttpHeaderTest extends TestCase
         }
     }
 
+    public function testComposedTraitHeaders(): void
+    {
+        // Headers contributed by the per-category traits resolve through HttpHeader.
+        $this->assertSame( 'Allow'               , HttpHeader::ALLOW               ) ;
+        $this->assertSame( 'Expect'              , HttpHeader::EXPECT              ) ;
+        $this->assertSame( 'Max-Forwards'        , HttpHeader::MAX_FORWARDS        ) ;
+        $this->assertSame( 'Sec-Fetch-Site'      , HttpHeader::SEC_FETCH_SITE      ) ;
+        $this->assertSame( 'Sec-CH-UA'           , HttpHeader::SEC_CH_UA           ) ;
+        $this->assertSame( 'Clear-Site-Data'     , HttpHeader::CLEAR_SITE_DATA     ) ;
+        $this->assertSame( 'Timing-Allow-Origin' , HttpHeader::TIMING_ALLOW_ORIGIN ) ;
+        $this->assertSame( 'Reporting-Endpoints' , HttpHeader::REPORTING_ENDPOINTS ) ;
+        $this->assertSame( 'Content-Digest'      , HttpHeader::CONTENT_DIGEST      ) ;
+        $this->assertSame( 'Sec-WebSocket-Key'   , HttpHeader::SEC_WEBSOCKET_KEY   ) ;
+        $this->assertSame( 'Idempotency-Key'     , HttpHeader::IDEMPOTENCY_KEY     ) ;
+        $this->assertSame( 'Access-Control-Allow-Private-Network' , HttpHeader::ACCESS_CONTROL_ALLOW_PRIVATE_NETWORK ) ;
+
+        // All trait constants are surfaced through ConstantsTrait reflection.
+        $this->assertContains( HttpHeader::SEC_FETCH_SITE , HttpHeader::enums() ) ;
+        $this->assertTrue( HttpHeader::includes( 'X-Requested-With' ) ) ;
+    }
+
     /**
      * @throws ConstantException
      */

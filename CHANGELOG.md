@@ -24,7 +24,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 - `AuthScheme` — RFC 7235 authentication schemes (`Basic`, `Bearer`, `Digest`, `OAuth`, …)
 - `GuzzleOption` — Guzzle HTTP client request option keys
-- `HttpHeader` — with helper methods. Observability / tracing section extended with `X_RESPONSE_TIME` (`X-Response-Time`, de-facto Express/Koa) and `SERVER_TIMING` (`Server-Timing`, W3C standard). Added `X_REQUESTED_WITH` (`X-Requested-With`, de-facto AJAX detection).
+- `HttpHeader` — with helper methods. Expanded to 131 header names and reorganised into composable per-category traits (see _Changed_). New headers include `Allow`, `Expect`, `Max-Forwards`, `From`, `Accept-Patch`, `Accept-Post`, Fetch Metadata (`Sec-Fetch-Site/Mode/Dest/User`), UA Client Hints (`Sec-CH-UA*`), `Clear-Site-Data`, `Timing-Allow-Origin`, `Reporting-Endpoints`, RFC 9530 digests (`Content-Digest`, `Repr-Digest`, `Want-*`), WebSocket handshake (`Sec-WebSocket-*`), API lifecycle (`Sunset`, `Prefer`, `Preference-Applied`, `Idempotency-Key`), CORS Private Network Access, and `X-Requested-With`.
 - `HttpMethod` — with `isValid()` case-sensitive flag
 - `HttpParamStrategy`
 - `HttpStatusCode` — incl. `fromException()` to extract a 4xx/5xx code from a `Throwable`, falling back to `INTERNAL_SERVER_ERROR`
@@ -112,6 +112,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ### Changed
 
+- `HttpHeader` — refactored into composable per-category traits under `oihana\enums\http\headers` (`CorsHeaderTrait`, `CachingHeaderTrait`, `SecurityHeaderTrait`, `FetchMetadataHeaderTrait`, `ObservabilityHeaderTrait`, …). `HttpHeader` now `use`s them all; each trait can be reused on its own. Fully backward compatible — every constant remains accessible as `HttpHeader::*`.
 - `oihana\enums\Char` — expanded with more symbols and improved tests
 - `oihana\enums\JsonParam` — added `JSON_NONE` constant
 

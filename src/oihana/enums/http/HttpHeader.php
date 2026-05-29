@@ -5,205 +5,77 @@ namespace oihana\enums\http;
 use oihana\reflect\exceptions\ConstantException;
 use oihana\reflect\traits\ConstantsTrait;
 
+use oihana\enums\http\headers\ApiHeaderTrait;
+use oihana\enums\http\headers\AuthenticationHeaderTrait;
+use oihana\enums\http\headers\CachingHeaderTrait;
+use oihana\enums\http\headers\ClientHintHeaderTrait;
+use oihana\enums\http\headers\ConditionalHeaderTrait;
+use oihana\enums\http\headers\ContentHeaderTrait;
+use oihana\enums\http\headers\ContentNegotiationHeaderTrait;
+use oihana\enums\http\headers\CookieHeaderTrait;
+use oihana\enums\http\headers\CorsHeaderTrait;
+use oihana\enums\http\headers\FetchMetadataHeaderTrait;
+use oihana\enums\http\headers\IntegrityHeaderTrait;
+use oihana\enums\http\headers\MiscHeaderTrait;
+use oihana\enums\http\headers\ObservabilityHeaderTrait;
+use oihana\enums\http\headers\ProxyHeaderTrait;
+use oihana\enums\http\headers\RangeHeaderTrait;
+use oihana\enums\http\headers\RateLimitHeaderTrait;
+use oihana\enums\http\headers\ReportingHeaderTrait;
+use oihana\enums\http\headers\RequestContextHeaderTrait;
+use oihana\enums\http\headers\RoutingHeaderTrait;
+use oihana\enums\http\headers\SecurityHeaderTrait;
+use oihana\enums\http\headers\WebSocketHeaderTrait;
+
 /**
  * Enumeration of standard HTTP header names (request and response).
  *
  * This class provides a centralized, type-safe list of common HTTP header
  * names, preserving the exact wire-format casing defined by the relevant
- * RFCs (notably RFC 7230–7235, RFC 9110–9112) and de-facto standards.
+ * RFCs (notably RFC 9110–9112) and de-facto standards.
+ *
+ * The constants are organised by domain into composable traits living in
+ * {@see \oihana\enums\http\headers}; this class simply `use`s them all and
+ * adds the helper methods. Use a single category trait directly when you only
+ * need part of the set.
  *
  * Usage examples:
- * - Access a header name: Headers::CONTENT_TYPE
- * - Validate/inspect available names with ConstantsTrait utilities:
- *   - Headers::enums() returns all header values
- *   - Headers::includes('Content-Type') checks existence
- *   - Headers::getConstant('Content-Type') returns the constant name
+ * - Access a header name: `HttpHeader::CONTENT_TYPE`
+ * - List/validate names with the {@see ConstantsTrait} utilities:
+ *   - `HttpHeader::enums()` returns all header values
+ *   - `HttpHeader::includes('Content-Type')` checks existence
+ *   - `HttpHeader::getConstant('Content-Type')` returns the constant name
  *
  * Notes:
- * - Only widely used standardized headers are listed. Vendor-specific
- *   or application-specific X- headers are intentionally omitted.
  * - Values are case-insensitive per RFC, but this list keeps canonical casing.
+ *
+ * @package oihana\enums\http
+ * @author  Marc Alcaraz (ekameleon)
  */
 class HttpHeader
 {
-    use ConstantsTrait ;
-
-    // -------------------------------------------------------------------------
-    // CORS (Cross-Origin Resource Sharing)
-    // -------------------------------------------------------------------------
-
-    const string ACCESS_CONTROL_ALLOW_CREDENTIALS = 'Access-Control-Allow-Credentials';
-    const string ACCESS_CONTROL_ALLOW_HEADERS     = 'Access-Control-Allow-Headers';
-    const string ACCESS_CONTROL_ALLOW_METHODS     = 'Access-Control-Allow-Methods';
-    const string ACCESS_CONTROL_ALLOW_ORIGIN      = 'Access-Control-Allow-Origin';
-    const string ACCESS_CONTROL_EXPOSE_HEADERS    = 'Access-Control-Expose-Headers';
-    const string ACCESS_CONTROL_MAX_AGE           = 'Access-Control-Max-Age';
-    const string ACCESS_CONTROL_REQUEST_HEADERS   = 'Access-Control-Request-Headers';
-    const string ACCESS_CONTROL_REQUEST_METHOD    = 'Access-Control-Request-Method';
-
-    // -------------------------------------------------------------------------
-    // Content negotiation (request)
-    // -------------------------------------------------------------------------
-
-    const string ACCEPT          = 'Accept';
-    const string ACCEPT_CHARSET  = 'Accept-Charset';
-    const string ACCEPT_ENCODING = 'Accept-Encoding';
-    const string ACCEPT_LANGUAGE = 'Accept-Language';
-
-    // -------------------------------------------------------------------------
-    // Caching
-    // -------------------------------------------------------------------------
-
-    const string AGE           = 'Age';
-    const string CACHE_CONTROL = 'Cache-Control';
-    const string EXPIRES       = 'Expires';
-    const string PRAGMA        = 'Pragma';
-    const string WARNING       = 'Warning';
-
-    // -------------------------------------------------------------------------
-    // Conditional requests
-    // -------------------------------------------------------------------------
-
-    const string ETAG                 = 'ETag';
-    const string IF_MATCH             = 'If-Match';
-    const string IF_NONE_MATCH        = 'If-None-Match';
-    const string IF_MODIFIED_SINCE    = 'If-Modified-Since';
-    const string IF_UNMODIFIED_SINCE  = 'If-Unmodified-Since';
-    const string IF_RANGE             = 'If-Range';
-
-    // -------------------------------------------------------------------------
-    // Content / representation metadata
-    // -------------------------------------------------------------------------
-
-    const string CONTENT_DISPOSITION = 'Content-Disposition';
-    const string CONTENT_ENCODING    = 'Content-Encoding';
-    const string CONTENT_LANGUAGE    = 'Content-Language';
-    const string CONTENT_LENGTH      = 'Content-Length';
-    const string CONTENT_LOCATION    = 'Content-Location';
-    const string CONTENT_RANGE       = 'Content-Range';
-    const string CONTENT_TYPE        = 'Content-Type';
-    const string LAST_MODIFIED       = 'Last-Modified';
-    const string VARY                = 'Vary';
-
-    // -------------------------------------------------------------------------
-    // Authentication & Authorization
-    // -------------------------------------------------------------------------
-
-    const string AUTHORIZATION        = 'Authorization';
-    const string PROXY_AUTHENTICATE   = 'Proxy-Authenticate';
-    const string PROXY_AUTHORIZATION  = 'Proxy-Authorization';
-    const string WWW_AUTHENTICATE     = 'WWW-Authenticate';
-
-    // -------------------------------------------------------------------------
-    // Cookies
-    // -------------------------------------------------------------------------
-
-    const string COOKIE     = 'Cookie';
-    const string SET_COOKIE = 'Set-Cookie';
-
-    // -------------------------------------------------------------------------
-    // Range requests / downloads
-    // -------------------------------------------------------------------------
-
-    const string ACCEPT_RANGES = 'Accept-Ranges';
-    const string RANGE         = 'Range';
-    const string RETRY_AFTER   = 'Retry-After';
-
-    // -------------------------------------------------------------------------
-    // Message routing & transport
-    // -------------------------------------------------------------------------
-
-    const string CONNECTION        = 'Connection';
-    const string DATE              = 'Date';
-    const string FORWARDED         = 'Forwarded';
-    const string HOST              = 'Host';
-    const string KEEP_ALIVE        = 'Keep-Alive';
-    const string LINK              = 'Link';
-    const string LOCATION          = 'Location';
-    const string SERVER            = 'Server';
-    const string TE                = 'TE';
-    const string TRAILER           = 'Trailer';
-    const string TRANSFER_ENCODING = 'Transfer-Encoding';
-    const string UPGRADE           = 'Upgrade';
-    const string VIA               = 'Via';
-
-    // -------------------------------------------------------------------------
-    // Request context
-    // -------------------------------------------------------------------------
-
-    const string DNT                        = 'DNT';
-    const string ORIGIN                     = 'Origin';
-    const string REFERER                    = 'Referer';
-    const string USER_AGENT                 = 'User-Agent';
-    const string UPGRADE_INSECURE_REQUESTS  = 'Upgrade-Insecure-Requests';
-
-    // -------------------------------------------------------------------------
-    // Security (modern best practices)
-    // -------------------------------------------------------------------------
-
-    const string CROSS_ORIGIN_OPENER_POLICY          = 'Cross-Origin-Opener-Policy';
-    const string CROSS_ORIGIN_EMBEDDER_POLICY        = 'Cross-Origin-Embedder-Policy';
-    const string CROSS_ORIGIN_RESOURCE_POLICY        = 'Cross-Origin-Resource-Policy';
-    const string CONTENT_SECURITY_POLICY             = 'Content-Security-Policy';
-    const string CONTENT_SECURITY_POLICY_REPORT_ONLY = 'Content-Security-Policy-Report-Only';
-    const string PERMISSIONS_POLICY                  = 'Permissions-Policy';
-    const string REFERRER_POLICY                     = 'Referrer-Policy';
-    const string STRICT_TRANSPORT_SECURITY           = 'Strict-Transport-Security';
-    const string X_CONTENT_TYPE_OPTIONS              = 'X-Content-Type-Options';
-    const string X_FRAME_OPTIONS                     = 'X-Frame-Options';
-    const string X_XSS_PROTECTION                    = 'X-XSS-Protection';
-
-    // -------------------------------------------------------------------------
-    // Reverse proxy / infrastructure (de-facto standard + CDN)
-    // -------------------------------------------------------------------------
-
-    const string X_FORWARDED_FOR      = 'X-Forwarded-For';
-    const string X_FORWARDED_HOST     = 'X-Forwarded-Host';
-    const string X_FORWARDED_PROTO    = 'X-Forwarded-Proto';
-    const string X_REAL_IP            = 'X-Real-IP';
-
-    const string CF_CONNECTING_IP     = 'CF-Connecting-IP';
-    const string FASTLY_CLIENT_IP     = 'Fastly-Client-IP';
-    const string TRUE_CLIENT_IP       = 'True-Client-IP';
-    const string X_CLUSTER_CLIENT_IP  = 'X-Cluster-Client-IP';
-
-    // -------------------------------------------------------------------------
-    // Rate limiting (de-facto + RFC draft)
-    // -------------------------------------------------------------------------
-
-    const string X_RATELIMIT_LIMIT     = 'X-RateLimit-Limit';
-    const string X_RATELIMIT_REMAINING = 'X-RateLimit-Remaining';
-    const string X_RATELIMIT_RESET     = 'X-RateLimit-Reset';
-
-    const string RATELIMIT_LIMIT       = 'RateLimit-Limit';
-    const string RATELIMIT_REMAINING   = 'RateLimit-Remaining';
-    const string RATELIMIT_RESET       = 'RateLimit-Reset';
-
-    // -------------------------------------------------------------------------
-    // Observability / tracing
-    // -------------------------------------------------------------------------
-
-    const string SERVER_TIMING    = 'Server-Timing';
-    const string TRACEPARENT      = 'traceparent';
-    const string TRACESTATE       = 'tracestate';
-    const string X_CORRELATION_ID = 'X-Correlation-Id';
-    const string X_REQUEST_ID     = 'X-Request-Id';
-    const string X_RESPONSE_TIME  = 'X-Response-Time';
-
-    // -------------------------------------------------------------------------
-    // Client / AJAX (de-facto)
-    // -------------------------------------------------------------------------
-
-    const string X_REQUESTED_WITH = 'X-Requested-With';
-
-    // -------------------------------------------------------------------------
-    // Misc modern headers
-    // -------------------------------------------------------------------------
-
-    const string EARLY_HINTS  = '103 Early Hints';
-    const string ALT_SVC      = 'Alt-Svc';
-    const string NEL          = 'NEL';
-    const string REPORT_TO    = 'Report-To';
+    use ConstantsTrait                ,
+        ApiHeaderTrait                ,
+        AuthenticationHeaderTrait     ,
+        CachingHeaderTrait            ,
+        ClientHintHeaderTrait         ,
+        ConditionalHeaderTrait        ,
+        ContentHeaderTrait            ,
+        ContentNegotiationHeaderTrait ,
+        CookieHeaderTrait             ,
+        CorsHeaderTrait               ,
+        FetchMetadataHeaderTrait      ,
+        IntegrityHeaderTrait          ,
+        MiscHeaderTrait               ,
+        ObservabilityHeaderTrait      ,
+        ProxyHeaderTrait              ,
+        RangeHeaderTrait              ,
+        RateLimitHeaderTrait          ,
+        ReportingHeaderTrait          ,
+        RequestContextHeaderTrait     ,
+        RoutingHeaderTrait            ,
+        SecurityHeaderTrait           ,
+        WebSocketHeaderTrait          ;
 
     // -------------------------------------------------------------------------
     // Helpers
