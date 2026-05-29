@@ -16,6 +16,9 @@ use oihana\reflect\traits\ConstantsTrait;
  * IANAAppCodePage, facilitating consistent charset handling in database drivers
  * or other components interacting with textual data.
  *
+ * For the textual charset *names* (e.g. `utf-8`) used in a `Content-Type`
+ * header or by `mb_*` / `iconv`, see {@see \oihana\enums\http\Charset}.
+ *
  * See the official IANA character sets registry for full details:
  * https://www.iana.org/assignments/character-sets/character-sets.xhtml
  *

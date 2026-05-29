@@ -27,7 +27,7 @@ composer require oihana/php-enums
 
 ## ✨ What you can do
 
-- 📦 49 enumerations across general, HTTP, JWT/JOSE and OAuth 2.0/OIDC domains — see the [catalog](#-enumeration-catalog).
+- 📦 55 enumerations across general, HTTP, JWT/JOSE and OAuth 2.0/OIDC domains — see the [catalog](#-enumeration-catalog).
 - 🔍 Reflection-ready with ConstantsTrait for listing or validating values.
 - 🛡️ Reduces “magic strings” and improves semantic clarity.
 - 🧩 Easily reusable in any PHP application or framework.
@@ -53,7 +53,7 @@ ini_set(IniOptions::DISPLAY_ERRORS, '1');
 
 ## 📖 Enumeration catalog
 
-Over **1,600 constants** spread across **49 enumerations** in 4 namespaces. Every class uses
+Over **1,600 constants** spread across **55 enumerations** in 4 namespaces. Every class uses
 `ConstantsTrait`, so they all share a common reflection API — list, validate and reverse-lookup
 values without instantiating anything:
 
@@ -100,6 +100,12 @@ A few enums marked ⚙️ also ship domain-specific helpers — see [Convenience
 | `RequestAttribute` | `string` | 15 | Conventional PSR-7 request attribute names. |
 | `UriScheme` ⚙️ | `string` | 5 | URI schemes (`http`, `https`, `ws`, …). |
 | `UrlComponent` | `string` | 8 | Component keys returned by `parse_url()`. |
+| `MediaType` ⚙️ | `string` | 36 | Common IANA media types (`application/json`, `text/html`, …). |
+| `Charset` | `string` | 22 | Charset names for `Content-Type` (`utf-8`, `iso-8859-1`, …). |
+| `CacheControlDirective` | `string` | 16 | `Cache-Control` directives (`no-store`, `max-age`, …). |
+| `ContentEncoding` | `string` | 6 | Content codings (`gzip`, `br`, `zstd`, …). |
+| `CookieSameSite` | `string` | 3 | `SameSite` cookie values (`Strict`, `Lax`, `None`). |
+| `HttpProtocolVersion` | `string` | 4 | Protocol version strings (`HTTP/1.1`, `HTTP/2`, …). |
 
 ### JWT / JOSE — `oihana\enums\jwt`
 
@@ -149,6 +155,7 @@ Beyond the shared `ConstantsTrait` API, these enums expose domain-specific stati
 | `HttpHeader` | `all()`, `has()`, `remove()`, `send()` |
 | `HttpMethod` | `isValid()` |
 | `HttpStatusCode` | `getDescription()`, `getType()`, `fromException()` |
+| `MediaType` | `withCharset()` |
 | `UriScheme` | `defaultPort()` |
 
 

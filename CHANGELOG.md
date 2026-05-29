@@ -37,6 +37,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
   - camelCase values aligned with the de-facto PSR-15 ecosystem convention
 - `UrlComponent` — `parse_url()` component keys (`scheme`, `host`, `port`, `user`, `pass`, `path`, `query`, `fragment`)
 - `UriScheme` — common URI schemes (`http`, `https`, `ws`, `wss`, `ftp`) with a `defaultPort()` helper
+- `MediaType` (with unit tests) — common IANA media types (`application/json`, `multipart/form-data`, `text/event-stream`, `image/svg+xml`, …) with a `withCharset()` helper that defaults to `Charset::UTF_8`
+- `Charset` (with unit tests) — charset names for the `Content-Type` `charset` parameter (`utf-8`, `iso-8859-1`, `windows-1252`, `shift_jis`, …); the string-name counterpart of the int-coded `CharacterSet`
+- `CacheControlDirective` (with unit tests) — `Cache-Control` directives (RFC 9111, RFC 8246, RFC 5861): `public`, `private`, `no-cache`, `no-store`, `max-age`, `s-maxage`, `immutable`, `stale-while-revalidate`, …
+- `ContentEncoding` (with unit tests) — content codings: `gzip`, `compress`, `deflate`, `br`, `zstd`, `identity`
+- `CookieSameSite` (with unit tests) — `SameSite` cookie attribute values: `Strict`, `Lax`, `None`
+- `HttpProtocolVersion` (with unit tests) — protocol version strings: `HTTP/1.0`, `HTTP/1.1`, `HTTP/2`, `HTTP/3`
 
 #### JWT / JOSE enums (`oihana\enums\jwt`)
 
