@@ -35,6 +35,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
   - Routing (PSR-15): `ROUTE`, `ROUTE_PARAMS`
   - I18n: `LOCALE`
   - camelCase values aligned with the de-facto PSR-15 ecosystem convention
+- `UrlComponent` — `parse_url()` component keys (`scheme`, `host`, `port`, `user`, `pass`, `path`, `query`, `fragment`)
+- `UriScheme` — common URI schemes (`http`, `https`, `ws`, `wss`, `ftp`) with a `defaultPort()` helper
 
 #### JWT / JOSE enums (`oihana\enums\jwt`)
 
