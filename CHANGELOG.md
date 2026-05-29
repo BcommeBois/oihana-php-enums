@@ -56,6 +56,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
   - Full phpdoc per constant with spec references
 - `JwtHeader` (with unit tests) — JOSE header parameter names (RFC 7515 §4.1, RFC 7516 §4.1, RFC 7797, RFC 8555): `alg`, `kid`, `typ`, `cty`, `crit`, `enc`, `zip`, `b64`, `url`, `nonce`, `ppt`, and the full X.509 set (`x5u`, `x5c`, `x5t`, `x5t#S256`)
 - `JwtType` (with unit tests) — `typ` header values: `JWT`, `at+jwt` (RFC 9068), `dpop+jwt` (RFC 9449), `logout+jwt`, `secevent+jwt` (RFC 8417), `token-introspection+jwt` (RFC 9701), `it+jwt`
+- `JwkKeyType` (with unit tests) — JWK `kty` values: `EC`, `RSA`, `oct` (RFC 7518 §6.1), `OKP` (RFC 8037)
+- `JwkCurve` (with unit tests) — JWK `crv` values: `P-256`, `P-384`, `P-521` (RFC 7518), `secp256k1` (RFC 8812), `Ed25519`, `Ed448`, `X25519`, `X448` (RFC 8037)
+- `JwkParameter` (with unit tests) — JWK / JWK Set member names (RFC 7517, RFC 7518 §6, RFC 8037): common metadata (`kty`, `use`, `key_ops`, `alg`, `kid`, X.509 set), JWK Set (`keys`), EC/OKP (`crv`, `x`, `y`, `d`), RSA (`n`, `e`, `p`, `q`, `dp`, `dq`, `qi`, `oth`), symmetric (`k`)
+- `JwkUse` (with unit tests) — JWK `use` values: `sig`, `enc` (RFC 7517 §4.2)
+- `JwkKeyOperation` (with unit tests) — JWK `key_ops` values: `sign`, `verify`, `encrypt`, `decrypt`, `wrapKey`, `unwrapKey`, `deriveKey`, `deriveBits` (RFC 7517 §4.3)
 
 #### OAuth 2.0 / OIDC enums (`oihana\enums\oauth2`)
 

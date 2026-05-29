@@ -27,7 +27,7 @@ composer require oihana/php-enums
 
 ## ✨ What you can do
 
-- 📦 44 enumerations across general, HTTP, JWT/JOSE and OAuth 2.0/OIDC domains — see the [catalog](#-enumeration-catalog).
+- 📦 49 enumerations across general, HTTP, JWT/JOSE and OAuth 2.0/OIDC domains — see the [catalog](#-enumeration-catalog).
 - 🔍 Reflection-ready with ConstantsTrait for listing or validating values.
 - 🛡️ Reduces “magic strings” and improves semantic clarity.
 - 🧩 Easily reusable in any PHP application or framework.
@@ -53,7 +53,7 @@ ini_set(IniOptions::DISPLAY_ERRORS, '1');
 
 ## 📖 Enumeration catalog
 
-Over **1,600 constants** spread across **44 enumerations** in 4 namespaces. Every class uses
+Over **1,600 constants** spread across **49 enumerations** in 4 namespaces. Every class uses
 `ConstantsTrait`, so they all share a common reflection API — list, validate and reverse-lookup
 values without instantiating anything:
 
@@ -109,6 +109,11 @@ A few enums marked ⚙️ also ship domain-specific helpers — see [Convenience
 | `JwtClaim` | `string` | 53 | Standard JWT claim names. |
 | `JwtHeader` | `string` | 17 | Standard JOSE header parameter names. |
 | `JwtType` | `string` | 7 | Standard `typ` (JWT type) header values. |
+| `JwkKeyType` | `string` | 4 | JWK key types — `kty` values (`EC`, `RSA`, `oct`, `OKP`). |
+| `JwkCurve` | `string` | 8 | JWK curves — `crv` values (`P-256`, `Ed25519`, …). |
+| `JwkParameter` | `string` | 23 | JWK / JWK Set member names (`kty`, `n`, `e`, `crv`, …). |
+| `JwkUse` | `string` | 2 | JWK public-key use — `use` values (`sig`, `enc`). |
+| `JwkKeyOperation` | `string` | 8 | JWK key operations — `key_ops` values (`sign`, `verify`, …). |
 
 ### OAuth 2.0 / OpenID Connect — `oihana\enums\oauth2`
 
