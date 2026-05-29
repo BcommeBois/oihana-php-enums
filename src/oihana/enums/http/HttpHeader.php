@@ -191,6 +191,12 @@ class HttpHeader
     const string X_RESPONSE_TIME  = 'X-Response-Time';
 
     // -------------------------------------------------------------------------
+    // Client / AJAX (de-facto)
+    // -------------------------------------------------------------------------
+
+    const string X_REQUESTED_WITH = 'X-Requested-With';
+
+    // -------------------------------------------------------------------------
     // Misc modern headers
     // -------------------------------------------------------------------------
 
@@ -218,7 +224,7 @@ class HttpHeader
      * @param string $name The header name.
      * @return bool True if the header was sent, false otherwise.
      */
-    public static function has(string $name): bool
+    public static function has( string $name ): bool
     {
         $lowerName = strtolower( $name ) ;
         return array_any( headers_list() , fn( $header ) => str_starts_with( strtolower( $header ) , $lowerName . ':' ) ) ;
@@ -231,7 +237,7 @@ class HttpHeader
      *
      * @return void
      */
-    public static function remove(string $name): void
+    public static function remove( string $name ): void
     {
         if ( !headers_sent() )
         {

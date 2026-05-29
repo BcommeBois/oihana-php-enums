@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-05-29
+
 ### Added
 
 #### Core enums (`oihana\enums`)
@@ -22,7 +24,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 - `AuthScheme` — RFC 7235 authentication schemes (`Basic`, `Bearer`, `Digest`, `OAuth`, …)
 - `GuzzleOption` — Guzzle HTTP client request option keys
-- `HttpHeader` — with helper methods. Observability / tracing section extended with `X_RESPONSE_TIME` (`X-Response-Time`, de-facto Express/Koa) and `SERVER_TIMING` (`Server-Timing`, W3C standard).
+- `HttpHeader` — with helper methods. Observability / tracing section extended with `X_RESPONSE_TIME` (`X-Response-Time`, de-facto Express/Koa) and `SERVER_TIMING` (`Server-Timing`, W3C standard). Added `X_REQUESTED_WITH` (`X-Requested-With`, de-facto AJAX detection).
 - `HttpMethod` — with `isValid()` case-sensitive flag
 - `HttpParamStrategy`
 - `HttpStatusCode` — incl. `fromException()` to extract a 4xx/5xx code from a `Throwable`, falling back to `INTERNAL_SERVER_ERROR`
@@ -43,6 +45,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - `ContentEncoding` (with unit tests) — content codings: `gzip`, `compress`, `deflate`, `br`, `zstd`, `identity`
 - `CookieSameSite` (with unit tests) — `SameSite` cookie attribute values: `Strict`, `Lax`, `None`
 - `HttpProtocolVersion` (with unit tests) — protocol version strings: `HTTP/1.0`, `HTTP/1.1`, `HTTP/2`, `HTTP/3`
+- `ContentDisposition` (with unit tests) — `Content-Disposition` disposition types: `inline`, `attachment` (RFC 6266), `form-data` (RFC 7578)
 
 #### JWT / JOSE enums (`oihana\enums\jwt`)
 
@@ -103,6 +106,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - `OidcAmr` (with unit tests) — Authentication Method Reference values (RFC 8176)
 - `OidcDiscoveryField` (with unit tests) — fields of the `/.well-known/openid-configuration` discovery document (OIDC Discovery 1.0, RFC 8414, RFC 8628, RFC 9126, RFC 9449, OIDC RP-Initiated / Front-Channel / Back-Channel Logout)
 - `OidcScope` (with unit tests) — standard OIDC scopes: `openid`, `profile`, `email`, `address`, `phone`, `offline_access`
+- `OidcClaimType` (with unit tests) — OIDC claim types (OIDC Core §5.6): `normal`, `aggregated`, `distributed`
+- `OidcAddressField` (with unit tests) — sub-fields of the OIDC `address` claim (OIDC Core §5.1.1): `formatted`, `street_address`, `locality`, `region`, `postal_code`, `country`
+- `OAuth2ClientMetadata` (with unit tests) — Dynamic Client Registration metadata fields (RFC 7591, RFC 7592, OIDC Dynamic Client Registration 1.0, OIDC logout): client metadata, registration response/management, and OIDC-specific fields. Client-side counterpart of `OidcDiscoveryField`
 
 ### Changed
 

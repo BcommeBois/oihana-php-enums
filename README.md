@@ -27,7 +27,7 @@ composer require oihana/php-enums
 
 ## ✨ What you can do
 
-- 📦 58 enumerations across general, HTTP, JWT/JOSE and OAuth 2.0/OIDC domains — see the [catalog](#-enumeration-catalog).
+- 📦 62 enumerations across general, HTTP, JWT/JOSE and OAuth 2.0/OIDC domains — see the [catalog](#-enumeration-catalog).
 - 🔍 Reflection-ready with ConstantsTrait for listing or validating values.
 - 🛡️ Reduces “magic strings” and improves semantic clarity.
 - 🧩 Easily reusable in any PHP application or framework.
@@ -53,7 +53,7 @@ ini_set(IniOptions::DISPLAY_ERRORS, '1');
 
 ## 📖 Enumeration catalog
 
-Over **1,600 constants** spread across **58 enumerations** in 4 namespaces. Every class uses
+Over **1,600 constants** spread across **62 enumerations** in 4 namespaces. Every class uses
 `ConstantsTrait`, so they all share a common reflection API — list, validate and reverse-lookup
 values without instantiating anything:
 
@@ -91,7 +91,7 @@ A few enums marked ⚙️ also ship domain-specific helpers — see [Convenience
 |---|---|--:|---|
 | `AuthScheme` ⚙️ | `string` | 10 | HTTP authentication schemes (`Basic`, `Bearer`, …). |
 | `GuzzleOption` | `string` | 29 | Guzzle HTTP client request options. |
-| `HttpHeader` ⚙️ | `string` | 94 | Standard HTTP header names (request & response). |
+| `HttpHeader` ⚙️ | `string` | 95 | Standard HTTP header names (request & response). |
 | `HttpMethod` ⚙️ | `string` | 33 | HTTP request methods (`GET`, `POST`, …). |
 | `HttpParamStrategy` | `string` | 3 | Strategy for retrieving parameters from a request. |
 | `HttpStatusCode` ⚙️ | `int` | 78 | Standard HTTP status codes. |
@@ -106,6 +106,7 @@ A few enums marked ⚙️ also ship domain-specific helpers — see [Convenience
 | `ContentEncoding` | `string` | 6 | Content codings (`gzip`, `br`, `zstd`, …). |
 | `CookieSameSite` | `string` | 3 | `SameSite` cookie values (`Strict`, `Lax`, `None`). |
 | `HttpProtocolVersion` | `string` | 4 | Protocol version strings (`HTTP/1.1`, `HTTP/2`, …). |
+| `ContentDisposition` | `string` | 3 | `Content-Disposition` types (`inline`, `attachment`, `form-data`). |
 
 ### JWT / JOSE — `oihana\enums\jwt`
 
@@ -142,6 +143,9 @@ A few enums marked ⚙️ also ship domain-specific helpers — see [Convenience
 | `OidcAmr` | `string` | 21 | Authentication Method Reference (`amr`) values. |
 | `OidcDiscoveryField` | `string` | 54 | OIDC discovery document fields (`.well-known/openid-configuration`). |
 | `OidcScope` | `string` | 6 | OIDC scope values. |
+| `OidcClaimType` | `string` | 3 | OIDC claim types (`normal`, `aggregated`, `distributed`). |
+| `OidcAddressField` | `string` | 6 | Sub-fields of the OIDC `address` claim. |
+| `OAuth2ClientMetadata` | `string` | 45 | Dynamic Client Registration metadata (RFC 7591/7592, OIDC). |
 
 ### ⚙️ Convenience helpers
 
