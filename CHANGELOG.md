@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased]
 
+### Added
+
+#### Mail enums (`oihana\enums\mail`)
+
+- `SmtpPort` (with unit tests) — well-known SMTP ports by role: `SMTP` (25), `IMPLICIT_TLS` (465), `SUBMISSION` (587), `ALTERNATE` (2525)
+- `SmtpScheme` (with unit tests) — the two SMTP DSN schemes (`smtp`, `smtps`) with a `defaultPort()` helper
+- `SmtpSecurity` (with unit tests) — the six accepted `secure` configuration values (`ssl`/`smtps`, `tls`/`starttls`, `none`/`plain`), with `scheme()`, `defaultPort()` and `isImplicitTls()` helpers mapping a `secure` value onto a `SmtpScheme` and default port; absent/empty/unknown falls back to STARTTLS
+
 ## [1.1.0] - 2026-05-29
 
 ### Added
