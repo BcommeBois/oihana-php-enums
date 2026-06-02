@@ -13,6 +13,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - `MailHeader` (with unit tests) — email header field names (RFC 5322, 2045, 2369/2919/8058, 6376, 8601, 8617, 8098, 3834), organised into composable per-category traits under `oihana\enums\mail\headers`. Map-based helpers `all()`, `has()`, `get()`, `remove()`, `set()` (case-insensitive), plus `normalize()` (canonical casing) and `canRepeat()`
 - `ContentTransferEncoding` (with unit tests) — MIME `Content-Transfer-Encoding` values (`7bit`, `8bit`, `binary`, `quoted-printable`, `base64`) with an `isIdentity()` helper
 - `MailPriority` (with unit tests) — canonical priority levels (`high`/`normal`/`low`) with `normalize()` and conversions to/from `X-Priority`, `Importance` and `Priority` (RFC 2156)
+- `SmtpAuthMechanism` (with unit tests) — SMTP SASL authentication mechanisms (`PLAIN`, `LOGIN`, `CRAM-MD5`, `SCRAM-SHA-256`, `XOAUTH2`, …) with a `requiresTls()` helper
+- `SmtpReplyCode` (with unit tests) — SMTP reply codes (RFC 5321, with RFC 4954/7504 extensions) grouped by class, with `getDescription()`, `getType()`, `isPositive()`, `isTransient()` and `isPermanent()` helpers
+- `EnhancedStatusCode` (with unit tests) — enhanced status code classes (RFC 3463): `SUCCESS` (2), `TRANSIENT` (4), `PERMANENT` (5), with `X.Y.Z` parsing helpers (`classOf()`, `subjectOf()`, `detailOf()`, `isValid()`, …)
 - `SmtpPort` (with unit tests) — well-known SMTP ports by role: `SMTP` (25), `IMPLICIT_TLS` (465), `SUBMISSION` (587), `ALTERNATE` (2525)
 - `SmtpScheme` (with unit tests) — the two SMTP DSN schemes (`smtp`, `smtps`) with a `defaultPort()` helper
 - `SmtpSecurity` (with unit tests) — the six accepted `secure` configuration values (`ssl`/`smtps`, `tls`/`starttls`, `none`/`plain`), with `scheme()`, `defaultPort()` and `isImplicitTls()` helpers mapping a `secure` value onto a `SmtpScheme` and default port; absent/empty/unknown falls back to STARTTLS

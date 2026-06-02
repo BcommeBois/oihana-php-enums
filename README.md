@@ -27,7 +27,7 @@ composer require oihana/php-enums
 
 ## ✨ What you can do
 
-- 📦 68 enumerations across general, HTTP, mail, JWT/JOSE and OAuth 2.0/OIDC domains — see the [catalog](#-enumeration-catalog).
+- 📦 71 enumerations across general, HTTP, mail, JWT/JOSE and OAuth 2.0/OIDC domains — see the [catalog](#-enumeration-catalog).
 - 🔍 Reflection-ready with ConstantsTrait for listing or validating values.
 - 🛡️ Reduces “magic strings” and improves semantic clarity.
 - 🧩 Easily reusable in any PHP application or framework.
@@ -53,7 +53,7 @@ ini_set(IniOptions::DISPLAY_ERRORS, '1');
 
 ## 📖 Enumeration catalog
 
-Over **1,600 constants** spread across **68 enumerations** in 5 namespaces. Every class uses
+Over **1,600 constants** spread across **71 enumerations** in 5 namespaces. Every class uses
 `ConstantsTrait`, so they all share a common reflection API — list, validate and reverse-lookup
 values without instantiating anything:
 
@@ -120,6 +120,9 @@ A few enums marked ⚙️ also ship domain-specific helpers — see [Convenience
 | `SmtpPort` | `int` | 4 | Well-known SMTP ports (`25`, `465`, `587`, `2525`) by role. |
 | `SmtpScheme` ⚙️ | `string` | 2 | SMTP DSN schemes (`smtp`, `smtps`). |
 | `SmtpSecurity` ⚙️ | `string` | 6 | SMTP `secure` values (`ssl`/`smtps`, `tls`/`starttls`, `none`/`plain`) mapped to scheme & port. |
+| `SmtpAuthMechanism` ⚙️ | `string` | 11 | SMTP SASL auth mechanisms (`PLAIN`, `LOGIN`, `CRAM-MD5`, `XOAUTH2`, …). |
+| `SmtpReplyCode` ⚙️ | `int` | 32 | SMTP reply codes (RFC 5321) with type / transient / permanent helpers. |
+| `EnhancedStatusCode` ⚙️ | `string` | 3 | Enhanced status code classes (`2`/`4`/`5`) with `X.Y.Z` parsing helpers. |
 
 > `MailHeader`'s constants are split into composable per-category traits under `oihana\enums\mail\headers` (`OriginatorHeaderTrait`, `MimeHeaderTrait`, `ListHeaderTrait`, `AuthenticationHeaderTrait`, …). `use` a single trait when you only need one category. Its helpers act on an in-memory header map (`array<string,string>`), not the runtime response sink.
 
@@ -184,6 +187,9 @@ Beyond the shared `ConstantsTrait` API, these enums expose domain-specific stati
 | `MailHeader` | `all()`, `has()`, `get()`, `remove()`, `set()`, `normalize()`, `canRepeat()` |
 | `ContentTransferEncoding` | `isIdentity()` |
 | `MailPriority` | `normalize()`, `toXPriority()`, `fromXPriority()`, `toImportance()`, `toPriority()` |
+| `SmtpAuthMechanism` | `requiresTls()` |
+| `SmtpReplyCode` | `getDescription()`, `getType()`, `isPositive()`, `isTransient()`, `isPermanent()` |
+| `EnhancedStatusCode` | `classOf()`, `subjectOf()`, `detailOf()`, `isSuccess()`, `isTransient()`, `isPermanent()`, `isValid()` |
 
 
 ## ✅ Running Unit Tests
