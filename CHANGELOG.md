@@ -13,6 +13,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - `MailHeader` (with unit tests) — email header field names (RFC 5322, 2045, 2369/2919/8058, 6376, 8601, 8617, 8098, 3834), organised into composable per-category traits under `oihana\enums\mail\headers`. Map-based helpers `all()`, `has()`, `get()`, `remove()`, `set()` (case-insensitive), plus `normalize()` (canonical casing) and `canRepeat()`
 - `ContentTransferEncoding` (with unit tests) — MIME `Content-Transfer-Encoding` values (`7bit`, `8bit`, `binary`, `quoted-printable`, `base64`) with an `isIdentity()` helper
 - `MailPriority` (with unit tests) — canonical priority levels (`high`/`normal`/`low`) with `normalize()` and conversions to/from `X-Priority`, `Importance` and `Priority` (RFC 2156)
+- `AutoSubmitted` (with unit tests) — `Auto-Submitted` header values (RFC 3834, RFC 5436): `no`, `auto-generated`, `auto-replied`, `auto-notified`, with an `isAutomated()` helper to suppress auto-replies
+- `Sensitivity` (with unit tests) — `Sensitivity` header values (RFC 2156): `Personal`, `Private`, `Company-Confidential`
 - `SmtpAuthMechanism` (with unit tests) — SMTP SASL authentication mechanisms (`PLAIN`, `LOGIN`, `CRAM-MD5`, `SCRAM-SHA-256`, `XOAUTH2`, …) with a `requiresTls()` helper
 - `SmtpReplyCode` (with unit tests) — SMTP reply codes (RFC 5321, with RFC 4954/7504 extensions) grouped by class, with `getDescription()`, `getType()`, `isPositive()`, `isTransient()` and `isPermanent()` helpers
 - `EnhancedStatusCode` (with unit tests) — enhanced status code classes (RFC 3463): `SUCCESS` (2), `TRANSIENT` (4), `PERMANENT` (5), with `X.Y.Z` parsing helpers (`classOf()`, `subjectOf()`, `detailOf()`, `isValid()`, …)
