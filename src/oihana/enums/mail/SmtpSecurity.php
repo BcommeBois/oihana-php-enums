@@ -40,26 +40,6 @@ class SmtpSecurity
     use ConstantsTrait ;
 
     /**
-     * Implicit TLS (synonym of {@see self::SMTPS}). Scheme `smtps`, port `465`.
-     */
-    public const string SSL = 'ssl' ;
-
-    /**
-     * Implicit TLS. Scheme `smtps`, port `465`.
-     */
-    public const string SMTPS = 'smtps' ;
-
-    /**
-     * Opportunistic STARTTLS (synonym of {@see self::STARTTLS}). Scheme `smtp`, port `587`.
-     */
-    public const string TLS = 'tls' ;
-
-    /**
-     * Opportunistic STARTTLS. Scheme `smtp`, port `587`.
-     */
-    public const string STARTTLS = 'starttls' ;
-
-    /**
      * Cleartext, no encryption (synonym of {@see self::PLAIN}). Scheme `smtp`, port `25` — dev only.
      */
     public const string NONE = 'none' ;
@@ -69,25 +49,29 @@ class SmtpSecurity
      */
     public const string PLAIN = 'plain' ;
 
+    /**
+     * Implicit TLS. Scheme `smtps`, port `465`.
+     */
+    public const string SMTPS = 'smtps' ;
+
+    /**
+     * Implicit TLS (synonym of {@see self::SMTPS}). Scheme `smtps`, port `465`.
+     */
+    public const string SSL = 'ssl' ;
+
+    /**
+     * Opportunistic STARTTLS. Scheme `smtp`, port `587`.
+     */
+    public const string STARTTLS = 'starttls' ;
+
+    /**
+     * Opportunistic STARTTLS (synonym of {@see self::STARTTLS}). Scheme `smtp`, port `587`.
+     */
+    public const string TLS = 'tls' ;
+
     // -------------------------------------------------------------------------
     // Helpers
     // -------------------------------------------------------------------------
-
-    /**
-     * Maps a `secure` value onto the SMTP DSN scheme.
-     *
-     * @param string|null $secure One of the class constants (case-insensitive).
-     *                            Absent / empty / unknown falls back to STARTTLS.
-     * @return string Either {@see SmtpScheme::SMTP} or {@see SmtpScheme::SMTPS}.
-     */
-    public static function scheme( ?string $secure ): string
-    {
-        return match ( strtolower( (string) $secure ) )
-        {
-            self::SSL , self::SMTPS => SmtpScheme::SMTPS ,
-            default                 => SmtpScheme::SMTP ,
-        } ;
-    }
 
     /**
      * Maps a `secure` value onto the conventional default SMTP port.
@@ -115,5 +99,21 @@ class SmtpSecurity
     public static function isImplicitTls( ?string $secure ): bool
     {
         return self::scheme( $secure ) === SmtpScheme::SMTPS ;
+    }
+
+    /**
+     * Maps a `secure` value onto the SMTP DSN scheme.
+     *
+     * @param string|null $secure One of the class constants (case-insensitive).
+     *                            Absent / empty / unknown falls back to STARTTLS.
+     * @return string Either {@see SmtpScheme::SMTP} or {@see SmtpScheme::SMTPS}.
+     */
+    public static function scheme( ?string $secure ): string
+    {
+        return match ( strtolower( (string) $secure ) )
+        {
+            self::SSL , self::SMTPS => SmtpScheme::SMTPS ,
+            default                 => SmtpScheme::SMTP ,
+        } ;
     }
 }

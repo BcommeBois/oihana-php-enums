@@ -27,7 +27,7 @@ composer require oihana/php-enums
 
 ## ✨ What you can do
 
-- 📦 65 enumerations across general, HTTP, mail, JWT/JOSE and OAuth 2.0/OIDC domains — see the [catalog](#-enumeration-catalog).
+- 📦 68 enumerations across general, HTTP, mail, JWT/JOSE and OAuth 2.0/OIDC domains — see the [catalog](#-enumeration-catalog).
 - 🔍 Reflection-ready with ConstantsTrait for listing or validating values.
 - 🛡️ Reduces “magic strings” and improves semantic clarity.
 - 🧩 Easily reusable in any PHP application or framework.
@@ -53,7 +53,7 @@ ini_set(IniOptions::DISPLAY_ERRORS, '1');
 
 ## 📖 Enumeration catalog
 
-Over **1,600 constants** spread across **65 enumerations** in 5 namespaces. Every class uses
+Over **1,600 constants** spread across **68 enumerations** in 5 namespaces. Every class uses
 `ConstantsTrait`, so they all share a common reflection API — list, validate and reverse-lookup
 values without instantiating anything:
 
@@ -114,9 +114,14 @@ A few enums marked ⚙️ also ship domain-specific helpers — see [Convenience
 
 | Enumeration | Values | # | Description |
 |---|---|--:|---|
+| `MailHeader` ⚙️ | `string` | 57 | Email header field names (RFC 5322 & friends), split into per-category traits. |
+| `ContentTransferEncoding` ⚙️ | `string` | 5 | MIME `Content-Transfer-Encoding` values (`base64`, `quoted-printable`, …). |
+| `MailPriority` ⚙️ | `string` | 3 | Canonical priority levels with `X-Priority` / `Importance` / `Priority` conversions. |
 | `SmtpPort` | `int` | 4 | Well-known SMTP ports (`25`, `465`, `587`, `2525`) by role. |
 | `SmtpScheme` ⚙️ | `string` | 2 | SMTP DSN schemes (`smtp`, `smtps`). |
 | `SmtpSecurity` ⚙️ | `string` | 6 | SMTP `secure` values (`ssl`/`smtps`, `tls`/`starttls`, `none`/`plain`) mapped to scheme & port. |
+
+> `MailHeader`'s constants are split into composable per-category traits under `oihana\enums\mail\headers` (`OriginatorHeaderTrait`, `MimeHeaderTrait`, `ListHeaderTrait`, `AuthenticationHeaderTrait`, …). `use` a single trait when you only need one category. Its helpers act on an in-memory header map (`array<string,string>`), not the runtime response sink.
 
 ### JWT / JOSE — `oihana\enums\jwt`
 
@@ -176,6 +181,9 @@ Beyond the shared `ConstantsTrait` API, these enums expose domain-specific stati
 | `UriScheme` | `defaultPort()` |
 | `SmtpScheme` | `defaultPort()` |
 | `SmtpSecurity` | `scheme()`, `defaultPort()`, `isImplicitTls()` |
+| `MailHeader` | `all()`, `has()`, `get()`, `remove()`, `set()`, `normalize()`, `canRepeat()` |
+| `ContentTransferEncoding` | `isIdentity()` |
+| `MailPriority` | `normalize()`, `toXPriority()`, `fromXPriority()`, `toImportance()`, `toPriority()` |
 
 
 ## ✅ Running Unit Tests

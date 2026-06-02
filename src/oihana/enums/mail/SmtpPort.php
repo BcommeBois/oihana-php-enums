@@ -29,9 +29,9 @@ class SmtpPort
     use ConstantsTrait ;
 
     /**
-     * Classic SMTP port — server-to-server relay and cleartext. IANA service `smtp`.
+     * Common non-standard fallback used by some providers when `587` is blocked.
      */
-    public const int SMTP = 25 ;
+    public const int ALTERNATE = 2525 ;
 
     /**
      * Message submission over implicit TLS (RFC 8314). IANA service `submissions`.
@@ -39,12 +39,12 @@ class SmtpPort
     public const int IMPLICIT_TLS = 465 ;
 
     /**
+     * Classic SMTP port — server-to-server relay and cleartext. IANA service `smtp`.
+     */
+    public const int SMTP = 25 ;
+
+    /**
      * Message submission with STARTTLS (RFC 6409). IANA service `submission`.
      */
     public const int SUBMISSION = 587 ;
-
-    /**
-     * Common non-standard fallback used by some providers when `587` is blocked.
-     */
-    public const int ALTERNATE = 2525 ;
 }
