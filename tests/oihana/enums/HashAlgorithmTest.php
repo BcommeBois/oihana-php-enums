@@ -213,6 +213,25 @@ class HashAlgorithmTest extends TestCase
         HashAlgorithm::ensureAvailable( 'not-a-real-algo' ) ;
     }
 
+    /**
+     * @throws ConstantException
+     */
+    public function testEnsureAvailablePassesWhenInjectedListContainsAlgorithm() :void
+    {
+        // Should not throw: the algorithm is a valid constant AND present in the list.
+        HashAlgorithm::ensureAvailable( HashAlgorithm::SHA256 , [ HashAlgorithm::SHA256 ] ) ;
+        $this->addToAssertionCount( 1 ) ;
+    }
+
+    public function testEnsureAvailableThrowsWhenAlgorithmDisabledAtRuntime() :void
+    {
+        // SHA256 is a valid enum constant but absent from the injected runtime
+        // list -> exercises the "defined but not enabled at runtime" guard.
+        $this->expectException( ConstantException::class ) ;
+        $this->expectExceptionMessage( 'not enabled on this PHP runtime' ) ;
+        HashAlgorithm::ensureAvailable( HashAlgorithm::SHA256 , [ HashAlgorithm::MD5 ] ) ;
+    }
+
     public function testHashSha256ProducesExpectedDigest() :void
     {
         if( !in_array( 'sha256' , hash_algos() , true ) )
