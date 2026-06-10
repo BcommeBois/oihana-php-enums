@@ -21,6 +21,9 @@ coverage.xml
 /.phpdoc/cache
 /build/
 /build/coverage/history.json   # coverage trend log — local only
+
+# generated API docs — built locally for previews, published by CI (Pages)
+/docs/
 /builds/
 /database/
 /vendor/
