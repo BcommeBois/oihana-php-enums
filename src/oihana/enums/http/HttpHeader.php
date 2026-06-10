@@ -145,6 +145,9 @@ class HttpHeader
 
         if ( headers_sent($file, $line ) )
         {
+            // Unreachable under the PHPUnit harness: its output buffering keeps
+            // headers_sent() false. header() below would raise its own warning anyway.
+            // @codeCoverageIgnoreStart
             trigger_error
             (
                 sprintf
@@ -157,6 +160,7 @@ class HttpHeader
                 E_USER_WARNING
             );
             return ;
+            // @codeCoverageIgnoreEnd
         }
 
         $header = $value !== null ? "{$name}: {$value}" : $name ;

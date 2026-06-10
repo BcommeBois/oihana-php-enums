@@ -162,18 +162,21 @@ class HashAlgorithm
     /**
      * Ensures an algorithm is supported by the runtime, throwing otherwise.
      *
-     * @param string $algorithm The algorithm identifier to validate.
+     * @param string                 $algorithm The algorithm identifier to validate.
+     * @param array<int,string>|null $available The list of algorithms supported by the runtime.
+     *                                          Defaults to {@see hash_algos()}; injectable to test
+     *                                          the runtime guard.
      *
      * @return void
      *
      * @throws ConstantException If the algorithm is unknown to this enum
      *                           or disabled at runtime.
      */
-    public static function ensureAvailable( string $algorithm ) :void
+    public static function ensureAvailable( string $algorithm , ?array $available = null ) :void
     {
         self::validate( $algorithm ) ;
 
-        if( !in_array( $algorithm , hash_algos() , true ) )
+        if( !in_array( $algorithm , $available ?? hash_algos() , true ) )
         {
             throw new ConstantException
             (
