@@ -6,6 +6,23 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased]
 
+## [1.2.2] - 2026-06-10
+
+### Added
+
+- Bilingual user wiki under `wiki/` (English `wiki/en`, French `wiki/fr`): getting started, the shared `ConstantsTrait` API, the full catalogue per namespace (general, HTTP, mail/SMTP, JWT/JOSE, OAuth 2.0/OIDC), convenience helpers, testing and tips
+- GitHub Actions `Docs` workflow (`.github/workflows/docs.yml`): builds the phpDocumentor site (`composer doc`) and publishes it to GitHub Pages on push to `main`
+
+### Changed
+
+- Reworked `README.md` to point at the wiki: trimmed to overview, quick start and links; the full enum catalogue and the helpers table now live in the wiki
+- `phpdoc.xml`: documented version bumped `1.0.0` → `1.2.2`
+- phpDocumentor home page (`.phpdoc/template/index.html.twig`): curated content with FR/EN wiki links, a _Tests & coverage_ section and a related-packages list; removed the auto-generated table-of-contents / constants / functions footer
+
+### Removed
+
+- The generated `docs/` folder is no longer committed — it is now gitignored, built locally for previews, and published by CI
+
 ## [1.2.1] - 2026-06-10
 
 ### Added
