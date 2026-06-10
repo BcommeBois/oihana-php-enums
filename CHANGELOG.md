@@ -23,6 +23,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 - The generated `docs/` folder is no longer committed — it is now gitignored, built locally for previews, and published by CI
 
+### Fixed
+
+- CI: the `HttpHeader` header-sending test no longer skips when Xdebug is absent. It used `markTestSkipped()`, and with `phpunit.xml`'s `failOnSkipped=true` that turned the `coverage: none` CI run red. The `send()` paths now always run; only the `xdebug_get_headers()` verification is gated on Xdebug.
+
 ## [1.2.1] - 2026-06-10
 
 ### Added

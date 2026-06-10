@@ -112,36 +112,28 @@ class HttpHeaderTest extends TestCase
      */
     public function testSendAndHasAndAll(): void
     {
-        if ( !function_exists('xdebug_get_headers') )
-        {
-            $this->markTestSkipped('xdebug required to test header sending');
-        }
-
+        // send() must accept valid headers without throwing. This always runs and
+        // exercises every send() path: with a value, with an explicit response
+        // code, and name-only.
         HttpHeader::send(HttpHeader::CONTENT_TYPE  , 'application/json' ) ;
         HttpHeader::send(HttpHeader::CACHE_CONTROL , 'no-cache'         ) ;
+        HttpHeader::send(HttpHeader::VARY , 'Accept' , true , 200 ) ; // header(..., $responseCode)
+        HttpHeader::send(HttpHeader::CONNECTION ) ;                   // name only, no value
 
-        // With an explicit response code (covers the header(..., $responseCode) path).
-        HttpHeader::send(HttpHeader::VARY , 'Accept' , true , 200 ) ;
-
-        // Name only, no value.
-        HttpHeader::send(HttpHeader::CONNECTION ) ;
+        if ( !function_exists('xdebug_get_headers') )
+        {
+            // Without Xdebug the sent headers cannot be inspected (CLI's
+            // headers_list() does not capture them); reaching this point without
+            // an exception is the assertion.
+            $this->addToAssertionCount( 1 ) ;
+            return ;
+        }
 
         $headers = xdebug_get_headers();
 
-        $this->assertTrue(
-            in_array(HttpHeader::CONTENT_TYPE . ': application/json', $headers),
-            'Expected Content-Type header not found'
-        );
-
-        $this->assertTrue(
-            in_array(HttpHeader::CACHE_CONTROL . ': no-cache', $headers),
-            'Expected Cache-Control header not found'
-        );
-
-        $this->assertTrue(
-            in_array(HttpHeader::VARY . ': Accept', $headers),
-            'Expected Vary header not found'
-        );
+        $this->assertContains( HttpHeader::CONTENT_TYPE  . ': application/json' , $headers ) ;
+        $this->assertContains( HttpHeader::CACHE_CONTROL . ': no-cache'         , $headers ) ;
+        $this->assertContains( HttpHeader::VARY          . ': Accept'           , $headers ) ;
     }
 
     public function testAllReturnsHeadersList(): void
