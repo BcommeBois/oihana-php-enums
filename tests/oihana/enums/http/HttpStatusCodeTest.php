@@ -41,6 +41,16 @@ class HttpStatusCodeTest extends TestCase
         $this->assertSame('Bandwidth Limit Exceeded', HttpStatusCode::getDescription('509'));
     }
 
+    public function testGetDescriptionCoversEveryConstant(): void
+    {
+        foreach ( HttpStatusCode::getAll() as $name => $code )
+        {
+            $description = HttpStatusCode::getDescription( $code ) ;
+            $this->assertIsString( $description , "Missing description for {$name} ({$code})" ) ;
+            $this->assertNotSame( '' , $description , "Empty description for {$name} ({$code})" ) ;
+        }
+    }
+
     public function testGetType(): void
     {
         $this->assertSame(Output::INFO, HttpStatusCode::getType(HttpStatusCode::CONTINUE));

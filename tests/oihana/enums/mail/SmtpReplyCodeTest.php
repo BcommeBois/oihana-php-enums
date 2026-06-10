@@ -33,6 +33,16 @@ class SmtpReplyCodeTest extends TestCase
         $this->assertNull( SmtpReplyCode::getDescription( 999 ) ) ;
     }
 
+    public function testGetDescriptionCoversEveryConstant() :void
+    {
+        foreach ( SmtpReplyCode::getAll() as $name => $code )
+        {
+            $description = SmtpReplyCode::getDescription( $code ) ;
+            $this->assertIsString( $description , "Missing description for {$name} ({$code})" ) ;
+            $this->assertNotSame( '' , $description , "Empty description for {$name} ({$code})" ) ;
+        }
+    }
+
     public function testIsPositive() :void
     {
         $this->assertTrue ( SmtpReplyCode::isPositive( 250 ) ) ;

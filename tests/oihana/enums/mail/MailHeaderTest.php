@@ -95,4 +95,10 @@ class MailHeaderTest extends TestCase
             MailHeader::all( $headers )
         ) ;
     }
+
+    public function testHasReturnsFalseWhenAbsent() :void
+    {
+        $this->assertFalse( MailHeader::has( [ 'Subject' => 'Hi' ] , 'X-Missing' ) ) ;
+        $this->assertFalse( MailHeader::has( [] , 'Subject' ) ) ;
+    }
 }

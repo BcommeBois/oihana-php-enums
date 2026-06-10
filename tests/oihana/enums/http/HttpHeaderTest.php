@@ -120,6 +120,12 @@ class HttpHeaderTest extends TestCase
         HttpHeader::send(HttpHeader::CONTENT_TYPE  , 'application/json' ) ;
         HttpHeader::send(HttpHeader::CACHE_CONTROL , 'no-cache'         ) ;
 
+        // With an explicit response code (covers the header(..., $responseCode) path).
+        HttpHeader::send(HttpHeader::VARY , 'Accept' , true , 200 ) ;
+
+        // Name only, no value.
+        HttpHeader::send(HttpHeader::CONNECTION ) ;
+
         $headers = xdebug_get_headers();
 
         $this->assertTrue(
@@ -131,6 +137,27 @@ class HttpHeaderTest extends TestCase
             in_array(HttpHeader::CACHE_CONTROL . ': no-cache', $headers),
             'Expected Cache-Control header not found'
         );
+
+        $this->assertTrue(
+            in_array(HttpHeader::VARY . ': Accept', $headers),
+            'Expected Vary header not found'
+        );
+    }
+
+    public function testAllReturnsHeadersList(): void
+    {
+        $this->assertIsArray( HttpHeader::all() ) ;
+    }
+
+    public function testHasReturnsFalseForUnsentHeader(): void
+    {
+        $this->assertFalse( HttpHeader::has( 'X-Never-Sent-Header' ) ) ;
+    }
+
+    public function testRemoveDoesNotThrowAndClearsHeader(): void
+    {
+        HttpHeader::remove( HttpHeader::CONTENT_TYPE ) ;
+        $this->assertFalse( HttpHeader::has( HttpHeader::CONTENT_TYPE ) ) ;
     }
 
     public function testSendInvalidHeaderThrowsException(): void
