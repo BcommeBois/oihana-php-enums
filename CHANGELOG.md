@@ -6,6 +6,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased]
 
+## [1.2.3] - 2026-06-21
+
+### Added
+
+- `HttpMethod` constants `COUNT`, `SEARCH` and `search`
+- Per-constant PHPDoc for every `HttpMethod` constant, plus an expanded class PHPDoc describing the three sections and the scope of `isValid()`
+- Test coverage for the new constants in `HttpMethodTest::testEnums()`
+
+### Changed
+
+- Reorganised `HttpMethod` constants into three sections: standard methods recognised by `isValid()` (now including `CONNECT`), the RFC 5323 `SEARCH` method, and the non-verb extras (`ALL`, `COUNT`, and the lowercase CRUD vocabulary)
+- Wiki (`wiki/en/http.md`, `wiki/fr/http.md`): bumped the `HttpMethod` constant count `33` → `36`
+- `phpdoc.xml`: documented version bumped `1.2.2` → `1.2.3`
+
 ## [1.2.2] - 2026-06-10
 
 ### Added

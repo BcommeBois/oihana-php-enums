@@ -7,7 +7,7 @@ Everything HTTP: request methods, status codes, the full header vocabulary (comp
 | `AuthScheme` ⚙️ | `string` | 10 | HTTP authentication schemes (`Basic`, `Bearer`, …). |
 | `GuzzleOption` | `string` | 29 | Guzzle HTTP client request options. |
 | `HttpHeader` ⚙️ | `string` | 131 | Standard HTTP header names (request & response). |
-| `HttpMethod` ⚙️ | `string` | 33 | HTTP request methods (`GET`, `POST`, …). |
+| `HttpMethod` ⚙️ | `string` | 36 | HTTP request methods (`GET`, `POST`, …). |
 | `HttpParamStrategy` | `string` | 3 | Strategy for retrieving parameters from a request. |
 | `HttpStatusCode` ⚙️ | `int` | 78 | Standard HTTP status codes. |
 | `OAuthParameters` | `string` | 7 | OAuth 1.0a parameter keys. |

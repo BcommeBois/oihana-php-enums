@@ -7,7 +7,7 @@ Tout ce qui touche à HTTP : méthodes de requête, codes de statut, le vocabula
 | `AuthScheme` ⚙️ | `string` | 10 | Schémas d'authentification HTTP (`Basic`, `Bearer`, …). |
 | `GuzzleOption` | `string` | 29 | Options de requête du client HTTP Guzzle. |
 | `HttpHeader` ⚙️ | `string` | 131 | Noms d'en-têtes HTTP standard (requête & réponse). |
-| `HttpMethod` ⚙️ | `string` | 33 | Méthodes de requête HTTP (`GET`, `POST`, …). |
+| `HttpMethod` ⚙️ | `string` | 36 | Méthodes de requête HTTP (`GET`, `POST`, …). |
 | `HttpParamStrategy` | `string` | 3 | Stratégie de récupération des paramètres d'une requête. |
 | `HttpStatusCode` ⚙️ | `int` | 78 | Codes de statut HTTP standard. |
 | `OAuthParameters` | `string` | 7 | Clés de paramètres OAuth 1.0a. |
