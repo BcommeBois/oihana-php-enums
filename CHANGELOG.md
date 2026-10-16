@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased]
 
+### Added
+
+- **2026-10-16** — **`HttpHeader::IDEMPOTENT_REPLAYED`** — feat(http): add the `Idempotent-Replayed`
+  response header. It is the companion of `IDEMPOTENCY_KEY` (`ApiHeaderTrait`): a server that keeps the
+  answer given to an `Idempotency-Key` sends `Idempotent-Replayed: true` when it serves that answer again
+  instead of re-running the request, so a client can tell a replay from a first execution. Not part of
+  the IETF idempotency draft; a de-facto convention. `HttpHeaderTest` covers it; the wiki
+  (`wiki/{en,fr}/http.md`) counts `131` → `132` header constants.
+
 ### Changed
 
 - Bump the `phpunit/phpunit` dev dependency from `^12` to `^13` and update the

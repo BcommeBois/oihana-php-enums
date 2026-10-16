@@ -100,6 +100,7 @@ class HttpHeaderTest extends TestCase
         $this->assertSame( 'Content-Digest'      , HttpHeader::CONTENT_DIGEST      ) ;
         $this->assertSame( 'Sec-WebSocket-Key'   , HttpHeader::SEC_WEBSOCKET_KEY   ) ;
         $this->assertSame( 'Idempotency-Key'     , HttpHeader::IDEMPOTENCY_KEY     ) ;
+        $this->assertSame( 'Idempotent-Replayed' , HttpHeader::IDEMPOTENT_REPLAYED ) ;
         $this->assertSame( 'Access-Control-Allow-Private-Network' , HttpHeader::ACCESS_CONTROL_ALLOW_PRIVATE_NETWORK ) ;
 
         // All trait constants are surfaced through ConstantsTrait reflection.

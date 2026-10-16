@@ -6,7 +6,7 @@ Tout ce qui touche à HTTP : méthodes de requête, codes de statut, le vocabula
 |---|---|--:|---|
 | `AuthScheme` ⚙️ | `string` | 10 | Schémas d'authentification HTTP (`Basic`, `Bearer`, …). |
 | `GuzzleOption` | `string` | 29 | Options de requête du client HTTP Guzzle. |
-| `HttpHeader` ⚙️ | `string` | 131 | Noms d'en-têtes HTTP standard (requête & réponse). |
+| `HttpHeader` ⚙️ | `string` | 132 | Noms d'en-têtes HTTP standard (requête & réponse). |
 | `HttpMethod` ⚙️ | `string` | 36 | Méthodes de requête HTTP (`GET`, `POST`, …). |
 | `HttpParamStrategy` | `string` | 3 | Stratégie de récupération des paramètres d'une requête. |
 | `HttpStatusCode` ⚙️ | `int` | 78 | Codes de statut HTTP standard. |
@@ -40,7 +40,7 @@ UriScheme::defaultPort( UriScheme::HTTPS );              // 443
 
 ## `HttpHeader` et ses traits par catégorie
 
-Les **131** constantes de `HttpHeader` sont réparties en traits composables par catégorie sous `oihana\enums\http\headers` — `CorsHeaderTrait`, `SecurityHeaderTrait`, `FetchMetadataHeaderTrait`, `CachingHeaderTrait`, `ContentHeaderTrait`, et d'autres. `HttpHeader` les compose tous ; `use` un seul trait quand vous n'avez besoin que d'une catégorie.
+Les **132** constantes de `HttpHeader` sont réparties en traits composables par catégorie sous `oihana\enums\http\headers` — `CorsHeaderTrait`, `SecurityHeaderTrait`, `FetchMetadataHeaderTrait`, `CachingHeaderTrait`, `ContentHeaderTrait`, et d'autres. `HttpHeader` les compose tous ; `use` un seul trait quand vous n'avez besoin que d'une catégorie.
 
 ```php
 use oihana\enums\http\HttpHeader;

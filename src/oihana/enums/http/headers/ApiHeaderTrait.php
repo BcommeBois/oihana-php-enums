@@ -19,6 +19,11 @@ trait ApiHeaderTrait
     public const string IDEMPOTENCY_KEY = 'Idempotency-Key' ;
 
     /**
+     * `Idempotent-Replayed` — Set to `true` on a response replayed for a known `Idempotency-Key` instead of re-running the request (de-facto).
+     */
+    public const string IDEMPOTENT_REPLAYED = 'Idempotent-Replayed' ;
+
+    /**
      * `Prefer` — Preferences for how the server should handle the request (RFC 7240).
      */
     public const string PREFER = 'Prefer' ;
